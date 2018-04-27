@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "config:js-app",
+    ":automergeDigest",
+    ":automergeMajor",
+    ":automergeRequireAllStatusChecks",
+    ":prHourlyLimit4",
+    ":semanticCommits",
+    ":pinDigestsDisabled"
+  ]
+}

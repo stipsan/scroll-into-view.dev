@@ -1,0 +1,94 @@
+{
+  "private": true,
+  "scripts": {
+    "precommit": "lint-staged",
+    "deploy": "next build && next export",
+    "dev": "next",
+    "test": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'"
+  },
+  "dependencies": {
+    "@types/next": "2.4.9",
+    "@types/node": "9.6.7",
+    "@types/prettier": "1.12.0",
+    "@types/react": "16.3.13",
+    "@types/react-dom": "16.0.5",
+    "@zeit/next-typescript": "0.1.1",
+    "bulma": "0.7.1",
+    "codemirror": "5.37.0",
+    "fork-ts-checker-webpack-plugin": "0.4.1",
+    "next": "5.1.0",
+    "popmotion": "8.1.22",
+    "prettier-browser": "git://github.com/prettier/prettier.git#1.8.2",
+    "react": "16.3.2",
+    "react-codemirror2": "5.0.1",
+    "react-dom": "16.3.2",
+    "react-syntax-highlighter": "7.0.2",
+    "scroll-into-view-if-needed": "2.0.0-alpha.4",
+    "smooth-scroll-into-view-if-needed": "1.0.1-alpha.1",
+    "styled-components": "3.2.6",
+    "system-font-stack": "1.0.5",
+    "typescript": "2.8.3",
+    "uglifyjs-webpack-plugin": "1.2.5"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "2.0.1",
+    "babel-eslint": "8.2.3",
+    "cypress": "2.1.0",
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-react": "7.7.0",
+    "husky": "0.14.3",
+    "lerna": "2.11.0",
+    "lint-staged": "7.0.5",
+    "prettier": "1.12.1",
+    "prettier-package-json": "1.5.1",
+    "tsify": "4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.css": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ],
+    "**/.babelrc": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "overrides": [
+      {
+        "files": ".babelrc",
+        "options": {
+          "parser": "json"
+        }
+      }
+    ]
+  },
+  "resolutions": {
+    "@types/react": "*"
+  }
+}
