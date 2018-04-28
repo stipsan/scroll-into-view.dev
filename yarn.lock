@@ -3788,7 +3788,7 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
-invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
+invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
@@ -6470,12 +6470,9 @@ schema-utils@^0.4.2, schema-utils@^0.4.4, schema-utils@^0.4.5:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
-scroll-into-view-if-needed@2.0.1-alpha.1:
-  version "2.0.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.0.1-alpha.1.tgz#f1d0e83cfeb18142324fa0ebe24276de727231a2"
-  dependencies:
-    invariant "^2.2.4"
-    warning "^3.0.0"
+scroll-into-view-if-needed@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.1.0.tgz#fc574e55d0a3cd6928243ff673f9854789f4434a"
 
 select@^1.1.2:
   version "1.1.2"
@@ -7584,12 +7581,6 @@ walk@2.3.9:
   resolved "https://registry.yarnpkg.com/walk/-/walk-2.3.9.tgz#31b4db6678f2ae01c39ea9fb8725a9031e558a7b"
   dependencies:
     foreachasync "^3.0.0"
-
-warning@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
-  dependencies:
-    loose-envify "^1.0.0"
 
 watchpack@^1.4.0, watchpack@^1.5.0:
   version "1.6.0"
