@@ -6470,16 +6470,9 @@ schema-utils@^0.4.2, schema-utils@^0.4.4, schema-utils@^0.4.5:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
-scroll-into-view-if-needed@2.0.1-alpha.0:
+scroll-into-view-if-needed@2.0.1-alpha.0, scroll-into-view-if-needed@^2.0.1-alpha.0:
   version "2.0.1-alpha.0"
   resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.0.1-alpha.0.tgz#cbdecdee1e268dbb20faa783eeba7e03b3e4ec98"
-  dependencies:
-    invariant "^2.2.4"
-    warning "^3.0.0"
-
-scroll-into-view-if-needed@^2.0.0-alpha.4:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.0.0.tgz#a992dbf3597a11f1699ec4a788430c581e8b2acd"
   dependencies:
     invariant "^2.2.4"
     warning "^3.0.0"
@@ -6605,11 +6598,11 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-smooth-scroll-into-view-if-needed@1.0.1-alpha.1:
-  version "1.0.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.0.1-alpha.1.tgz#3e8790a0de16a22707499664760920eb789c29df"
+smooth-scroll-into-view-if-needed@1.0.1-alpha.2:
+  version "1.0.1-alpha.2"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.0.1-alpha.2.tgz#91a2105f413d35bdaabf8da1202511ff8bbed6e4"
   dependencies:
-    scroll-into-view-if-needed "^2.0.0-alpha.4"
+    scroll-into-view-if-needed "^2.0.1-alpha.0"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
