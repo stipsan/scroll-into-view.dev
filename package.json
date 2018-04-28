@@ -24,7 +24,7 @@
     "react-codemirror2": "5.0.1",
     "react-dom": "16.3.2",
     "react-syntax-highlighter": "7.0.2",
-    "scroll-into-view-if-needed": "2.0.1-alpha.0",
+    "scroll-into-view-if-needed": "2.0.1-alpha.1",
     "smooth-scroll-into-view-if-needed": "1.0.1-alpha.2",
     "styled-components": "3.2.6",
     "system-font-stack": "1.0.5",
