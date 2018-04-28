@@ -6477,13 +6477,6 @@ scroll-into-view-if-needed@2.0.1-alpha.1:
     invariant "^2.2.4"
     warning "^3.0.0"
 
-scroll-into-view-if-needed@^2.0.1-alpha.0:
-  version "2.0.1-alpha.0"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.0.1-alpha.0.tgz#cbdecdee1e268dbb20faa783eeba7e03b3e4ec98"
-  dependencies:
-    invariant "^2.2.4"
-    warning "^3.0.0"
-
 select@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
@@ -6605,11 +6598,9 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-smooth-scroll-into-view-if-needed@1.0.1-alpha.2:
-  version "1.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.0.1-alpha.2.tgz#91a2105f413d35bdaabf8da1202511ff8bbed6e4"
-  dependencies:
-    scroll-into-view-if-needed "^2.0.1-alpha.0"
+smooth-scroll-into-view-if-needed@1.0.1-alpha.4:
+  version "1.0.1-alpha.4"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.0.1-alpha.4.tgz#73d2e4c09bafaa02645b3a8e58061d539b49ee43"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
