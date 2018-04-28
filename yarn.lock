@@ -6595,9 +6595,9 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-smooth-scroll-into-view-if-needed@1.0.1-alpha.4:
-  version "1.0.1-alpha.4"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.0.1-alpha.4.tgz#73d2e4c09bafaa02645b3a8e58061d539b49ee43"
+smooth-scroll-into-view-if-needed@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.0.2.tgz#2631d5cfd8cafad69b743b811d33880da4f45642"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
