@@ -2,7 +2,7 @@ import { Fragment, PureComponent } from 'react'
 import styled from 'styled-components'
 
 import Code from '../Code'
-import { scrollIntoView } from '../../utils'
+import scrollIntoView from 'scroll-into-view-if-needed'
 
 const SIZE = 200
 
@@ -32,10 +32,13 @@ const Item = styled.div.attrs({
 
 const range = ['😁', '🤯', '😅', '🤔', '🤩', '🤨', '😲']
 
-class Boundary extends PureComponent {
+interface BoundaryState {
+  block: 'start' | 'center' | 'end' | 'nearest'
+  boundary: boolean
+}
+class Boundary extends PureComponent<{}, BoundaryState> {
   state = {
-    // @TODO replace type casting with Options from scroll-into-view-if-needed
-    block: 'end',
+    block: 'end' as 'start' | 'center' | 'end' | 'nearest',
     boundary: true,
   }
 
@@ -119,7 +122,15 @@ class Boundary extends PureComponent {
             Block:&nbsp;
             <div className="select is-small">
               <select
-                onChange={event => this.setState({ block: event.target.value })}
+                onChange={event =>
+                  this.setState({
+                    block: event.target.value as
+                      | 'start'
+                      | 'center'
+                      | 'end'
+                      | 'nearest',
+                  })
+                }
                 value={block}
               >
                 <option value="start">Start</option>

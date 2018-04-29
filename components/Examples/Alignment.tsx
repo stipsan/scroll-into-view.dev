@@ -1,7 +1,8 @@
 import { Fragment, PureComponent } from 'react'
 import styled from 'styled-components'
+import scrollIntoView from 'scroll-into-view-if-needed'
+
 import Code from '../Code'
-import { scrollIntoView } from '../../utils'
 
 const SIZE = 200
 
@@ -57,8 +58,8 @@ class Alignment extends PureComponent {
   doScroll = target =>
     scrollIntoView(target, {
       behavior: 'smooth',
-      block: this.state.block,
-      inline: this.state.inline,
+      block: this.state.block as 'start' | 'center' | 'end' | 'nearest',
+      inline: this.state.inline as 'start' | 'center' | 'end' | 'nearest',
     })
 
   render() {
