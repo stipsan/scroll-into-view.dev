@@ -44,22 +44,19 @@ const Tile = styled.div.attrs({
   width: ${SIZE / 3}px;
 `
 
-const behavior = 'smooth'
-const scrollMode = 'always'
 const range = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 class Alignment extends PureComponent {
   state = {
-    block: 'center' as 'center',
-    inline: 'center' as 'center',
+    block: 'center',
+    inline: 'center',
   }
 
   items: HTMLElement[] = []
 
   doScroll = target =>
     scrollIntoView(target, {
-      behavior,
-      scrollMode,
+      behavior: 'smooth',
       block: this.state.block,
       inline: this.state.inline,
     })
@@ -74,11 +71,8 @@ class Alignment extends PureComponent {
             <Code>{`
         import scrollIntoView from 'scroll-into-view-if-needed';
 
-        const nodes = document.querySelectorAll('#example-alignment > *')
-
-        scrollIntoView(nodes[5], ${JSON.stringify({
-          scrollMode,
-          behavior,
+        scrollIntoView(node, ${JSON.stringify({
+          behavior: 'smooth',
           block,
           inline,
         })})

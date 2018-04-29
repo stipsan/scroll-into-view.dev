@@ -15,8 +15,6 @@ const ScrollContainer = styled.div`
   width: ${SIZE}px;
 `
 
-const ScrollLayer = styled.div``
-
 const Item = styled.div.attrs({
   className: 'has-background-dark is-size-4',
 })`
@@ -36,12 +34,9 @@ const range = ['😁', '🤯', '😅', '🤔', '🤩', '🤨', '😲']
 
 class Boundary extends PureComponent {
   state = {
-    selectedBehavior: 'smooth',
     // @TODO replace type casting with Options from scroll-into-view-if-needed
-    block: 'end' as 'end',
+    block: 'end',
     boundary: true,
-    scrollMode: 'if-needed' as 'if-needed',
-    position: ['nearest', 'center'],
   }
 
   frameBoundary: Element
@@ -100,13 +95,11 @@ class Boundary extends PureComponent {
               </a>
             </div>
             <ScrollContainer innerRef={node => (this.frameBoundary = node)}>
-              <ScrollLayer id="example-boundary">
-                {range.map(name => (
-                  <Item key={name}>
-                    <span ref={node => (this.items[name] = node)}>{name}</span>
-                  </Item>
-                ))}
-              </ScrollLayer>
+              {range.map(name => (
+                <Item key={name}>
+                  <span ref={node => (this.items[name] = node)}>{name}</span>
+                </Item>
+              ))}
             </ScrollContainer>
           </div>
         </div>

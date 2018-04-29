@@ -35,7 +35,10 @@ const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
 class IfNeeded extends PureComponent {
   state = {
-    selectedBehavior: 'smooth' as 'smooth',
+    selectedBehavior:
+      'document' in global && 'scrollBehavior' in document.documentElement.style
+        ? 'smooth'
+        : 'smooth-ponyfill',
     scrollMode: 'if-needed' as 'if-needed',
     position: ['nearest' as 'nearest', 'center' as 'center'],
   }
@@ -47,9 +50,9 @@ class IfNeeded extends PureComponent {
       ? scrollIntoView
       : smoothScrollIntoView)(target, {
       behavior:
-        (this.state.selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
-          ? ('smooth' as 'smooth')
-          : this.state.selectedBehavior,
+        this.state.selectedBehavior === 'smooth-ponyfill'
+          ? 'smooth'
+          : (this.state.selectedBehavior as any),
       scrollMode: this.state.scrollMode,
     })
 
@@ -71,9 +74,8 @@ class IfNeeded extends PureComponent {
             : ''
         }scroll-into-view-if-needed';
 
-        const nodes = document.querySelectorAll('#example-if-needed > *')
 
-        scrollIntoView(nodes[3], ${JSON.stringify({ behavior, scrollMode })})
+        scrollIntoView(node, ${JSON.stringify({ behavior, scrollMode })})
         `}</Code>
           </div>
           <div className="column is-narrow has-text-centered">
