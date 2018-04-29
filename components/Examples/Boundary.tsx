@@ -2,7 +2,7 @@ import { Fragment, PureComponent } from 'react'
 import styled from 'styled-components'
 
 import Code from '../Code'
-import { scrollIntoView } from '../../utils'
+import scrollIntoView from 'scroll-into-view-if-needed'
 
 const SIZE = 200
 
@@ -14,8 +14,6 @@ const ScrollContainer = styled.div`
   overflow: scroll;
   width: ${SIZE}px;
 `
-
-const ScrollLayer = styled.div``
 
 const Item = styled.div.attrs({
   className: 'has-background-dark is-size-4',
@@ -34,14 +32,14 @@ const Item = styled.div.attrs({
 
 const range = ['😁', '🤯', '😅', '🤔', '🤩', '🤨', '😲']
 
-class Boundary extends PureComponent {
+interface BoundaryState {
+  block: 'start' | 'center' | 'end' | 'nearest'
+  boundary: boolean
+}
+class Boundary extends PureComponent<{}, BoundaryState> {
   state = {
-    selectedBehavior: 'smooth',
-    // @TODO replace type casting with Options from scroll-into-view-if-needed
-    block: 'end' as 'end',
+    block: 'end' as 'start' | 'center' | 'end' | 'nearest',
     boundary: true,
-    scrollMode: 'if-needed' as 'if-needed',
-    position: ['nearest', 'center'],
   }
 
   frameBoundary: Element
@@ -100,13 +98,11 @@ class Boundary extends PureComponent {
               </a>
             </div>
             <ScrollContainer innerRef={node => (this.frameBoundary = node)}>
-              <ScrollLayer id="example-boundary">
-                {range.map(name => (
-                  <Item key={name}>
-                    <span ref={node => (this.items[name] = node)}>{name}</span>
-                  </Item>
-                ))}
-              </ScrollLayer>
+              {range.map(name => (
+                <Item key={name}>
+                  <span ref={node => (this.items[name] = node)}>{name}</span>
+                </Item>
+              ))}
             </ScrollContainer>
           </div>
         </div>
@@ -126,7 +122,15 @@ class Boundary extends PureComponent {
             Block:&nbsp;
             <div className="select is-small">
               <select
-                onChange={event => this.setState({ block: event.target.value })}
+                onChange={event =>
+                  this.setState({
+                    block: event.target.value as
+                      | 'start'
+                      | 'center'
+                      | 'end'
+                      | 'nearest',
+                  })
+                }
                 value={block}
               >
                 <option value="start">Start</option>

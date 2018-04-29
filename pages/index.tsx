@@ -9,9 +9,7 @@ import Alignment from '../components/Examples/Alignment'
 import Boundary from '../components/Examples/Boundary'
 import OverrideBehavior from '../components/Examples/OverrideBehavior'
 
-import { scrollIntoView } from '../utils'
-
-// @TODO last demo should be a horizontal slider with overflow hidden, 3 links and use custom behavior to animate background color with the scrolling
+import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 
 injectGlobal`
   html,
@@ -132,7 +130,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               <h2 className="is-size-4">Minimal</h2>
               <p>
                 The core package <code>scroll-into-view-if-needed</code> is
-                unapologetically small and razor focused. That is why{' '}
+                unapologetically small and dependency-free. That is why{' '}
                 <code>behavior: "smooth"</code> is only ponyfilled if you use
                 the add-on package{' '}
                 <code>smooth-scroll-into-view-if-needed</code>. You don't need
@@ -192,11 +190,9 @@ export default class IndexPage extends Component<IndexPageProps> {
               <div className="column is-one-third">
                 <h3 className="title">Scroll alignment</h3>
                 <p className="subtitle">
-                  The options <code>block</code> and <code>inline</code> each
-                  have one of <code>"start"</code>, <code>"center"</code>,{' '}
-                  <code>"end"</code> or <code>"nearest"</code>. The default
-                  values are <code>block: "center"</code> and{' '}
-                  <code>inline: "nearest"</code>.
+                  The position options for both <code>block</code> and{' '}
+                  <code>inline</code> are supported. Mix and match to your
+                  heart's content.
                 </p>
                 <p>
                   Usually <code>block</code> aligns vertically, while{' '}
