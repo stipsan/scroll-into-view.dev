@@ -67,35 +67,33 @@ class IfNeeded extends PureComponent {
       <Example.Section>
         <Example.Code>
           <Example.CodeHeader>
-            <div className="field is-grouped">
-              <div className="control">
-                Behavior:&nbsp;
-                <div className="select is-small">
-                  <select
-                    onChange={event =>
-                      this.setState({ selectedBehavior: event.target.value })
-                    }
-                    value={selectedBehavior}
-                  >
-                    <option value="smooth-ponyfill">Ponyfilled smooth</option>
-                    <option value="smooth">Native smooth</option>
-                    <option value="instant">Instant</option>
-                  </select>
-                </div>
+            <div className="control">
+              Behavior:&nbsp;
+              <div className="select is-small is-black">
+                <select
+                  onChange={event =>
+                    this.setState({ selectedBehavior: event.target.value })
+                  }
+                  value={selectedBehavior}
+                >
+                  <option value="smooth-ponyfill">Ponyfill smooth</option>
+                  <option value="smooth">Native smooth</option>
+                  <option value="instant">Instant</option>
+                </select>
               </div>
-              <div className="control">
-                Scroll mode:&nbsp;
-                <div className="select is-small">
-                  <select
-                    onChange={event =>
-                      this.setState({ scrollMode: event.target.value })
-                    }
-                    value={scrollMode}
-                  >
-                    <option value="if-needed">If needed</option>
-                    <option value="always">Always</option>
-                  </select>
-                </div>
+            </div>
+            <div className="control">
+              Scroll mode:&nbsp;
+              <div className="select is-small is-black">
+                <select
+                  onChange={event =>
+                    this.setState({ scrollMode: event.target.value })
+                  }
+                  value={scrollMode}
+                >
+                  <option value="if-needed">If needed</option>
+                  <option value="always">Always</option>
+                </select>
               </div>
             </div>
           </Example.CodeHeader>
@@ -114,31 +112,33 @@ class IfNeeded extends PureComponent {
             </Code>
           </Example.CodeBody>
         </Example.Code>
-        <div className="column is-narrow has-text-centered is-centered">
-          <div className="buttons is-centered">
-            <span className="label">Scroll to:&nbsp;</span>
-            <a
-              key="C"
-              className="button is-small"
-              onClick={() => this.doScroll(this.items.C)}
-            >
-              C
-            </a>
-            <a
-              key="D"
-              className="button is-small"
-              onClick={() => this.doScroll(this.items.D)}
-            >
-              D
-            </a>
-            <a
-              key="F"
-              className="button is-small"
-              onClick={() => this.doScroll(this.items.F)}
-            >
-              F
-            </a>
-          </div>
+        <Example.Result>
+          <Example.ResultHeader>
+            <div className="buttons is-centered">
+              <span className="label">Scroll to:&nbsp;</span>
+              <a
+                key="C"
+                className="button is-small"
+                onClick={() => this.doScroll(this.items.C)}
+              >
+                C
+              </a>
+              <a
+                key="D"
+                className="button is-small"
+                onClick={() => this.doScroll(this.items.D)}
+              >
+                D
+              </a>
+              <a
+                key="F"
+                className="button is-small"
+                onClick={() => this.doScroll(this.items.F)}
+              >
+                F
+              </a>
+            </div>
+          </Example.ResultHeader>
           <ScrollContainer>
             {range.map(name => (
               <Item key={name} innerRef={node => (this.items[name] = node)}>
@@ -146,7 +146,7 @@ class IfNeeded extends PureComponent {
               </Item>
             ))}
           </ScrollContainer>
-        </div>
+        </Example.Result>
       </Example.Section>
     )
   }

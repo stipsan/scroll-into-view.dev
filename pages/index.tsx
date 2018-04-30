@@ -120,7 +120,7 @@ export default class IndexPage extends Component<IndexPageProps> {
             </ScrollWrapper>
           </Wrapper>
         </Hero>
-        <div className="container">
+        <div className="container is-fluid">
           <IntroductionSection className="columns">
             <div className="column">
               <h2 className="is-size-4">Ponyfill</h2>

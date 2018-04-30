@@ -2,7 +2,6 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 const { description } = require('scroll-into-view-if-needed/package.json')
-const { version } = require('codemirror/package.json')
 const { version: bulmaVersion } = require('bulma/package.json')
 
 export default class MyDocument extends Document {
@@ -32,15 +31,7 @@ export default class MyDocument extends Document {
           />
           <link
             rel="stylesheet"
-            href={`//cdnjs.cloudflare.com/ajax/libs/codemirror/${
-              version
-            }/codemirror.min.css`}
-          />
-          <link
-            rel="stylesheet"
-            href={`//cdnjs.cloudflare.com/ajax/libs/codemirror/${
-              version
-            }/theme/panda-syntax.min.css`}
+            href={`http://prismjs.com/themes/prism-okaidia.css`}
           />
           {this.props.styleTags}
         </Head>
