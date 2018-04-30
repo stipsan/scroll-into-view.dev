@@ -53,13 +53,14 @@ const ChromeWrapper = styled.div`
   z-index: 1;
 }
 `
-export const Chrome = () => (
+export const Chrome = props => (
   <ChromeWrapper>
-    <svg
+    <Svg
       viewBox="0 0 744 389"
       width="744"
       height="389"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M1.5 47.5V381c0 3.6 3 6.5 6.5 6.5h728c3.6 0 6.5-3 6.5-6.5V47.5H1.5z"
@@ -71,6 +72,6 @@ export const Chrome = () => (
         d="M8 0h728a8 8 0 0 1 8 8v39H0V8a8 8 0 0 1 8-8zm11 30a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm20 0a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm20 0a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
         fill="#FFF"
       />
-    </svg>
+    </Svg>
   </ChromeWrapper>
 )

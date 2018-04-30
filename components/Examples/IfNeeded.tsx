@@ -2,6 +2,7 @@ import { Fragment, PureComponent } from 'react'
 import styled from 'styled-components'
 
 import Code from '../Code'
+import * as Example from '../Example'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
 
@@ -13,6 +14,8 @@ const ScrollContainer = styled.div`
   background: hsla(0, 0%, 0%, 0.05);
   height: ${SIZE}px;
   overflow: scroll;
+  margin-left: auto;
+  margin-right: auto;
   width: ${SIZE}px;
 `
 
@@ -35,7 +38,7 @@ const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
 class IfNeeded extends PureComponent {
   state = {
-    selectedBehavior: 'smooth' as 'smooth',
+    selectedBehavior: 'smooth',
     scrollMode: 'if-needed' as 'if-needed',
     position: ['nearest' as 'nearest', 'center' as 'center'],
   }
@@ -47,9 +50,9 @@ class IfNeeded extends PureComponent {
       ? scrollIntoView
       : smoothScrollIntoView)(target, {
       behavior:
-        (this.state.selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
-          ? ('smooth' as 'smooth')
-          : this.state.selectedBehavior,
+        this.state.selectedBehavior === 'smooth-ponyfill'
+          ? 'smooth'
+          : (this.state.selectedBehavior as any),
       scrollMode: this.state.scrollMode,
     })
 
@@ -61,55 +64,7 @@ class IfNeeded extends PureComponent {
         : selectedBehavior
 
     return (
-      <Fragment>
-        <div className="columns">
-          <div className="column">
-            <Code>{`
-        import scrollIntoView from '${
-          (selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
-            ? 'smooth-'
-            : ''
-        }scroll-into-view-if-needed';
-
-        const nodes = document.querySelectorAll('#example-if-needed > *')
-
-        scrollIntoView(nodes[3], ${JSON.stringify({ behavior, scrollMode })})
-        `}</Code>
-          </div>
-          <div className="column is-narrow has-text-centered">
-            <div className="buttons is-centered">
-              <span className="label">Scroll to:&nbsp;</span>
-              <a
-                key="C"
-                className="button is-small"
-                onClick={() => this.doScroll(this.items.C)}
-              >
-                C
-              </a>
-              <a
-                key="D"
-                className="button is-small"
-                onClick={() => this.doScroll(this.items.D)}
-              >
-                D
-              </a>
-              <a
-                key="F"
-                className="button is-small"
-                onClick={() => this.doScroll(this.items.F)}
-              >
-                F
-              </a>
-            </div>
-            <ScrollContainer>
-              {range.map(name => (
-                <Item key={name} innerRef={node => (this.items[name] = node)}>
-                  {name}
-                </Item>
-              ))}
-            </ScrollContainer>
-          </div>
-        </div>
+      <Example.Section>
         <div className="field is-grouped">
           <div className="control">
             Behavior:&nbsp;
@@ -141,7 +96,52 @@ class IfNeeded extends PureComponent {
             </div>
           </div>
         </div>
-      </Fragment>
+        <div className="column">
+          <Code>{`
+        import scrollIntoView from '${
+          (selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
+            ? 'smooth-'
+            : ''
+        }scroll-into-view-if-needed';
+
+
+        scrollIntoView(node, ${JSON.stringify({ behavior, scrollMode })})
+        `}</Code>
+        </div>
+        <div className="column is-narrow has-text-centered is-centered">
+          <div className="buttons is-centered">
+            <span className="label">Scroll to:&nbsp;</span>
+            <a
+              key="C"
+              className="button is-small"
+              onClick={() => this.doScroll(this.items.C)}
+            >
+              C
+            </a>
+            <a
+              key="D"
+              className="button is-small"
+              onClick={() => this.doScroll(this.items.D)}
+            >
+              D
+            </a>
+            <a
+              key="F"
+              className="button is-small"
+              onClick={() => this.doScroll(this.items.F)}
+            >
+              F
+            </a>
+          </div>
+          <ScrollContainer>
+            {range.map(name => (
+              <Item key={name} innerRef={node => (this.items[name] = node)}>
+                {name}
+              </Item>
+            ))}
+          </ScrollContainer>
+        </div>
+      </Example.Section>
     )
   }
 }
