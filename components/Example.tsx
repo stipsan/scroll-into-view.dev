@@ -39,6 +39,7 @@ export const CodeBody = styled.div.attrs({
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 `
 
 export const Result = styled.div.attrs({
@@ -47,6 +48,7 @@ export const Result = styled.div.attrs({
 })`
   border-radius: 0 10px 10px 0;
   box-shadow: inset 0 0 0 1px #e4e4e4;
+  overflow: hidden;
 `
 
 export const ResultHeader = styled(Header).attrs({})`

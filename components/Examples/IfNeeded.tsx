@@ -1,4 +1,4 @@
-import { Fragment, PureComponent } from 'react'
+import { PureComponent } from 'react'
 import styled from 'styled-components'
 
 import Code from '../Code'
@@ -38,7 +38,6 @@ const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
 class IfNeeded extends PureComponent {
   state = {
-
     selectedBehavior:
       'document' in global && 'scrollBehavior' in document.documentElement.style
         ? 'smooth'
@@ -113,7 +112,7 @@ class IfNeeded extends PureComponent {
 
 
         scrollIntoView(node, ${JSON.stringify({ behavior, scrollMode })})
-        `.repeat(3)}
+        `}
             </Code>
           </Example.CodeBody>
         </Example.Code>
