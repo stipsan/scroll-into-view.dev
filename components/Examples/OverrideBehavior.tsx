@@ -54,17 +54,15 @@ class Boundary extends PureComponent {
   doScroll = target =>
     scrollIntoView(target, {
       behavior: instructions => {
-        const { el: frame, left } = instructions[0]
-        const elementScroll = scroll(frame)
+        const { el, left } = instructions[0]
+        const elementScroll = scroll(el)
 
         spring({
-          from: frame.scrollLeft,
+          from: el.scrollLeft,
           to: left,
-          //stiffness: 200,
-          //damping: 10,
         }).start(v => elementScroll.set('left', v))
       },
-      boundary: this.container.parentNode as Element,
+      boundary: this.container,
       inline: 'center',
     })
 
@@ -87,10 +85,10 @@ class Boundary extends PureComponent {
         import { spring } from 'popmotion'
 
         scrollIntoView(node, {behavior: instructions => {
-            const [frame, top, left] = instructions[0]
-            const elementScroll = scroll(frame)
+          const { el, left } = instructions[0]
+            const elementScroll = scroll(el)
     
-            spring({from: scrollLeft,to: left})
+            spring({from: el.scrollLeft,to: left})
             .start((left) => elementScroll.set('left', left))
             
           },inline: 'center'})
@@ -113,7 +111,7 @@ class Boundary extends PureComponent {
             <ScrollContainer
               innerRef={container => (this.container = container)}
             >
-              <ScrollLayer id="example-override-behavior">
+              <ScrollLayer>
                 {emojis.map((emoji, key) => (
                   <Item key={emoji} innerRef={node => (this.items[key] = node)}>
                     {emoji}

@@ -38,7 +38,12 @@ const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
 class IfNeeded extends PureComponent {
   state = {
-    selectedBehavior: 'smooth',
+
+    selectedBehavior:
+      'document' in global && 'scrollBehavior' in document.documentElement.style
+        ? 'smooth'
+        : 'smooth-ponyfill',
+
     scrollMode: 'if-needed' as 'if-needed',
     position: ['nearest' as 'nearest', 'center' as 'center'],
   }
