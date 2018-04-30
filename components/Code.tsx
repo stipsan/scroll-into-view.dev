@@ -1,4 +1,4 @@
-import { PureComponent, Fragment } from 'react'
+import { PureComponent } from 'react'
 import styled from 'styled-components'
 import { format } from '../utils'
 
