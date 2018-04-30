@@ -165,8 +165,11 @@ export default class IndexPage extends Component<IndexPageProps> {
               </p>
             </div>
           </IntroductionSection>
-          <Section className="columns is-multiline">
-            <div className="column" style={{ minWidth: '360px' }}>
+          <Section className="columns is-multiline is-desktop">
+            <div
+              className="column is-one-third-desktop"
+              style={{ minWidth: '250px' }}
+            >
               <h3 className="title">Scrolling if needed</h3>
               <p className="subtitle">
                 When deciding if scrolling is needed the visibility of the
@@ -195,7 +198,7 @@ export default class IndexPage extends Component<IndexPageProps> {
                 <a href="https://codepen.io/stipsan/pen/NMxLew">CodePen</a>.
               </p>
             </div>
-            <div className="column">
+            <div className="column is-two-thirds-desktop">
               <IfNeeded />
             </div>
           </Section>

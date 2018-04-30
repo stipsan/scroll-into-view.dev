@@ -65,39 +65,43 @@ class IfNeeded extends PureComponent {
 
     return (
       <Example.Section>
-        <div className="field is-grouped">
-          <div className="control">
-            Behavior:&nbsp;
-            <div className="select is-small">
-              <select
-                onChange={event =>
-                  this.setState({ selectedBehavior: event.target.value })
-                }
-                value={selectedBehavior}
-              >
-                <option value="smooth-ponyfill">Ponyfilled smooth</option>
-                <option value="smooth">Native smooth</option>
-                <option value="instant">Instant</option>
-              </select>
+        <Example.Code>
+          <Example.CodeHeader>
+            <div className="field is-grouped">
+              <div className="control">
+                Behavior:&nbsp;
+                <div className="select is-small">
+                  <select
+                    onChange={event =>
+                      this.setState({ selectedBehavior: event.target.value })
+                    }
+                    value={selectedBehavior}
+                  >
+                    <option value="smooth-ponyfill">Ponyfilled smooth</option>
+                    <option value="smooth">Native smooth</option>
+                    <option value="instant">Instant</option>
+                  </select>
+                </div>
+              </div>
+              <div className="control">
+                Scroll mode:&nbsp;
+                <div className="select is-small">
+                  <select
+                    onChange={event =>
+                      this.setState({ scrollMode: event.target.value })
+                    }
+                    value={scrollMode}
+                  >
+                    <option value="if-needed">If needed</option>
+                    <option value="always">Always</option>
+                  </select>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="control">
-            Scroll mode:&nbsp;
-            <div className="select is-small">
-              <select
-                onChange={event =>
-                  this.setState({ scrollMode: event.target.value })
-                }
-                value={scrollMode}
-              >
-                <option value="if-needed">If needed</option>
-                <option value="always">Always</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div className="column">
-          <Code>{`
+          </Example.CodeHeader>
+          <Example.CodeBody>
+            <Code>
+              {`
         import scrollIntoView from '${
           (selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
             ? 'smooth-'
@@ -106,8 +110,10 @@ class IfNeeded extends PureComponent {
 
 
         scrollIntoView(node, ${JSON.stringify({ behavior, scrollMode })})
-        `}</Code>
-        </div>
+        `.repeat(3)}
+            </Code>
+          </Example.CodeBody>
+        </Example.Code>
         <div className="column is-narrow has-text-centered is-centered">
           <div className="buttons is-centered">
             <span className="label">Scroll to:&nbsp;</span>
