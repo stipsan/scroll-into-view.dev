@@ -83,10 +83,11 @@ export const ResultHeader = styled(Header).attrs({})`
 
 export const ScrollContainer = styled.div`
   box-sizing: content-box;
-  border: 1px solid #e4e4e4;
+  box-shadow: 0 0 0 1px #e4e4e4;
   background: hsla(0, 0%, 0%, 0.05);
   height: ${SIZE}px;
   overflow: scroll;
+  margin-top: 1px;
   margin-left: auto;
   margin-right: auto;
   width: ${SIZE}px;
