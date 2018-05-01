@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 
+const breakpoint = 768
+const cornerRadius = 8
+
 export const Section = styled.div.attrs({
   className: 'columns is-gapless is-multiline',
 })`
-  border-radius: 10px;
+  border-radius: ${cornerRadius}px;
   min-width: 0px;
 `
 
@@ -22,37 +25,52 @@ const Header = styled.div`
 export const CodeHeader = styled(Header).attrs({
   className: 'has-background-grey-dark has-text-light',
 })`
-  border-radius: 10px 0 0 0;
+  border-radius: ${cornerRadius}px ${cornerRadius}px 0 0;
   align-items: center;
 
   justify-content: flex-start;
   flex-direction: row;
 
+  @media screen and (min-width: ${breakpoint}px) {
+    border-radius: ${cornerRadius}px 0 0 0;
+  }
+
   .control {
-    padding: 0.5rem;
+    padding: 0 0.5rem;
+    /* line-height: 3; */
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
   }
 `
 export const CodeBody = styled.div.attrs({
   className: 'has-background-grey-darker',
 })`
-  border-radius: 0 0 0 10px;
+  border-radius: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  @media screen and (min-width: ${breakpoint}px) {
+    border-radius: 0 0 0 ${cornerRadius}px;
+  }
 `
 
 export const Result = styled.div.attrs({
   className:
     'column is-narrow has-text-centered is-centered has-background-white-bis',
 })`
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 0 ${cornerRadius}px ${cornerRadius}px;
   box-shadow: inset 0 0 0 1px #e4e4e4;
   overflow: hidden;
+
+  @media screen and (min-width: ${breakpoint}px) {
+    border-radius: 0 ${cornerRadius}px ${cornerRadius}px 0;
+  }
 `
 
 export const ResultHeader = styled(Header).attrs({})`
-  border-radius: 0 10px 0 0;
   align-items: center;
   justify-content: center;
   flex-direction: row;

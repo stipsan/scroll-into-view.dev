@@ -10,7 +10,7 @@ const SIZE = 200
 
 const ScrollContainer = styled.div`
   box-sizing: content-box;
-  border: 1px solid hsla(0, 0%, 0%, 0.05);
+  border: 1px solid #e4e4e4;
   background: hsla(0, 0%, 0%, 0.05);
   height: ${SIZE}px;
   overflow: scroll;

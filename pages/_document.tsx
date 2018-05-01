@@ -29,10 +29,7 @@ export default class MyDocument extends Document {
               bulmaVersion
             }/css/bulma.min.css`}
           />
-          <link
-            rel="stylesheet"
-            href={`http://prismjs.com/themes/prism-okaidia.css`}
-          />
+
           {this.props.styleTags}
         </Head>
         <body>
