@@ -82,8 +82,8 @@ const IntroductionSection = styled(Section)`
   :after {
     content: '';
     position: absolute;
-    left: 1rem;
-    right: 1rem;
+    left: 10px;
+    right: 10px;
     bottom: 0;
     height: 2px;
     background: #f5f5f5;
