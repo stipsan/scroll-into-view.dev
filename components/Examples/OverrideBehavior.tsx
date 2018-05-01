@@ -1,27 +1,18 @@
-import { Fragment, PureComponent } from 'react'
+import { PureComponent } from 'react'
 import styled from 'styled-components'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import scroll from 'stylefire/scroll'
 import { spring } from 'popmotion'
 
 import Code from '../Code'
-
-const SIZE = 200
-
-const ScrollContainer = styled.div`
-  box-sizing: content-box;
-  border: 1px solid hsla(0, 0%, 0%, 0.2);
-  background: hsla(0, 0%, 0%, 0.05);
-  overflow: hidden;
-  height: ${SIZE}px;
-  width: ${SIZE}px;
-`
+import * as Example from '../Example'
+import Select from '../Select'
 
 const ScrollLayer = styled.div`
   display: flex;
-  padding-left: ${SIZE}px;
-  padding-right: ${SIZE}px;
-  width: ${SIZE * 3}px;
+  padding-left: ${Example.SIZE}px;
+  padding-right: ${Example.SIZE}px;
+  width: ${Example.SIZE * 3}px;
 `
 
 const Item = styled.div.attrs({
@@ -30,8 +21,9 @@ const Item = styled.div.attrs({
   display: flex;
   align-items: center;
   justify-content: center;
-  height: ${SIZE}px;
-  width: ${SIZE}px;
+  height: ${Example.SIZE / 2}px;
+  width: ${Example.SIZE / 2}px;
+  margin: ${Example.SIZE / 4}px;
   color: black;
 `
 
@@ -39,12 +31,9 @@ const emojis = ['🌎', '🌍', '🌏']
 
 class Boundary extends PureComponent {
   state = {
-    selectedBehavior: 'smooth',
-    inline: 'center',
+    inline: 'center' as 'center',
     boundary: true,
     selected: 0,
-    scrollMode: 'if-needed',
-    position: ['nearest', 'center'],
   }
 
   container: HTMLElement
@@ -54,7 +43,7 @@ class Boundary extends PureComponent {
   doScroll = target =>
     scrollIntoView(target, {
       behavior: instructions => {
-        const { el, left } = instructions[0]
+        const [{ el, left }] = instructions
         const elementScroll = scroll(el)
 
         spring({
@@ -63,11 +52,11 @@ class Boundary extends PureComponent {
         }).start(v => elementScroll.set('left', v))
       },
       boundary: this.container,
-      inline: 'center',
+      inline: this.state.inline,
     })
 
   componentDidMount() {
-    this.container.scrollLeft = SIZE
+    this.container.scrollLeft = Example.SIZE
   }
 
   componentDidUpdate() {
@@ -76,52 +65,61 @@ class Boundary extends PureComponent {
   component
   render() {
     return (
-      <Fragment>
-        <div className="columns">
-          <div className="column">
+      <Example.Section>
+        <Example.Code>
+          <Example.CodeHeader>
+            <Select
+              label="Inline"
+              onChange={event => this.setState({ inline: event.target.value })}
+              value={this.state.inline}
+            >
+              <option value="center">Center</option>
+              <option value="nearest">Nearest</option>
+            </Select>
+          </Example.CodeHeader>
+          <Example.CodeBody>
             <Code>{`
         import scrollIntoView from 'scroll-into-view-if-needed';
         import scroll from 'stylefire/scroll'
         import { spring } from 'popmotion'
 
         scrollIntoView(node, {behavior: instructions => {
-          const { el, left } = instructions[0]
+          const [{ el, left }] = instructions
             const elementScroll = scroll(el)
     
             spring({from: el.scrollLeft,to: left})
             .start((left) => elementScroll.set('left', left))
             
-          },inline: 'center'})
+          },inline: ${JSON.stringify(this.state.inline)}})
         `}</Code>
-          </div>
-          <div className="column is-narrow has-text-centered">
-            <div className="buttons is-centered">
-              <span className="label">Scroll to:&nbsp;</span>
+          </Example.CodeBody>
+        </Example.Code>
+        <Example.Result>
+          <Example.ResultHeader>
+            <span>Scroll to&nbsp;</span>
+            {emojis.map((emoji, key) => (
+              <Example.Button
+                key={emoji}
+                ref={button => (this.buttons[key] = button)}
+                onClick={() => this.setState({ selected: key })}
+              >
+                {emoji}
+              </Example.Button>
+            ))}
+          </Example.ResultHeader>
+          <Example.ScrollContainer
+            innerRef={container => (this.container = container)}
+          >
+            <ScrollLayer>
               {emojis.map((emoji, key) => (
-                <a
-                  key={emoji}
-                  ref={button => (this.buttons[key] = button)}
-                  className="button is-small"
-                  onClick={() => this.setState({ selected: key })}
-                >
+                <Item key={emoji} innerRef={node => (this.items[key] = node)}>
                   {emoji}
-                </a>
+                </Item>
               ))}
-            </div>
-            <ScrollContainer
-              innerRef={container => (this.container = container)}
-            >
-              <ScrollLayer>
-                {emojis.map((emoji, key) => (
-                  <Item key={emoji} innerRef={node => (this.items[key] = node)}>
-                    {emoji}
-                  </Item>
-                ))}
-              </ScrollLayer>
-            </ScrollContainer>
-          </div>
-        </div>
-      </Fragment>
+            </ScrollLayer>
+          </Example.ScrollContainer>
+        </Example.Result>
+      </Example.Section>
     )
   }
 }

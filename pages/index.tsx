@@ -29,19 +29,20 @@ export interface IndexPageProps {
 const Hero = styled.header`
   display: flex;
   box-sizing: border-box;
-  padding: 90px 20px;
+  padding: 90px 10px;
   padding-top: 10vmin;
   padding-bottom: 10vmin;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(168deg, #b3fbf7 0%, #ff0561 100%);
+  background-image: linear-gradient(168deg, #b1d2fa 0%, #05ffe6 100%);
 `
 const Wrapper = styled.div`
   position: relative;
-  max-height: 389px;
+  width: 100%;
+  max-width: 744px;
 
   svg {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 
@@ -52,6 +53,7 @@ const Wrapper = styled.div`
 `
 const ScrollWrapper = styled.div`
   position: absolute;
+  transition: opacity 100ms;
   /* overflow: scroll; is so ugly on machines that don't hide scrollbars */
   overflow: hidden;
   top: 0;
@@ -60,33 +62,74 @@ const ScrollWrapper = styled.div`
   bottom: 3px;
   opacity: 0.6;
 
-  @supports (mix-blend-mode: overlay) {
+  @supports (mix-blend-mode: difference) {
     opacity: 1;
-    mix-blend-mode: overlay;
+    mix-blend-mode: difference;
+
+    svg {
+      color: #557271;
+    }
   }
 `
 
 const IntroductionSection = styled(Section)`
-  margin-top: 10px;
+  margin-top: 1.5rem;
+
+  padding-bottom: 3rem;
+  margin-bottom: 3rem !important;
+  position: relative;
+
+  :after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    height: 2px;
+    background: #f5f5f5;
+  }
 `
+
+const OtherSection = styled(Section).attrs({
+  className: 'columns is-multiline is-desktop',
+})``
+
+const SectionIntro = styled.div.attrs({
+  className: 'column is-one-third-desktop',
+})`
+  min-width: 250px;
+`
+const SectionCode = styled.div.attrs({
+  className: 'column is-two-thirds-desktop',
+})``
 
 export default class IndexPage extends Component<IndexPageProps> {
   static defaultProps = {
     items: Array.apply(null, { length: 100 }).map(Number.call, Number),
   }
 
+  state = { maxHeight: 'auto' }
+
   scrollToBoundary: HTMLElement
   scrollToRef: SVGElement
+  maxHeightRef: SVGElement
   timeout: any
 
   componentDidMount() {
-    this.timeout = setTimeout(() => {
-      scrollIntoView(this.scrollToRef, {
-        behavior: 'smooth',
-        block: 'end',
-        boundary: this.scrollToBoundary,
-      })
-    }, 1500)
+    window.addEventListener('load', () => {
+      this.setState(
+        { maxHeight: `${this.maxHeightRef.getBoundingClientRect().height}px` },
+        () => {
+          this.timeout = setTimeout(() => {
+            scrollIntoView(this.scrollToRef, {
+              behavior: 'smooth',
+              block: 'end',
+              boundary: this.scrollToBoundary,
+            })
+          }, 1500)
+        }
+      )
+    })
   }
 
   componentWIllUnmount() {
@@ -98,13 +141,18 @@ export default class IndexPage extends Component<IndexPageProps> {
       <div>
         <Hero>
           <Wrapper innerRef={node => (this.scrollToBoundary = node)}>
-            <Chrome />
-            <ScrollWrapper>
+            <Chrome innerRef={node => (this.maxHeightRef = node)} />
+            <ScrollWrapper
+              style={{
+                maxHeight: this.state.maxHeight,
+                opacity: this.state.maxHeight === 'auto' ? 0 : undefined,
+              }}
+            >
               <TextIcon innerRef={node => (this.scrollToRef = node)} />
             </ScrollWrapper>
           </Wrapper>
         </Hero>
-        <div className="container">
+        <div className="container is-fluid">
           <IntroductionSection className="columns">
             <div className="column">
               <h2 className="is-size-4">Ponyfill</h2>
@@ -149,106 +197,91 @@ export default class IndexPage extends Component<IndexPageProps> {
               </p>
             </div>
           </IntroductionSection>
-          <Section>
-            <div className="columns">
-              <div className="column is-one-third">
-                <h3 className="title">Scrolling if needed</h3>
-                <p className="subtitle">
-                  When deciding if scrolling is needed the visibility of the
-                  target element is checked. If it's less than 100% it will be
-                  scrolled.
-                </p>
-                <p>
-                  By default the browser controls the scrolling when{' '}
-                  <code>behavior: 'smooth'</code> (unless you opt in to the
-                  ponyfill). Note there's browser differences with native smooth
-                  scrolling, like{' '}
-                  <a
-                    target="_blank"
-                    href="https://user-images.githubusercontent.com/81981/38905887-9c00eff2-42b3-11e8-86aa-41ef679a54af.gif"
-                  >
-                    Chrome
-                  </a>{' '}
-                  vs{' '}
-                  <a
-                    target="_blank"
-                    href="https://user-images.githubusercontent.com/81981/38905963-3065b790-42b4-11e8-9fab-35393d7b7d09.gif"
-                  >
-                    FireFox
-                  </a>{' '}
-                  in this{' '}
-                  <a href="https://codepen.io/stipsan/pen/NMxLew">CodePen</a>.
-                </p>
-              </div>
-              <div className="column">
-                <IfNeeded />
-              </div>
-            </div>
-          </Section>
-          <Section>
-            <div className="columns">
-              <div className="column is-one-third">
-                <h3 className="title">Scroll alignment</h3>
-                <p className="subtitle">
-                  The position options for both <code>block</code> and{' '}
-                  <code>inline</code> are supported. Mix and match to your
-                  heart's content.
-                </p>
-                <p>
-                  Usually <code>block</code> aligns vertically, while{' '}
-                  <code>inline</code> aligns horizontally. It depends on the{' '}
-                  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">
-                    writing-mode
-                  </a>.
-                </p>
-              </div>
-              <div className="column">
-                <Alignment />
-              </div>
-            </div>
-          </Section>
-          <Section>
-            <div className="columns">
-              <div className="column is-one-third">
-                <h3 className="title">Limit propagation</h3>
-                <p className="subtitle">
-                  Boundaries are good, that's what people keep saying. If you
-                  want some elements to scroll into view, but not all of the
-                  parents then <code>boundary</code> is the answer.
-                </p>
-                <p>
-                  Keep in mind this is a non-standard feature not in any spec.
-                  If you want to use this library as a <code>ponyfill</code>{' '}
-                  that you can easily delete the day browser support is good
-                  enough then it's worth exploring other solutions to your use
-                  case.
-                </p>
-              </div>
-              <div className="column">
-                <Boundary />
-              </div>
-            </div>
-          </Section>
-          <Section>
-            <div className="columns">
-              <div className="column is-one-third">
-                <h3 className="title">Custom transition: popmotion example</h3>
-                <p className="subtitle">
-                  If you want a different easing, duration or another creative
-                  direction you can pass a function to <code>behavior</code>.
-                </p>
-                <p>
-                  Just like <code>behavior</code> this is not in the spec. Also
-                  note that you shouldn't combine this option with{' '}
-                  <code>smooth-scroll-into-view-if-needed</code> or you'll bloat
-                  your bundle for no reason.
-                </p>
-              </div>
-              <div className="column">
-                <OverrideBehavior />
-              </div>
-            </div>
-          </Section>
+          <OtherSection>
+            <SectionIntro>
+              <h3 className="title">Scrolling if needed</h3>
+              <p className="subtitle">
+                When deciding if scrolling is needed the visibility of the
+                target element is checked. If it's less than 100% it will be
+                scrolled.
+              </p>
+              <p>
+                By default the browser controls the scrolling when{' '}
+                <code>behavior: 'smooth'</code> (unless you opt in to the
+                ponyfill). Note there's browser differences with native smooth
+                scrolling, like{' '}
+                <a
+                  target="_blank"
+                  href="https://user-images.githubusercontent.com/81981/38905887-9c00eff2-42b3-11e8-86aa-41ef679a54af.gif"
+                >
+                  Chrome
+                </a>{' '}
+                vs{' '}
+                <a
+                  target="_blank"
+                  href="https://user-images.githubusercontent.com/81981/38905963-3065b790-42b4-11e8-9fab-35393d7b7d09.gif"
+                >
+                  FireFox
+                </a>{' '}
+                in this{' '}
+                <a href="https://codepen.io/stipsan/pen/NMxLew">CodePen</a>.
+              </p>
+            </SectionIntro>
+            <SectionCode>
+              <IfNeeded />
+            </SectionCode>
+          </OtherSection>
+          <OtherSection>
+            <SectionIntro>
+              <h3 className="title">Scroll alignment</h3>
+              <p className="subtitle">
+                The position options for both <code>block</code> and{' '}
+                <code>inline</code> are supported. Mix and match to your heart's
+                content.
+              </p>
+              <p>
+                Usually <code>block</code> aligns vertically, while{' '}
+                <code>inline</code> aligns horizontally. It depends on the{' '}
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">
+                  writing-mode
+                </a>.
+              </p>
+            </SectionIntro>
+            <SectionCode>
+              <Alignment />
+            </SectionCode>
+          </OtherSection>
+          <OtherSection>
+            <SectionIntro>
+              <h3 className="title">Limit propagation</h3>
+              <p className="subtitle">
+                Boundaries are good, that's what people keep saying. If you want
+                some elements to scroll into view, but not all of the parents
+                then <code>boundary</code> is the answer.
+              </p>
+              <p>
+                Keep in mind this is a non-standard feature not in any spec.
+              </p>
+            </SectionIntro>
+            <SectionCode>
+              <Boundary />
+            </SectionCode>
+          </OtherSection>
+          <OtherSection>
+            <SectionIntro>
+              <h3 className="title">Custom transition: popmotion example</h3>
+              <p className="subtitle">
+                If you want a different easing, duration or another creative
+                direction you can pass a function to <code>behavior</code>.
+              </p>
+              <p>
+                Just like <code>behavior</code> this is not in the spec.
+              </p>
+            </SectionIntro>
+            <SectionCode>
+              <OverrideBehavior />
+            </SectionCode>
+          </OtherSection>
         </div>
         <Footer />
       </div>

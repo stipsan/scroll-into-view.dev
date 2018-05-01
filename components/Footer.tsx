@@ -22,20 +22,26 @@ export default () => (
           </a>
         </p>
         <div className="field is-grouped is-grouped-centered is-grouped-multiline">
-          <div className="control">
+          <a
+            href="https://www.npmjs.com/package/scroll-into-view-if-needed"
+            className="control"
+          >
             <div className="tags has-addons">
               <span className="tag is-dark">scroll-into-view-if-needed</span>
               <span className="tag is-info">{baseVersion}</span>
             </div>
-          </div>
-          <div className="control">
+          </a>
+          <a
+            href="https://www.npmjs.com/package/smooth-scroll-into-view-if-needed"
+            className="control"
+          >
             <div className="tags has-addons">
               <span className="tag is-dark">
                 smooth-scroll-into-view-if-needed
               </span>
               <span className="tag is-info">{smoothVersion}</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
