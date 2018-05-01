@@ -35,7 +35,7 @@ const Hero = styled.header`
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(168deg, #b1d2fa 0%, #05ffe6 100%);
-  background: -moz-linear-gradient(-45deg, #c5dbf5 1%, #49e9d9 100%); /* FF3.6-15 */
+  background: -moz-linear-gradient(-78deg, rgb(182, 209, 245) 0%, rgb(114, 249, 231) 100%); /* FF3.6-15 */
 `
 const Wrapper = styled.div`
   position: relative;
