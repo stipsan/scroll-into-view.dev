@@ -28,9 +28,9 @@ export const CodeHeader = styled(Header).attrs({
 })`
   border-radius: ${cornerRadius}px ${cornerRadius}px 0 0;
   align-items: center;
-
   justify-content: flex-start;
   flex-direction: row;
+  flex-wrap: wrap;
 
   @media screen and (min-width: ${breakpoint}px) {
     border-radius: ${cornerRadius}px 0 0 0;
