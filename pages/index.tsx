@@ -40,6 +40,8 @@ const Hero = styled.header`
 `
 const Wrapper = styled.div`
   position: relative;
+  width: 100%;
+  max-width: 744px;
 
   svg {
     width: 100%;
