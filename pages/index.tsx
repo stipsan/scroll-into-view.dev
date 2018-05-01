@@ -36,6 +36,7 @@ const Hero = styled.header`
   justify-content: center;
   background-image: linear-gradient(168deg, #b3fbf7 0%, #ff0561 100%);
   background-image: linear-gradient(156deg, #fffd82 6%, #fa2863 86%);
+  background-image: linear-gradient(168deg, #b1d2fa 0%, #05ffe6 100%);
 `
 const Wrapper = styled.div`
   position: relative;
@@ -84,18 +85,21 @@ export default class IndexPage extends Component<IndexPageProps> {
   timeout: any
 
   componentDidMount() {
-    this.setState(
-      { maxHeight: `${this.maxHeightRef.getBoundingClientRect().height}px` },
-      () => {
-        this.timeout = setTimeout(() => {
-          scrollIntoView(this.scrollToRef, {
-            behavior: 'smooth',
-            block: 'end',
-            boundary: this.scrollToBoundary,
-          })
-        }, 1500)
-      }
-    )
+    window.addEventListener('load', () => {
+      console.log(this.maxHeightRef.getBoundingClientRect().height)
+      this.setState(
+        { maxHeight: `${this.maxHeightRef.getBoundingClientRect().height}px` },
+        () => {
+          this.timeout = setTimeout(() => {
+            scrollIntoView(this.scrollToRef, {
+              behavior: 'smooth',
+              block: 'end',
+              boundary: this.scrollToBoundary,
+            })
+          }, 1500)
+        }
+      )
+    })
   }
 
   componentWIllUnmount() {
