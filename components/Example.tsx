@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const breakpoint = 768
 const cornerRadius = 8
+export const SIZE = 200
 
 export const Section = styled.div.attrs({
   className: 'columns is-gapless is-multiline',
@@ -75,7 +76,29 @@ export const ResultHeader = styled(Header).attrs({})`
   justify-content: center;
   flex-direction: row;
 
-  .control {
-    padding: 0.5rem;
+  span {
+    font-weight: 700;
+  }
+`
+
+export const ScrollContainer = styled.div`
+  box-sizing: content-box;
+  border: 1px solid #e4e4e4;
+  background: hsla(0, 0%, 0%, 0.05);
+  height: ${SIZE}px;
+  overflow: scroll;
+  margin-left: auto;
+  margin-right: auto;
+  width: ${SIZE}px;
+`
+
+export const Button = styled.a.attrs({
+  className: 'button is-small',
+})`
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  :not(:last-child) {
+    margin-right: 0.5rem;
   }
 `

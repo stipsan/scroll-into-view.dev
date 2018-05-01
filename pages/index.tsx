@@ -73,7 +73,21 @@ const ScrollWrapper = styled.div`
 `
 
 const IntroductionSection = styled(Section)`
-  margin-top: 10px;
+  margin-top: 1.5rem;
+
+  padding-bottom: 3rem;
+  margin-bottom: 3rem !important;
+  position: relative;
+
+  :after {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0;
+    height: 2px;
+    background: #f5f5f5;
+  }
 `
 
 export default class IndexPage extends Component<IndexPageProps> {

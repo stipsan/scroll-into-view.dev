@@ -1,37 +1,22 @@
 import { PureComponent } from 'react'
 import styled from 'styled-components'
+import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
 
 import Code from '../Code'
 import * as Example from '../Example'
+import Select from '../Select'
 import scrollIntoView from 'scroll-into-view-if-needed'
-import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
-
-const SIZE = 200
-
-const ScrollContainer = styled.div`
-  box-sizing: content-box;
-  border: 1px solid #e4e4e4;
-  background: hsla(0, 0%, 0%, 0.05);
-  height: ${SIZE}px;
-  overflow: scroll;
-  margin-left: auto;
-  margin-right: auto;
-  width: ${SIZE}px;
-`
 
 const Item = styled.div.attrs({
   className: 'has-background-primary is-size-4',
 })`
   align-items: center;
+  justify-content: center;
   border-radius: 4px;
   display: flex;
-  height: ${SIZE / 4 - 10}px;
+  height: ${Example.SIZE / 4 - 10}px;
   margin: 20px;
   color: hsla(0, 0%, 0%, 0.4);
-  justify-content: center;
-
-  & + & {
-  }
 `
 
 const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
@@ -40,7 +25,6 @@ class IfNeeded extends PureComponent {
   state = {
     selectedBehavior: 'smooth',
     scrollMode: 'if-needed' as 'if-needed',
-    position: ['nearest' as 'nearest', 'center' as 'center'],
   }
 
   items: { [key: string]: HTMLElement } = {}
@@ -73,35 +57,28 @@ class IfNeeded extends PureComponent {
       <Example.Section>
         <Example.Code>
           <Example.CodeHeader>
-            <div className="control">
-              Behavior:&nbsp;
-              <div className="select is-small is-black">
-                <select
-                  onChange={event =>
-                    this.setState({ selectedBehavior: event.target.value })
-                  }
-                  value={selectedBehavior}
-                >
-                  <option value="smooth-ponyfill">Ponyfill smooth</option>
-                  <option value="smooth">Native smooth</option>
-                  <option value="instant">Instant</option>
-                </select>
-              </div>
-            </div>
-            <div className="control">
-              Scroll mode:&nbsp;
-              <div className="select is-small is-black">
-                <select
-                  onChange={event =>
-                    this.setState({ scrollMode: event.target.value })
-                  }
-                  value={scrollMode}
-                >
-                  <option value="if-needed">If needed</option>
-                  <option value="always">Always</option>
-                </select>
-              </div>
-            </div>
+            <Select
+              label="Behavior"
+              onChange={event =>
+                this.setState({ selectedBehavior: event.target.value })
+              }
+              value={selectedBehavior}
+            >
+              <option value="smooth-ponyfill">Ponyfill smooth</option>
+              <option value="smooth">Native smooth</option>
+              <option value="instant">Instant</option>
+            </Select>
+
+            <Select
+              label="Scroll mode"
+              onChange={event =>
+                this.setState({ scrollMode: event.target.value })
+              }
+              value={scrollMode}
+            >
+              <option value="if-needed">If needed</option>
+              <option value="always">Always</option>
+            </Select>
           </Example.CodeHeader>
           <Example.CodeBody>
             <Code>
@@ -120,38 +97,24 @@ class IfNeeded extends PureComponent {
         </Example.Code>
         <Example.Result>
           <Example.ResultHeader>
-            <div className="buttons is-centered">
-              <span className="label">Scroll to:&nbsp;</span>
-              <a
-                key="C"
-                className="button is-small"
-                onClick={() => this.doScroll(this.items.C)}
-              >
-                C
-              </a>
-              <a
-                key="D"
-                className="button is-small"
-                onClick={() => this.doScroll(this.items.D)}
-              >
-                D
-              </a>
-              <a
-                key="F"
-                className="button is-small"
-                onClick={() => this.doScroll(this.items.F)}
-              >
-                F
-              </a>
-            </div>
+            <span>Scroll to:&nbsp;</span>
+            <Example.Button key="C" onClick={() => this.doScroll(this.items.C)}>
+              C
+            </Example.Button>
+            <Example.Button key="D" onClick={() => this.doScroll(this.items.D)}>
+              D
+            </Example.Button>
+            <Example.Button key="F" onClick={() => this.doScroll(this.items.F)}>
+              F
+            </Example.Button>
           </Example.ResultHeader>
-          <ScrollContainer>
+          <Example.ScrollContainer>
             {range.map(name => (
               <Item key={name} innerRef={node => (this.items[name] = node)}>
                 {name}
               </Item>
             ))}
-          </ScrollContainer>
+          </Example.ScrollContainer>
         </Example.Result>
       </Example.Section>
     )
