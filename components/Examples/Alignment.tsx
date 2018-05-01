@@ -1,4 +1,4 @@
-import { Fragment, PureComponent } from 'react'
+import { PureComponent } from 'react'
 import styled from 'styled-components'
 import scrollIntoView from 'scroll-into-view-if-needed'
 
