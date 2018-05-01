@@ -71,14 +71,10 @@ export const Result = styled.div.attrs({
   }
 `
 
-export const ResultHeader = styled(Header).attrs({})`
+export const ResultHeader = styled(Header)`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-
-  span {
-    font-weight: 700;
-  }
 `
 
 export const ScrollContainer = styled.div`
