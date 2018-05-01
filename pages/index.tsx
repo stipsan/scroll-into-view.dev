@@ -34,8 +34,6 @@ const Hero = styled.header`
   padding-bottom: 10vmin;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(168deg, #b3fbf7 0%, #ff0561 100%);
-  background-image: linear-gradient(156deg, #fffd82 6%, #fa2863 86%);
   background-image: linear-gradient(168deg, #b1d2fa 0%, #05ffe6 100%);
 `
 const Wrapper = styled.div`
@@ -64,9 +62,13 @@ const ScrollWrapper = styled.div`
   bottom: 3px;
   opacity: 0.6;
 
-  @supports (mix-blend-mode: overlay) {
+  @supports (mix-blend-mode: difference) {
     opacity: 1;
-    mix-blend-mode: overlay;
+    mix-blend-mode: difference;
+
+    svg {
+      color: #557271;
+    }
   }
 `
 
@@ -88,7 +90,6 @@ export default class IndexPage extends Component<IndexPageProps> {
 
   componentDidMount() {
     window.addEventListener('load', () => {
-      console.log(this.maxHeightRef.getBoundingClientRect().height)
       this.setState(
         { maxHeight: `${this.maxHeightRef.getBoundingClientRect().height}px` },
         () => {
