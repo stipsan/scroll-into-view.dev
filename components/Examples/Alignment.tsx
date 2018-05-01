@@ -96,7 +96,7 @@ class Alignment extends PureComponent {
         </Example.Code>
         <Example.Result>
           <Example.ResultHeader>
-            <span>Scroll to:&nbsp;</span>
+            <span>Scroll to&nbsp;</span>
             <Example.Button onClick={() => this.doScroll(this.items[1])}>
               1
             </Example.Button>

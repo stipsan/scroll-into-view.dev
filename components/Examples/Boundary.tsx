@@ -1,19 +1,10 @@
-import { Fragment, PureComponent } from 'react'
+import { PureComponent } from 'react'
 import styled from 'styled-components'
-
-import Code from '../Code'
 import scrollIntoView from 'scroll-into-view-if-needed'
 
-const SIZE = 200
-
-const ScrollContainer = styled.div`
-  border: 1px solid hsla(0, 0%, 0%, 0.05);
-  box-sizing: content-box;
-  background: hsla(0, 0%, 0%, 0.05);
-  height: ${SIZE}px;
-  overflow: scroll;
-  width: ${SIZE}px;
-`
+import Code from '../Code'
+import * as Example from '../Example'
+import Select from '../Select'
 
 const Item = styled.div.attrs({
   className: 'has-background-dark is-size-4',
@@ -21,7 +12,7 @@ const Item = styled.div.attrs({
   align-items: center;
   border-radius: 4px;
   display: flex;
-  height: ${SIZE / 4 - 10}px;
+  height: ${Example.SIZE / 4 - 10}px;
   margin: 20px;
   color: white;
   justify-content: center;
@@ -56,15 +47,44 @@ class Boundary extends PureComponent<{}, BoundaryState> {
     const { boundary, block } = this.state
 
     return (
-      <Fragment>
-        <div className="columns">
-          <div className="column">
+      <Example.Section>
+        <Example.Code>
+          <Example.CodeHeader>
+            <div className="control">
+              <label>
+                Boundary:&nbsp;<input
+                  type="checkbox"
+                  checked={boundary}
+                  onChange={event =>
+                    this.setState({ boundary: event.target.checked })
+                  }
+                />
+              </label>
+            </div>
+            <Select
+              label="Block"
+              onChange={event =>
+                this.setState({
+                  block: event.target.value as
+                    | 'start'
+                    | 'center'
+                    | 'end'
+                    | 'nearest',
+                })
+              }
+              value={block}
+            >
+              <option value="start">Start</option>
+              <option value="center">Center</option>
+              <option value="end">End</option>
+              <option value="nearest">Nearest</option>
+            </Select>
+          </Example.CodeHeader>
+          <Example.CodeBody>
             <Code>{`
         import scrollIntoView from 'scroll-into-view-if-needed';
 
-        const nodes = document.querySelectorAll('#example-boundary > *')
-
-        scrollIntoView(nodes[3], {
+        scrollIntoView(node, {
           behavior: 'smooth',
           block: '${block}',
           ${
@@ -74,74 +94,33 @@ class Boundary extends PureComponent<{}, BoundaryState> {
           }
         })
         `}</Code>
-          </div>
-          <div className="column is-narrow has-text-centered">
-            <div className="buttons is-centered">
-              <span className="label">Scroll to:&nbsp;</span>
-              <a
-                className="button is-small"
-                onClick={() => this.doScroll(this.items[range[1]])}
-              >
-                {range[1]}
-              </a>
-              <a
-                className="button is-small"
-                onClick={() => this.doScroll(this.items[range[3]])}
-              >
-                {range[3]}
-              </a>
-              <a
-                className="button is-small"
-                onClick={() => this.doScroll(this.items[range[5]])}
-              >
-                {range[5]}
-              </a>
-            </div>
-            <ScrollContainer innerRef={node => (this.frameBoundary = node)}>
-              {range.map(name => (
-                <Item key={name}>
-                  <span ref={node => (this.items[name] = node)}>{name}</span>
-                </Item>
-              ))}
-            </ScrollContainer>
-          </div>
-        </div>
-        <div className="field is-grouped">
-          <div className="control">
-            <label className="checkbox">
-              Boundary:&nbsp;<input
-                type="checkbox"
-                checked={boundary}
-                onChange={event =>
-                  this.setState({ boundary: event.target.checked })
-                }
-              />
-            </label>
-          </div>
-          <div className="control">
-            Block:&nbsp;
-            <div className="select is-small">
-              <select
-                onChange={event =>
-                  this.setState({
-                    block: event.target.value as
-                      | 'start'
-                      | 'center'
-                      | 'end'
-                      | 'nearest',
-                  })
-                }
-                value={block}
-              >
-                <option value="start">Start</option>
-                <option value="center">Center</option>
-                <option value="end">End</option>
-                <option value="nearest">Nearest</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </Fragment>
+          </Example.CodeBody>
+        </Example.Code>
+        <Example.Result>
+          <Example.ResultHeader>
+            <span>Scroll to&nbsp;</span>
+            <Example.Button onClick={() => this.doScroll(this.items[range[1]])}>
+              {range[1]}
+            </Example.Button>
+            <Example.Button onClick={() => this.doScroll(this.items[range[3]])}>
+              {range[3]}
+            </Example.Button>
+            <Example.Button onClick={() => this.doScroll(this.items[range[5]])}>
+              {range[5]}
+            </Example.Button>
+          </Example.ResultHeader>
+          <Example.ScrollContainer
+            id="example-boundary"
+            innerRef={node => (this.frameBoundary = node)}
+          >
+            {range.map(name => (
+              <Item key={name}>
+                <span ref={node => (this.items[name] = node)}>{name}</span>
+              </Item>
+            ))}
+          </Example.ScrollContainer>
+        </Example.Result>
+      </Example.Section>
     )
   }
 }

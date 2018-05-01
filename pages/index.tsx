@@ -260,10 +260,7 @@ export default class IndexPage extends Component<IndexPageProps> {
                 then <code>boundary</code> is the answer.
               </p>
               <p>
-                Keep in mind this is a non-standard feature not in any spec. If
-                you want to use this library as a <code>ponyfill</code> that you
-                can easily delete the day browser support is good enough then
-                it's worth exploring other solutions to your use case.
+                Keep in mind this is a non-standard feature not in any spec.
               </p>
             </SectionIntro>
             <SectionCode>
@@ -278,10 +275,7 @@ export default class IndexPage extends Component<IndexPageProps> {
                 direction you can pass a function to <code>behavior</code>.
               </p>
               <p>
-                Just like <code>behavior</code> this is not in the spec. Also
-                note that you shouldn't combine this option with{' '}
-                <code>smooth-scroll-into-view-if-needed</code> or you'll bloat
-                your bundle for no reason.
+                Just like <code>behavior</code> this is not in the spec.
               </p>
             </SectionIntro>
             <SectionCode>

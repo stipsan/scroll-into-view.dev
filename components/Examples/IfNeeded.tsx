@@ -97,7 +97,7 @@ class IfNeeded extends PureComponent {
         </Example.Code>
         <Example.Result>
           <Example.ResultHeader>
-            <span>Scroll to:&nbsp;</span>
+            <span>Scroll to&nbsp;</span>
             <Example.Button onClick={() => this.doScroll(this.items.C)}>
               C
             </Example.Button>
