@@ -3,20 +3,11 @@ import styled from 'styled-components'
 import scrollIntoView from 'scroll-into-view-if-needed'
 
 import Code from '../Code'
+import * as Example from '../Example'
+import Select from '../Select'
 
-const SIZE = 200
-
-const ScrollContainer = styled.div`
-  box-sizing: content-box;
-  border: 1px solid hsla(0, 0%, 0%, 0.05);
-  background: hsla(0, 0%, 0%, 0.05);
-  height: ${SIZE}px;
-  overflow: scroll;
-  width: ${SIZE}px;
-`
-
-const layerSize = SIZE * 1.5 + SIZE / 6
-const layerPadding = SIZE / 12
+const layerSize = Example.SIZE * 1.5 + Example.SIZE / 6
+const layerPadding = Example.SIZE / 12
 const ScrollLayer = styled.div.attrs({
   className: 'columns is-multiline is-mobile is-gapless',
 })`
@@ -39,10 +30,10 @@ const Tile = styled.div.attrs({
   align-items: center;
   border-radius: 4px;
   display: flex;
-  height: ${SIZE / 3}px;
+  height: ${Example.SIZE / 3}px;
   color: hsla(0, 0%, 0%, 0.3);
   justify-content: center;
-  width: ${SIZE / 3}px;
+  width: ${Example.SIZE / 3}px;
 `
 
 const range = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -66,9 +57,32 @@ class Alignment extends PureComponent {
     const { block, inline } = this.state
 
     return (
-      <Fragment>
-        <div className="columns">
-          <div className="column">
+      <Example.Section>
+        <Example.Code>
+          <Example.CodeHeader>
+            <Select
+              label="Block"
+              onChange={event => this.setState({ block: event.target.value })}
+              value={block}
+            >
+              <option value="start">Start</option>
+              <option value="center">Center</option>
+              <option value="end">End</option>
+              <option value="nearest">Nearest</option>
+            </Select>
+
+            <Select
+              label="Inline"
+              onChange={event => this.setState({ inline: event.target.value })}
+              value={inline}
+            >
+              <option value="start">Start</option>
+              <option value="center">Center</option>
+              <option value="end">End</option>
+              <option value="nearest">Nearest</option>
+            </Select>
+          </Example.CodeHeader>
+          <Example.CodeBody>
             <Code>{`
         import scrollIntoView from 'scroll-into-view-if-needed';
 
@@ -78,76 +92,34 @@ class Alignment extends PureComponent {
           inline,
         })})
         `}</Code>
-          </div>
-          <div className="column is-narrow has-text-centered">
-            <div className="buttons is-centered">
-              <span className="label">Scroll to:&nbsp;</span>
-              <a
-                className="button is-small"
-                onClick={() => this.doScroll(this.items[1])}
-              >
-                1
-              </a>
-              <a
-                className="button is-small"
-                onClick={() => this.doScroll(this.items[5])}
-              >
-                5
-              </a>
-              <a
-                className="button is-small"
-                onClick={() => this.doScroll(this.items[9])}
-              >
-                9
-              </a>
-            </div>
-
-            <ScrollContainer>
-              <ScrollLayer id="example-alignment">
-                {range.map(number => (
-                  <Item key={number}>
-                    <Tile innerRef={node => (this.items[number] = node)}>
-                      {number}
-                    </Tile>
-                  </Item>
-                ))}
-              </ScrollLayer>
-            </ScrollContainer>
-          </div>
-        </div>
-        <div className="field is-grouped">
-          <div className="control">
-            Block:&nbsp;
-            <div className="select is-small">
-              <select
-                onChange={event => this.setState({ block: event.target.value })}
-                value={block}
-              >
-                <option value="start">Start</option>
-                <option value="center">Center</option>
-                <option value="end">End</option>
-                <option value="nearest">Nearest</option>
-              </select>
-            </div>
-          </div>
-          <div className="control">
-            Inline:&nbsp;
-            <div className="select is-small">
-              <select
-                onChange={event =>
-                  this.setState({ inline: event.target.value })
-                }
-                value={inline}
-              >
-                <option value="start">Start</option>
-                <option value="center">Center</option>
-                <option value="end">End</option>
-                <option value="nearest">Nearest</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </Fragment>
+          </Example.CodeBody>
+        </Example.Code>
+        <Example.Result>
+          <Example.ResultHeader>
+            <span>Scroll to:&nbsp;</span>
+            <Example.Button onClick={() => this.doScroll(this.items[1])}>
+              1
+            </Example.Button>
+            <Example.Button onClick={() => this.doScroll(this.items[5])}>
+              5
+            </Example.Button>
+            <Example.Button onClick={() => this.doScroll(this.items[9])}>
+              9
+            </Example.Button>
+          </Example.ResultHeader>
+          <Example.ScrollContainer>
+            <ScrollLayer>
+              {range.map(number => (
+                <Item key={number}>
+                  <Tile innerRef={node => (this.items[number] = node)}>
+                    {number}
+                  </Tile>
+                </Item>
+              ))}
+            </ScrollLayer>
+          </Example.ScrollContainer>
+        </Example.Result>
+      </Example.Section>
     )
   }
 }

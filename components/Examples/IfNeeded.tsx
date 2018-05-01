@@ -1,11 +1,11 @@
 import { PureComponent } from 'react'
 import styled from 'styled-components'
 import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
+import scrollIntoView from 'scroll-into-view-if-needed'
 
 import Code from '../Code'
 import * as Example from '../Example'
 import Select from '../Select'
-import scrollIntoView from 'scroll-into-view-if-needed'
 
 const Item = styled.div.attrs({
   className: 'has-background-primary is-size-4',
@@ -98,13 +98,13 @@ class IfNeeded extends PureComponent {
         <Example.Result>
           <Example.ResultHeader>
             <span>Scroll to:&nbsp;</span>
-            <Example.Button key="C" onClick={() => this.doScroll(this.items.C)}>
+            <Example.Button onClick={() => this.doScroll(this.items.C)}>
               C
             </Example.Button>
-            <Example.Button key="D" onClick={() => this.doScroll(this.items.D)}>
+            <Example.Button onClick={() => this.doScroll(this.items.D)}>
               D
             </Example.Button>
-            <Example.Button key="F" onClick={() => this.doScroll(this.items.F)}>
+            <Example.Button onClick={() => this.doScroll(this.items.F)}>
               F
             </Example.Button>
           </Example.ResultHeader>

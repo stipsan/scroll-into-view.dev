@@ -90,6 +90,19 @@ const IntroductionSection = styled(Section)`
   }
 `
 
+const OtherSection = styled(Section).attrs({
+  className: 'columns is-multiline is-desktop',
+})``
+
+const SectionIntro = styled.div.attrs({
+  className: 'column is-one-third-desktop',
+})`
+  min-width: 250px;
+`
+const SectionCode = styled.div.attrs({
+  className: 'column is-two-thirds-desktop',
+})``
+
 export default class IndexPage extends Component<IndexPageProps> {
   static defaultProps = {
     items: Array.apply(null, { length: 100 }).map(Number.call, Number),
@@ -184,11 +197,8 @@ export default class IndexPage extends Component<IndexPageProps> {
               </p>
             </div>
           </IntroductionSection>
-          <Section className="columns is-multiline is-desktop">
-            <div
-              className="column is-one-third-desktop"
-              style={{ minWidth: '250px' }}
-            >
+          <OtherSection>
+            <SectionIntro>
               <h3 className="title">Scrolling if needed</h3>
               <p className="subtitle">
                 When deciding if scrolling is needed the visibility of the
@@ -216,20 +226,18 @@ export default class IndexPage extends Component<IndexPageProps> {
                 in this{' '}
                 <a href="https://codepen.io/stipsan/pen/NMxLew">CodePen</a>.
               </p>
-            </div>
-            <div className="column is-two-thirds-desktop">
+            </SectionIntro>
+            <SectionCode>
               <IfNeeded />
-            </div>
-          </Section>
-          <Section className="columns">
-            <div className="column is-one-third">
+            </SectionCode>
+          </OtherSection>
+          <OtherSection>
+            <SectionIntro>
               <h3 className="title">Scroll alignment</h3>
               <p className="subtitle">
-                The options <code>block</code> and <code>inline</code> each have
-                one of <code>"start"</code>, <code>"center"</code>,{' '}
-                <code>"end"</code> or <code>"nearest"</code>. The default values
-                are <code>block: "center"</code> and{' '}
-                <code>inline: "nearest"</code>.
+                The position options for both <code>block</code> and{' '}
+                <code>inline</code> are supported. Mix and match to your heart's
+                content.
               </p>
               <p>
                 Usually <code>block</code> aligns vertically, while{' '}
@@ -238,13 +246,13 @@ export default class IndexPage extends Component<IndexPageProps> {
                   writing-mode
                 </a>.
               </p>
-            </div>
-            <div className="column">
+            </SectionIntro>
+            <SectionCode>
               <Alignment />
-            </div>
-          </Section>
-          <Section className="columns">
-            <div className="column is-one-third">
+            </SectionCode>
+          </OtherSection>
+          <OtherSection>
+            <SectionIntro>
               <h3 className="title">Limit propagation</h3>
               <p className="subtitle">
                 Boundaries are good, that's what people keep saying. If you want
@@ -257,13 +265,13 @@ export default class IndexPage extends Component<IndexPageProps> {
                 can easily delete the day browser support is good enough then
                 it's worth exploring other solutions to your use case.
               </p>
-            </div>
-            <div className="column">
+            </SectionIntro>
+            <SectionCode>
               <Boundary />
-            </div>
-          </Section>
-          <Section className="columns">
-            <div className="column is-one-third">
+            </SectionCode>
+          </OtherSection>
+          <OtherSection>
+            <SectionIntro>
               <h3 className="title">Custom transition: popmotion example</h3>
               <p className="subtitle">
                 If you want a different easing, duration or another creative
@@ -275,11 +283,11 @@ export default class IndexPage extends Component<IndexPageProps> {
                 <code>smooth-scroll-into-view-if-needed</code> or you'll bloat
                 your bundle for no reason.
               </p>
-            </div>
-            <div className="column">
+            </SectionIntro>
+            <SectionCode>
               <OverrideBehavior />
-            </div>
-          </Section>
+            </SectionCode>
+          </OtherSection>
         </div>
         <Footer />
       </div>
