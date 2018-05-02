@@ -276,7 +276,7 @@ export default class IndexPage extends Component<IndexPageProps> {
                 direction you can pass a function to <code>behavior</code>.
               </p>
               <p>
-                Just like <code>behavior</code> this is not in the spec.
+                Just like <code>boundary</code> this is not in the spec.
               </p>
             </SectionIntro>
             <SectionCode>
