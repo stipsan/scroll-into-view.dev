@@ -6618,7 +6618,14 @@ redent@^2.0.0:
     indent-string "^3.0.0"
     strip-indent "^2.0.0"
 
-refractor@2.4.0, refractor@^2.3.0:
+refractor@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.4.1.tgz#067654311ed1618fc2dd76e9263c8cf05ab6298b"
+  dependencies:
+    hastscript "^3.1.0"
+    prismjs "~1.14.0"
+
+refractor@^2.3.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.4.0.tgz#32fdc855f10ce67228ae3ca5221a89a5e8c8455e"
   dependencies:
