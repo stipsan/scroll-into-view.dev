@@ -44,7 +44,7 @@ class Boundary extends PureComponent {
     scrollIntoView(target, {
       behavior: instructions => {
         const [{ el, left }] = instructions
-        const elementScroll = scroll(el)
+        const elementScroll = scroll(el as HTMLElement)
 
         spring({
           from: el.scrollLeft,
