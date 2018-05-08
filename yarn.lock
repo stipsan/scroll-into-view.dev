@@ -770,9 +770,9 @@
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.0.0.tgz#c40f8e07dce607d3ef25a626b93a6a7cdcf97881"
 
-"@types/node@9.6.13":
-  version "9.6.13"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.13.tgz#ab0e691f166500b04075a2f01ca49235ea58e816"
+"@types/node@9.6.14":
+  version "9.6.14"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.14.tgz#79b5167f822d5fb0fb2b5c92ca150391ae0f2542"
 
 "@types/prettier@1.12.1":
   version "1.12.1"
@@ -785,13 +785,7 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react@*":
-  version "16.3.13"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.13.tgz#47d466462b774556c1174ea0eda22c0578643362"
-  dependencies:
-    csstype "^2.2.0"
-
-"@types/react@16.3.14":
+"@types/react@*", "@types/react@16.3.14":
   version "16.3.14"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.14.tgz#f90ac6834de172e13ecca430dcb6814744225d36"
   dependencies:
