@@ -6151,9 +6151,9 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
-popmotion@8.1.22:
-  version "8.1.22"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.1.22.tgz#71857484546ae5b7335b0704423a3a761de1fe67"
+popmotion@8.1.24:
+  version "8.1.24"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.1.24.tgz#9c8943a0dda1a39163cf3e42116c1fb6c41e331e"
   dependencies:
     framesync "^3.1.7"
     style-value-types "^1.0.4"
