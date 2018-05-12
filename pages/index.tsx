@@ -22,7 +22,7 @@ injectGlobal`
   }
 `
 
-export interface IndexPageProps {
+interface IndexPageProps {
   items: number[]
 }
 
