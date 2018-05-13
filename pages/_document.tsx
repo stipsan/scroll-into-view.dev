@@ -25,9 +25,7 @@ export default class MyDocument extends Document {
           <link
             rel="stylesheet"
             // @TODO setup proper css loading
-            href={`https://cdnjs.cloudflare.com/ajax/libs/bulma/${
-              bulmaVersion
-            }/css/bulma.min.css`}
+            href={`https://cdnjs.cloudflare.com/ajax/libs/bulma/${bulmaVersion}/css/bulma.min.css`}
           />
 
           {this.props.styleTags}
