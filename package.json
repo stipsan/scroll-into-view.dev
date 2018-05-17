@@ -37,7 +37,7 @@
     "cypress": "2.1.0",
     "eslint": "4.19.1",
     "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-import": "2.12.0",
     "eslint-plugin-react": "7.8.2",
     "husky": "0.14.3",
     "lerna": "2.11.0",
