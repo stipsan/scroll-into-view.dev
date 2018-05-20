@@ -3330,6 +3330,10 @@ estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
 
+estree-walker@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.5.2.tgz#d3850be7529c9580d815600b53126515e146dd39"
+
 esutils@2.0.2, esutils@^2.0.0, esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
@@ -3692,9 +3696,9 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framesync@^3.0.2, framesync@^3.1.7:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.7.tgz#9b9aa3eff8598625302597851a428f40c3dc1c6b"
+framesync@^3.1.8, framesync@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
 
 fresh@0.5.2:
   version "0.5.2"
@@ -4107,6 +4111,10 @@ hawk@~6.0.2:
     cryptiles "3.x.x"
     hoek "4.x.x"
     sntp "2.x.x"
+
+hey-listen@^1.0.4, hey-listen@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/hey-listen/-/hey-listen-1.0.5.tgz#6d0a3a2f60177f65bc4404d571a00025bf5dc20e"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -5282,6 +5290,12 @@ lru-cache@^4.0.1, lru-cache@^4.1.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+magic-string@^0.22.4:
+  version "0.22.5"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.22.5.tgz#8e9cf5afddf44385c1da5bc2a6a0dbd10b03657e"
+  dependencies:
+    vlq "^0.2.2"
+
 make-dir@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.2.0.tgz#6d6a49eead4aae296c53bbf3a1a008bd6c89469b"
@@ -6152,13 +6166,15 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
-popmotion@8.1.24:
-  version "8.1.24"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.1.24.tgz#9c8943a0dda1a39163cf3e42116c1fb6c41e331e"
+popmotion@8.2.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.2.1.tgz#ea94cc8ef6c5e6b29ccbfd9b28815bb113178f53"
   dependencies:
-    framesync "^3.1.7"
-    style-value-types "^1.0.4"
-    stylefire "^1.2.9"
+    framesync "^3.1.9"
+    hey-listen "^1.0.5"
+    rollup-plugin-replace "^2.0.0"
+    style-value-types "^1.0.8"
+    stylefire "^2.0.2"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -6934,6 +6950,21 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rollup-plugin-replace@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-replace/-/rollup-plugin-replace-2.0.0.tgz#19074089c8ed57184b8cc64e967a03d095119277"
+  dependencies:
+    magic-string "^0.22.4"
+    minimatch "^3.0.2"
+    rollup-pluginutils "^2.0.1"
+
+rollup-pluginutils@^2.0.1:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.2.0.tgz#64ba3f29988b84322bafa188a9f99ca731c95354"
+  dependencies:
+    estree-walker "^0.5.2"
+    micromatch "^2.3.11"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -7448,9 +7479,9 @@ strong-log-transformer@^1.0.6:
     moment "^2.6.0"
     through "^2.3.4"
 
-style-value-types@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-1.0.4.tgz#58df3a09281d719d981ee4a317addc434eecc877"
+style-value-types@^1.0.6, style-value-types@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-1.0.8.tgz#7effacf9145dc6992d7b8389ae1c5f99209a4551"
 
 styled-components@3.2.6:
   version "3.2.6"
@@ -7479,12 +7510,13 @@ styled-jsx@2.2.6:
     stylis "3.4.10"
     stylis-rule-sheet "0.0.8"
 
-stylefire@^1.2.9:
-  version "1.2.14"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-1.2.14.tgz#33c711e3f79da8e8ab80e4a935b12576a4b92c8e"
+stylefire@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.2.tgz#2c0c5d2749a22f71d3c5ae95889dcee1b3597599"
   dependencies:
-    framesync "^3.0.2"
-    style-value-types "^1.0.4"
+    framesync "^3.1.8"
+    hey-listen "^1.0.4"
+    style-value-types "^1.0.6"
 
 stylis-rule-sheet@0.0.8:
   version "0.0.8"
@@ -8056,6 +8088,10 @@ vfile@^2.0.0:
     replace-ext "1.0.0"
     unist-util-stringify-position "^1.0.0"
     vfile-message "^1.0.0"
+
+vlq@^0.2.2:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
 
 vm-browserify@0.0.4:
   version "0.0.4"
