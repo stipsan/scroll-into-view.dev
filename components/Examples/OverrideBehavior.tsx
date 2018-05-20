@@ -1,9 +1,8 @@
-import { PureComponent } from 'react'
-import styled from 'styled-components'
-import scrollIntoView from 'scroll-into-view-if-needed'
-import scroll from 'stylefire/scroll'
 import { spring } from 'popmotion'
-
+import { PureComponent } from 'react'
+import scrollIntoView from 'scroll-into-view-if-needed'
+import styled from 'styled-components'
+import styler from 'stylefire'
 import Code from '../Code'
 import * as Example from '../Example'
 import Select from '../Select'
@@ -44,12 +43,12 @@ class Boundary extends PureComponent {
     scrollIntoView(target, {
       behavior: instructions => {
         const [{ el, left }] = instructions
-        const elementScroll = scroll(el as HTMLElement)
+        const elStyler = styler(el as HTMLElement, {})
 
         spring({
           from: el.scrollLeft,
           to: left,
-        }).start(v => elementScroll.set('left', v))
+        }).start(v => elStyler.set('scrollLeft', v))
       },
       boundary: this.container,
       inline: this.state.inline,
@@ -80,15 +79,15 @@ class Boundary extends PureComponent {
           <Example.CodeBody>
             <Code>{`
         import scrollIntoView from 'scroll-into-view-if-needed';
-        import scroll from 'stylefire/scroll'
+        import styler from 'stylefire'
         import { spring } from 'popmotion'
 
         scrollIntoView(node, {behavior: instructions => {
           const [{ el, left }] = instructions
-            const elementScroll = scroll(el)
+            const elStyler = styler(el)
     
             spring({from: el.scrollLeft,to: left})
-            .start((left) => elementScroll.set('left', left))
+            .start((left) => elStyler.set('scrollLeft', left))
             
           },inline: ${JSON.stringify(this.state.inline)}})
         `}</Code>
