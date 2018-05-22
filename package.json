@@ -15,7 +15,7 @@
     "@zeit/next-typescript": "0.1.1",
     "babel-plugin-styled-components": "1.5.1",
     "bulma": "0.7.1",
-    "codemirror": "5.37.0",
+    "codemirror": "5.38.0",
     "fork-ts-checker-webpack-plugin": "0.4.1",
     "next": "6.0.3",
     "popmotion": "8.2.1",
