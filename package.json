@@ -7,7 +7,7 @@
     "test": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'"
   },
   "dependencies": {
-    "@types/next": "2.4.10",
+    "@types/next": "2.4.11",
     "@types/node": "9.6.18",
     "@types/prettier": "1.12.2",
     "@types/react": "16.3.14",
