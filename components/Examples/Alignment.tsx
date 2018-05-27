@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
-import styled from 'styled-components'
 import scrollIntoView from 'scroll-into-view-if-needed'
-
+import styled from 'styled-components'
 import Code from '../Code'
 import * as Example from '../Example'
 import Select from '../Select'
@@ -111,7 +110,11 @@ class Alignment extends PureComponent {
             <ScrollLayer>
               {range.map(number => (
                 <Item key={number}>
-                  <Tile innerRef={node => (this.items[number] = node)}>
+                  <Tile
+                    innerRef={node =>
+                      (this.items[number] = node as HTMLElement)
+                    }
+                  >
                     {number}
                   </Tile>
                 </Item>
