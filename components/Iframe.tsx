@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types'
 import { Component } from 'react'
 import { createPortal } from 'react-dom'
-import PropTypes from 'prop-types'
 import styled, { StyleSheetManager } from 'styled-components'
 import { dimensions } from '../utils'
 
@@ -43,7 +43,10 @@ class Iframe extends Component {
 
   render() {
     return (
-      <Wrapper frameBorder="0" innerRef={frame => (this.frame = frame)}>
+      <Wrapper
+        frameBorder="0"
+        innerRef={frame => (this.frame = frame as HTMLIFrameElement)}
+      >
         {this.state.mounted &&
           createPortal(
             <StyleSheetManager target={this.frame.contentDocument.head}>
