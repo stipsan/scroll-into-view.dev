@@ -1,31 +1,16 @@
-import parse from 'prettier-browser/src/parser-babylon'
-import { printAstToDoc } from 'prettier-browser/src/printer'
-import { printDocToString } from 'prettier-browser/src/doc-printer'
+const prettier = require('prettier/standalone')
+const plugins = [require('prettier/parser-babylon')]
 
 export const dimensions = {
   maxWidth: 1220,
 }
 
 export function format(code) {
-  let opts = {
-    cursorOffset: -1,
-    rangeStart: 0,
-    rangeEnd: Infinity,
-    useTabs: false,
-    tabWidth: 2,
+  return prettier.format(code, {
+    parser: 'babylon',
     printWidth: 60,
     singleQuote: true,
-    trailingComma: 'none',
-    bracketSpacing: true,
-    jsxBracketSameLine: false,
-    parser: 'babylon',
-    insertPragma: false,
-    requirePragma: false,
-    semi: true,
-    originalText: code,
-  }
-  const ast = parse(code)
-  const doc = printAstToDoc(ast, opts)
-  const result = printDocToString(doc, opts)
-  return result.formatted
+    trailingComma: 'es5',
+    plugins,
+  })
 }
