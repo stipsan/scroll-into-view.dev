@@ -1,15 +1,14 @@
 import { Component } from 'react'
-import systemFontStack from 'system-font-stack'
+import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import styled, { injectGlobal } from 'styled-components'
-import Section from '../components/Section'
-import Footer from '../components/Footer'
-import { Text as TextIcon, Chrome } from '../components/Icons'
-import IfNeeded from '../components/Examples/IfNeeded'
+import systemFontStack from 'system-font-stack'
 import Alignment from '../components/Examples/Alignment'
 import Boundary from '../components/Examples/Boundary'
+import IfNeeded from '../components/Examples/IfNeeded'
 import OverrideBehavior from '../components/Examples/OverrideBehavior'
-
-import scrollIntoView from 'smooth-scroll-into-view-if-needed'
+import Footer from '../components/Footer'
+import { Chrome, Text as TextIcon } from '../components/Icons'
+import Section from '../components/Section'
 
 injectGlobal`
   html,
@@ -148,7 +147,9 @@ export default class IndexPage extends Component<IndexPageProps> {
     return (
       <div>
         <Hero>
-          <Wrapper innerRef={node => (this.scrollToBoundary = node)}>
+          <Wrapper
+            innerRef={node => (this.scrollToBoundary = node as HTMLElement)}
+          >
             <Chrome innerRef={node => (this.maxHeightRef = node)} />
             <ScrollWrapper
               style={{
