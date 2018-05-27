@@ -19,7 +19,7 @@
     "fork-ts-checker-webpack-plugin": "0.4.1",
     "next": "6.0.3",
     "popmotion": "8.2.3",
-    "prettier-browser": "git://github.com/prettier/prettier.git#1.8.2",
+    "prettier": "1.13.0",
     "react": "16.4.0",
     "react-dom": "16.4.0",
     "react-refractor": "1.0.1",
@@ -28,8 +28,7 @@
     "smooth-scroll-into-view-if-needed": "1.1.5",
     "styled-components": "3.2.6",
     "system-font-stack": "1.0.5",
-    "typescript": "2.8.3",
-    "uglifyjs-webpack-plugin": "1.2.5"
+    "typescript": "2.8.3"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "2.0.1",
@@ -42,7 +41,6 @@
     "husky": "0.14.3",
     "lerna": "2.11.0",
     "lint-staged": "7.1.2",
-    "prettier": "1.13.0",
     "prettier-package-json": "1.6.0",
     "tsify": "4.0.0"
   },
