@@ -1,7 +1,6 @@
 import { PureComponent } from 'react'
-import styled from 'styled-components'
 import scrollIntoView from 'scroll-into-view-if-needed'
-
+import styled from 'styled-components'
 import Code from '../Code'
 import * as Example from '../Example'
 import Select from '../Select'
@@ -111,10 +110,13 @@ class Boundary extends PureComponent<{}, BoundaryState> {
           </Example.ResultHeader>
           <Example.ScrollContainer
             id="example-boundary"
-            innerRef={node => (this.frameBoundary = node)}
+            innerRef={node => (this.frameBoundary = node as Element)}
           >
             {range.map(name => (
-              <Item key={name} innerRef={node => (this.items[name] = node)}>
+              <Item
+                key={name}
+                innerRef={node => (this.items[name] = node as HTMLElement)}
+              >
                 {name}
               </Item>
             ))}

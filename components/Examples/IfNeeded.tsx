@@ -1,8 +1,7 @@
 import { PureComponent } from 'react'
-import styled from 'styled-components'
-import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
 import scrollIntoView from 'scroll-into-view-if-needed'
-
+import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
+import styled from 'styled-components'
 import Code from '../Code'
 import * as Example from '../Example'
 import Select from '../Select'
@@ -110,7 +109,10 @@ class IfNeeded extends PureComponent {
           </Example.ResultHeader>
           <Example.ScrollContainer>
             {range.map(name => (
-              <Item key={name} innerRef={node => (this.items[name] = node)}>
+              <Item
+                key={name}
+                innerRef={node => (this.items[name] = node as HTMLElement)}
+              >
                 {name}
               </Item>
             ))}
