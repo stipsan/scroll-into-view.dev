@@ -18,7 +18,7 @@
     "codemirror": "5.38.0",
     "fork-ts-checker-webpack-plugin": "0.4.1",
     "next": "6.0.3",
-    "popmotion": "8.2.2",
+    "popmotion": "8.2.3",
     "prettier-browser": "git://github.com/prettier/prettier.git#1.8.2",
     "react": "16.4.0",
     "react-dom": "16.4.0",
