@@ -5658,9 +5658,9 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-popmotion@8.2.4:
-  version "8.2.4"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.2.4.tgz#161ab0c09b0d4d50ee7779574075181d0c600374"
+popmotion@8.2.5:
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.2.5.tgz#29decf7747720cb95e960bd9c9f9fa92f4163835"
   dependencies:
     framesync "^3.1.9"
     hey-listen "^1.0.5"
