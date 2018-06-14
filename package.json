@@ -28,7 +28,7 @@
     "smooth-scroll-into-view-if-needed": "1.1.7",
     "styled-components": "3.3.2",
     "system-font-stack": "1.0.5",
-    "typescript": "2.9.1"
+    "typescript": "2.9.2"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "2.0.1",
