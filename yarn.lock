@@ -752,12 +752,19 @@
   version "2.2.44"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.44.tgz#1d4a798e53f35212fd5ad4d04050620171cd5b5e"
 
-"@types/next@2.4.12":
-  version "2.4.12"
-  resolved "https://registry.yarnpkg.com/@types/next/-/next-2.4.12.tgz#fb85497ca7d5be9a3f603c6642b77dca5de2cb6e"
+"@types/next@6.0.2":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@types/next/-/next-6.0.2.tgz#895b4196eded4f3e4b25e51007bbcc0ea1f3dc77"
   dependencies:
     "@types/node" "*"
+    "@types/node-fetch" "*"
     "@types/react" "*"
+
+"@types/node-fetch@*":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.1.1.tgz#1e8d0abf4c438828ce9c74b45d564a8a93e48cec"
+  dependencies:
+    "@types/node" "*"
 
 "@types/node@*":
   version "10.0.0"
