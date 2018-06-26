@@ -10,7 +10,7 @@
     "@types/next": "6.0.2",
     "@types/node": "9.6.18",
     "@types/prettier": "1.13.1",
-    "@types/react": "16.4.1",
+    "@types/react": "16.4.2",
     "@types/react-dom": "16.0.6",
     "@zeit/next-typescript": "0.1.1",
     "babel-plugin-styled-components": "1.5.1",
@@ -88,6 +88,6 @@
     ]
   },
   "resolutions": {
-    "@types/react": "16.4.1"
+    "@types/react": "16.4.2"
   }
 }
