@@ -17,7 +17,7 @@
     "bulma": "0.7.1",
     "codemirror": "5.39.0",
     "fork-ts-checker-webpack-plugin": "0.4.2",
-    "next": "6.0.3",
+    "next": "6.1.0",
     "popmotion": "8.3.2",
     "prettier": "1.13.6",
     "react": "16.4.1",
