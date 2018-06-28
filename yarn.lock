@@ -5737,14 +5737,14 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-popmotion@8.3.2:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.2.tgz#ee4ed43bccbab285e0e81fe6d8a7472a34525e36"
+popmotion@8.3.3:
+  version "8.3.3"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.3.tgz#af87d4f260f323f0a47c36aea32a18b568640bb0"
   dependencies:
     framesync "^3.1.9"
     hey-listen "^1.0.5"
-    style-value-types "^3.0.2"
-    stylefire "^2.0.5"
+    style-value-types "^3.0.3"
+    stylefire "^2.0.6"
     tslib "^1.9.1"
 
 posix-character-classes@^0.1.0:
@@ -6835,9 +6835,9 @@ strong-log-transformer@^1.0.6:
     moment "^2.6.0"
     through "^2.3.4"
 
-style-value-types@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.2.tgz#6623aba812390a681ab84c7153097d8542518604"
+style-value-types@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.3.tgz#1643486f1b9cfb5402bb5e7876a984d6619e9f82"
 
 styled-components@3.3.3:
   version "3.3.3"
@@ -6866,13 +6866,13 @@ styled-jsx@2.2.6:
     stylis "3.4.10"
     stylis-rule-sheet "0.0.8"
 
-stylefire@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.5.tgz#f4b546b0f662dbcc255196802134a9c9e03c92d6"
+stylefire@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.6.tgz#aa35093b782e1d2ea746d9aac483f38366954e19"
   dependencies:
     framesync "^3.1.8"
     hey-listen "^1.0.4"
-    style-value-types "^3.0.2"
+    style-value-types "^3.0.3"
     tslib "^1.9.1"
 
 stylis-rule-sheet@0.0.8:
