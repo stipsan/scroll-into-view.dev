@@ -19,7 +19,7 @@
     "fork-ts-checker-webpack-plugin": "0.4.2",
     "next": "6.1.0",
     "popmotion": "8.3.3",
-    "prettier": "1.13.6",
+    "prettier": "1.13.7",
     "react": "16.4.1",
     "react-dom": "16.4.1",
     "react-refractor": "1.0.1",
