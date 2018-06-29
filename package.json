@@ -33,7 +33,7 @@
   "devDependencies": {
     "@cypress/webpack-preprocessor": "2.0.1",
     "babel-eslint": "8.2.5",
-    "cypress": "3.0.1",
+    "cypress": "3.0.2",
     "eslint": "5.0.1",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-import": "2.13.0",
