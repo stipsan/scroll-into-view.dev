@@ -6,6 +6,9 @@ const {
 const {
   version: smoothVersion,
 } = require('smooth-scroll-into-view-if-needed/package.json')
+const {
+  version: computeVersion,
+} = require('compute-scroll-into-view/package.json')
 
 const Wrapper = styled.footer`
   margin-top: 20px;
@@ -40,6 +43,15 @@ export default () => (
                 smooth-scroll-into-view-if-needed
               </span>
               <span className="tag is-info">{smoothVersion}</span>
+            </div>
+          </a>
+          <a
+            href="https://www.npmjs.com/package/compute-scroll-into-view"
+            className="control"
+          >
+            <div className="tags has-addons">
+              <span className="tag is-dark">compute-scroll-into-view</span>
+              <span className="tag is-info">{computeVersion}</span>
             </div>
           </a>
         </div>
