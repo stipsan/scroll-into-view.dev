@@ -45,7 +45,7 @@ export default () => (
               <span className="tag is-info">{smoothVersion}</span>
             </div>
           </a>
-  <a
+          <a
             href="https://www.npmjs.com/package/compute-scroll-into-view"
             className="control"
           >
