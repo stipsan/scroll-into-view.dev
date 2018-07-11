@@ -4,6 +4,7 @@
     "precommit": "lint-staged",
     "deploy": "next build && next export",
     "dev": "next",
+    "lint": "lynt --ignore out --env mocha --global cy --typescript --react",
     "test": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'"
   },
   "dependencies": {
@@ -31,16 +32,10 @@
     "typescript": "2.9.2"
   },
   "devDependencies": {
-    "@cypress/webpack-preprocessor": "2.0.1",
-    "babel-eslint": "8.2.5",
     "cypress": "3.0.2",
-    "eslint": "5.1.0",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.13.0",
-    "eslint-plugin-react": "7.10.0",
     "husky": "0.14.3",
-    "lerna": "2.11.0",
     "lint-staged": "7.2.0",
+    "lynt": "0.4.0",
     "prettier-package-json": "1.6.0",
     "tsify": "4.0.0"
   },
