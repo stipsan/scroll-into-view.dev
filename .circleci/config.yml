@@ -5,7 +5,6 @@ jobs:
       - image: cypress/base:8
         environment:
           ## this enables colors in the output
-          TERM: xterm
     steps:
       - checkout
       - restore_cache:
@@ -17,6 +16,8 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
+      - run: yarn typecheck
+      - run: yarn lint
       - run:
            command: yarn start
            background: true
