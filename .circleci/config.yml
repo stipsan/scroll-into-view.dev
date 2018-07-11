@@ -3,8 +3,6 @@ jobs:
   build:
     docker:
       - image: cypress/base:8
-        environment:
-          ## this enables colors in the output
     steps:
       - checkout
       - restore_cache:
