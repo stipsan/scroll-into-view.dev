@@ -8,7 +8,9 @@
     "lynt": "lynt --ignore out",
     "lynt:js": "yarn lynt --env mocha --global cy",
     "lynt:ts": "yarn lynt --typescript --react",
-    "test": "cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'",
+    "prestart": "next build",
+    "start": "next start",
+    "test": "cypress run",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
