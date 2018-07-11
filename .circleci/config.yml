@@ -17,7 +17,9 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
-      - run: $(yarn bin)/cypress run --record --key <record_key>
+      - run: $(yarn bin)/cypress run --record --key $RECORD_KEY --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'
+      - store_test_results:
+          path: junit
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:

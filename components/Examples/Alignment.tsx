@@ -48,6 +48,7 @@ class Alignment extends PureComponent {
   doScroll = target =>
     scrollIntoView(target, {
       behavior: 'smooth',
+      // @TODO resolve "as" tricks here
       block: this.state.block as 'start' | 'center' | 'end' | 'nearest',
       inline: this.state.inline as 'start' | 'center' | 'end' | 'nearest',
     })
