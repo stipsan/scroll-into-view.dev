@@ -1,5 +1,6 @@
 /* tslint:disable:no-var-requires */
 
+import React from 'react'
 import styled from 'styled-components'
 
 const {

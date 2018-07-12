@@ -1,9 +1,11 @@
-/* tslint:disable:jsx-no-multiline-js jsx-no-lambda no-parameter-reassignment */
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda no-parameter-reassignment no-var-requires */
 
-import { Component } from 'react'
+import React, { Component } from 'react'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import styled, { injectGlobal } from 'styled-components'
 import systemFontStack from 'system-font-stack'
+import Helmet from 'react-helmet'
+
 import Alignment from '../components/Examples/Alignment'
 import Boundary from '../components/Examples/Boundary'
 import IfNeeded from '../components/Examples/IfNeeded'
@@ -12,14 +14,18 @@ import Footer from '../components/Footer'
 import { Chrome, Text as TextIcon } from '../components/Icons'
 import Section from '../components/Section'
 
+import 'bulma/css/bulma.min.css'
+
+const { description } = require('scroll-into-view-if-needed/package.json')
+
 injectGlobal`
   html,
   body {
-    margin: 0;
-    padding: 0;
+    margin: 0!important;
+    padding: 0!important;
   }
   body {
-    font-family: ${systemFontStack};
+    font-family: ${systemFontStack}!important;
   }
 `
 
@@ -79,9 +85,9 @@ const ScrollWrapper = styled.div`
 `
 
 const IntroductionSection = styled(Section)`
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 
-  padding-bottom: 3rem;
+  padding-bottom: 3rem !important;
   margin-bottom: 3rem !important;
   position: relative;
 
@@ -148,6 +154,12 @@ export default class IndexPage extends Component<IndexPageProps> {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>{description}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:description" content={description} />
+          <meta name="description" content={description} />
+        </Helmet>
         <Hero>
           <Wrapper
             innerRef={node => (this.scrollToBoundary = node as HTMLElement)}

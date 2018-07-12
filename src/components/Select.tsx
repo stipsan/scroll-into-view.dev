@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default ({ label, children, ...props }) => (
   <div className="control">
     {label}:&nbsp;
