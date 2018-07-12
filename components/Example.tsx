@@ -71,13 +71,17 @@ export const Result = styled.div.attrs({
   }
 `
 
-export const ResultHeader = styled(Header)`
+export const ResultHeader = styled(Header).attrs({
+  className: 'example-controls',
+})`
   align-items: center;
   justify-content: center;
   flex-direction: row;
 `
 
-export const ScrollContainer = styled.div`
+export const ScrollContainer = styled.div.attrs({
+  className: 'example-container',
+})`
   box-sizing: content-box;
   box-shadow: 0 0 0 1px #e4e4e4;
   background: hsla(0, 0%, 0%, 0.05);
@@ -89,8 +93,9 @@ export const ScrollContainer = styled.div`
   width: ${SIZE}px;
 `
 
-export const Button = styled.a.attrs({
+export const Button = styled.button.attrs({
   className: 'button is-small',
+  type: 'button',
 })`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;

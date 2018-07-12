@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+
 import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import styled from 'styled-components'
@@ -45,6 +47,16 @@ class Boundary extends PureComponent<{}, BoundaryState> {
   render() {
     const { boundary, block } = this.state
 
+    const SourceCode = `
+    import scrollIntoView from 'scroll-into-view-if-needed';
+
+    scrollIntoView(node, {
+      behavior: 'smooth',
+      block: '${block}',
+      ${boundary ? 'boundary: document.getElementById("example-boundary")' : ''}
+    })
+    `
+
     return (
       <Example.Section>
         <Example.Code>
@@ -52,6 +64,7 @@ class Boundary extends PureComponent<{}, BoundaryState> {
             <div className="control">
               <label>
                 Boundary:&nbsp;<input
+                  name="boundary"
                   type="checkbox"
                   checked={boundary}
                   onChange={event =>
@@ -80,19 +93,7 @@ class Boundary extends PureComponent<{}, BoundaryState> {
             </Select>
           </Example.CodeHeader>
           <Example.CodeBody>
-            <Code>{`
-        import scrollIntoView from 'scroll-into-view-if-needed';
-
-        scrollIntoView(node, {
-          behavior: 'smooth',
-          block: '${block}',
-          ${
-            boundary
-              ? 'boundary: document.getElementById("example-boundary")'
-              : ''
-          }
-        })
-        `}</Code>
+            <Code value={SourceCode} />
           </Example.CodeBody>
         </Example.Code>
         <Example.Result>

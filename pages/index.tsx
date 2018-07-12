@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda no-parameter-reassignment */
+
 import { Component } from 'react'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import styled, { injectGlobal } from 'styled-components'
@@ -206,7 +208,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               </p>
             </div>
           </IntroductionSection>
-          <OtherSection>
+          <OtherSection id="scrolling-if-needed">
             <SectionIntro>
               <h3 className="title">Scrolling if needed</h3>
               <p className="subtitle">
@@ -220,15 +222,17 @@ export default class IndexPage extends Component<IndexPageProps> {
                 ponyfill). Note there's browser differences with native smooth
                 scrolling, like{' '}
                 <a
-                  target="_blank"
                   href="https://user-images.githubusercontent.com/81981/38905887-9c00eff2-42b3-11e8-86aa-41ef679a54af.gif"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Chrome
                 </a>{' '}
                 vs{' '}
                 <a
-                  target="_blank"
                   href="https://user-images.githubusercontent.com/81981/38905963-3065b790-42b4-11e8-9fab-35393d7b7d09.gif"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   FireFox
                 </a>{' '}
@@ -240,7 +244,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               <IfNeeded />
             </SectionCode>
           </OtherSection>
-          <OtherSection>
+          <OtherSection id="scroll-alignment">
             <SectionIntro>
               <h3 className="title">Scroll alignment</h3>
               <p className="subtitle">
@@ -260,7 +264,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               <Alignment />
             </SectionCode>
           </OtherSection>
-          <OtherSection>
+          <OtherSection id="limit-propagation">
             <SectionIntro>
               <h3 className="title">Limit propagation</h3>
               <p className="subtitle">
@@ -276,7 +280,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               <Boundary />
             </SectionCode>
           </OtherSection>
-          <OtherSection>
+          <OtherSection id="custom-transition">
             <SectionIntro>
               <h3 className="title">Custom transition: popmotion example</h3>
               <p className="subtitle">

@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+
 import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
@@ -52,6 +54,16 @@ class IfNeeded extends PureComponent {
         ? 'smooth'
         : selectedBehavior
 
+    const SourceCode = `
+        import scrollIntoView from '${
+          (selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
+            ? 'smooth-'
+            : ''
+        }scroll-into-view-if-needed';
+
+
+        scrollIntoView(node, ${JSON.stringify({ behavior, scrollMode })})
+        `
     return (
       <Example.Section>
         <Example.Code>
@@ -80,18 +92,7 @@ class IfNeeded extends PureComponent {
             </Select>
           </Example.CodeHeader>
           <Example.CodeBody>
-            <Code>
-              {`
-        import scrollIntoView from '${
-          (selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
-            ? 'smooth-'
-            : ''
-        }scroll-into-view-if-needed';
-
-
-        scrollIntoView(node, ${JSON.stringify({ behavior, scrollMode })})
-        `}
-            </Code>
+            <Code value={SourceCode} />
           </Example.CodeBody>
         </Example.Code>
         <Example.Result>

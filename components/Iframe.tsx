@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+
 import PropTypes from 'prop-types'
 import { Component } from 'react'
 import { createPortal } from 'react-dom'

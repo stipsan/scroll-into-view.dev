@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+
 import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import styled from 'styled-components'
@@ -48,33 +50,38 @@ class Alignment extends PureComponent {
   doScroll = target =>
     scrollIntoView(target, {
       behavior: 'smooth',
+      // @TODO resolve "as" tricks here
       block: this.state.block as 'start' | 'center' | 'end' | 'nearest',
       inline: this.state.inline as 'start' | 'center' | 'end' | 'nearest',
     })
 
+  handleChange = event =>
+    this.setState({ [event.target.name]: event.target.value })
+
   render() {
     const { block, inline } = this.state
 
+    const SourceCode = `
+    import scrollIntoView from 'scroll-into-view-if-needed';
+
+    scrollIntoView(node, ${JSON.stringify({
+      behavior: 'smooth',
+      block,
+      inline,
+    })})
+    `
     return (
       <Example.Section>
         <Example.Code>
           <Example.CodeHeader>
-            <Select
-              label="Block"
-              onChange={event => this.setState({ block: event.target.value })}
-              value={block}
-            >
+            <Select label="Block" onChange={this.handleChange} value={block}>
               <option value="start">Start</option>
               <option value="center">Center</option>
               <option value="end">End</option>
               <option value="nearest">Nearest</option>
             </Select>
 
-            <Select
-              label="Inline"
-              onChange={event => this.setState({ inline: event.target.value })}
-              value={inline}
-            >
+            <Select label="Inline" onChange={this.handleChange} value={inline}>
               <option value="start">Start</option>
               <option value="center">Center</option>
               <option value="end">End</option>
@@ -82,15 +89,7 @@ class Alignment extends PureComponent {
             </Select>
           </Example.CodeHeader>
           <Example.CodeBody>
-            <Code>{`
-        import scrollIntoView from 'scroll-into-view-if-needed';
-
-        scrollIntoView(node, ${JSON.stringify({
-          behavior: 'smooth',
-          block,
-          inline,
-        })})
-        `}</Code>
+            <Code value={SourceCode} />
           </Example.CodeBody>
         </Example.Code>
         <Example.Result>
