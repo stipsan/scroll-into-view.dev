@@ -1,19 +1,19 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const {
   version: baseVersion,
-} = require('scroll-into-view-if-needed/package.json')
+} = require('scroll-into-view-if-needed/package.json');
 const {
   version: smoothVersion,
-} = require('smooth-scroll-into-view-if-needed/package.json')
+} = require('smooth-scroll-into-view-if-needed/package.json');
 const {
   version: computeVersion,
-} = require('compute-scroll-into-view/package.json')
+} = require('compute-scroll-into-view/package.json');
 
 const Wrapper = styled.footer`
   margin-top: 20px;
   text-align: center;
-`
+`;
 
 export default () => (
   <Wrapper className="footer">
@@ -58,4 +58,4 @@ export default () => (
       </div>
     </div>
   </Wrapper>
-)
+);

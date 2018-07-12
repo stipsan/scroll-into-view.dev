@@ -1,17 +1,17 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, { Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
-const { description } = require('scroll-into-view-if-needed/package.json')
-const { version: bulmaVersion } = require('bulma/package.json')
+const { description } = require('scroll-into-view-if-needed/package.json');
+const { version: bulmaVersion } = require('bulma/package.json');
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet()
+    const sheet = new ServerStyleSheet();
     const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />)
-    )
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
+    );
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
 
   render() {
@@ -35,6 +35,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }
