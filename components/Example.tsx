@@ -93,8 +93,9 @@ export const ScrollContainer = styled.div.attrs({
   width: ${SIZE}px;
 `;
 
-export const Button = styled.a.attrs({
+export const Button = styled.button.attrs({
   className: 'button is-small',
+  type: 'button',
 })`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;

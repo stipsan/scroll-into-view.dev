@@ -17,7 +17,7 @@ describe('Index Page', function() {
           [[1, 3, 'C'], [2, 4, 'D'], [3, 6, 'F']].forEach(
             ([button, item, text]) => {
               cy.get(
-                `#scrolling-if-needed .example-controls a:nth-of-type(${button})`
+                `#scrolling-if-needed .example-controls button:nth-of-type(${button})`
               )
                 .contains(text)
                 .click({ force: true });
