@@ -2,14 +2,13 @@
   "private": true,
   "scripts": {
     "precommit": "lint-staged",
-    "deploy": "gatsby build && gatsby export",
     "dev": "gatsby develop",
     "lint": "yarn lynt:js && yarn lynt:ts",
     "lynt": "lynt --ignore out --ignore public",
     "lynt:js": "yarn lynt --env mocha --global cy",
     "lynt:ts": "yarn lynt --typescript --react",
     "prestart": "gatsby build",
-    "start": "gatsby start",
+    "start": "gatsby serve",
     "test": "cypress run",
     "typecheck": "tsc --noEmit"
   },

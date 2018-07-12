@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js jsx-no-lambda no-parameter-reassignment */
 
-import { Component } from 'react'
+import React, { Component } from 'react'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import styled, { injectGlobal } from 'styled-components'
 import systemFontStack from 'system-font-stack'
