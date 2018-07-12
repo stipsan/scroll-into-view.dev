@@ -61,6 +61,9 @@ typings/
 .next
 out
 
+# Gatsby
+.cache
+public
 
 # Cypress
 cypress/screenshots
