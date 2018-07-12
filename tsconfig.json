@@ -12,10 +12,9 @@
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "noEmit": true,
     "baseUrl": ".",
-    "lib": ["dom", "es2015", "es2016"]
-  },
-  "exclude": ["cypress"]
+    "lib": ["dom", "es2016"]
+  }
 }

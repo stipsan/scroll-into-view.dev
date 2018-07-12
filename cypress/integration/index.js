@@ -31,4 +31,31 @@ describe('Index Page', function() {
       })
     })
   })
+
+  const scrollLogicalPosition = ['start', 'center', 'end', 'nearest']
+
+  describe('Scroll alignment', function() {
+    scrollLogicalPosition.forEach(block => {
+      scrollLogicalPosition.forEach(inline => {
+        it(`scrolls block: ${block} and inline: ${inline} correctly`, function() {
+          cy.get('#scroll-alignment select[name="block"]').select(block)
+          cy.get('#scroll-alignment select[name="inline"]').select(inline)
+          ;[[1, 1, '1'], [2, 5, '5'], [3, 9, '9']].forEach(
+            ([button, item, text]) => {
+              cy.get(
+                `#scroll-alignment .example-controls button:nth-of-type(${button})`
+              )
+                .contains(text)
+                .click({ force: true })
+              cy.get(
+                `#scroll-alignment .example-container > div > div:nth-child(${item})`
+              )
+                .contains(text)
+                .should('be.visible')
+            }
+          )
+        })
+      })
+    })
+  })
 })

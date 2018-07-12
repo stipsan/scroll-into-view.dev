@@ -64,6 +64,7 @@ class Boundary extends PureComponent<{}, BoundaryState> {
             <div className="control">
               <label>
                 Boundary:&nbsp;<input
+                  name="boundary"
                   type="checkbox"
                   checked={boundary}
                   onChange={event =>

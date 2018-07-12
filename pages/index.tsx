@@ -244,7 +244,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               <IfNeeded />
             </SectionCode>
           </OtherSection>
-          <OtherSection>
+          <OtherSection id="scroll-alignment">
             <SectionIntro>
               <h3 className="title">Scroll alignment</h3>
               <p className="subtitle">
@@ -264,7 +264,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               <Alignment />
             </SectionCode>
           </OtherSection>
-          <OtherSection>
+          <OtherSection id="limit-propagation">
             <SectionIntro>
               <h3 className="title">Limit propagation</h3>
               <p className="subtitle">
@@ -280,7 +280,7 @@ export default class IndexPage extends Component<IndexPageProps> {
               <Boundary />
             </SectionCode>
           </OtherSection>
-          <OtherSection>
+          <OtherSection id="custom-transition">
             <SectionIntro>
               <h3 className="title">Custom transition: popmotion example</h3>
               <p className="subtitle">
