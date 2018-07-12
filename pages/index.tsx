@@ -1,4 +1,4 @@
-/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda no-parameter-reassignment */
 
 import { Component } from 'react'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
@@ -222,15 +222,17 @@ export default class IndexPage extends Component<IndexPageProps> {
                 ponyfill). Note there's browser differences with native smooth
                 scrolling, like{' '}
                 <a
-                  target="_blank"
                   href="https://user-images.githubusercontent.com/81981/38905887-9c00eff2-42b3-11e8-86aa-41ef679a54af.gif"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Chrome
                 </a>{' '}
                 vs{' '}
                 <a
-                  target="_blank"
                   href="https://user-images.githubusercontent.com/81981/38905963-3065b790-42b4-11e8-9fab-35393d7b7d09.gif"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   FireFox
                 </a>{' '}

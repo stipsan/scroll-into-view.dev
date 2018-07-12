@@ -1,3 +1,5 @@
+/* tslint:disable:no-var-requires */
+
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 

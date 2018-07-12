@@ -1,5 +1,5 @@
-const prettier = require('prettier/standalone')
-const plugins = [require('prettier/parser-babylon')]
+import prettier from 'prettier/standalone'
+import babylonParser from 'prettier/parser-babylon'
 
 export const dimensions = {
   maxWidth: 1220,
@@ -11,6 +11,6 @@ export function format(code) {
     printWidth: 60,
     singleQuote: true,
     trailingComma: 'es5',
-    plugins,
+    plugins: [babylonParser],
   })
 }
