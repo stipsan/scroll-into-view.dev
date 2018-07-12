@@ -8,7 +8,7 @@
     "lynt:js": "yarn lynt --env mocha --global cy",
     "lynt:ts": "yarn lynt --typescript --react",
     "prestart": "gatsby build",
-    "start": "gatsby serve",
+    "start": "gatsby serve -p 8000",
     "test": "cypress run",
     "typecheck": "tsc --noEmit"
   },
