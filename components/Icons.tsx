@@ -1,9 +1,9 @@
-import * as React from 'react'
-import styled from 'styled-components'
+import * as React from 'react';
+import styled from 'styled-components';
 
 const Svg = styled.svg`
   height: auto;
-`
+`;
 
 export const Text = props => (
   <Svg
@@ -46,13 +46,13 @@ export const Text = props => (
       />
     </g>
   </Svg>
-)
+);
 
 const ChromeWrapper = styled.div`
   position: relative;
   z-index: 1;
 }
-`
+`;
 export const Chrome = props => (
   <ChromeWrapper>
     <Svg
@@ -74,4 +74,4 @@ export const Chrome = props => (
       />
     </Svg>
   </ChromeWrapper>
-)
+);

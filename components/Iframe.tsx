@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types'
-import { Component } from 'react'
-import { createPortal } from 'react-dom'
-import styled, { StyleSheetManager } from 'styled-components'
-import { dimensions } from '../utils'
+import PropTypes from 'prop-types';
+import { Component } from 'react';
+import { createPortal } from 'react-dom';
+import styled, { StyleSheetManager } from 'styled-components';
+import { dimensions } from '../utils';
 
-const maxWidth = (dimensions.maxWidth - 20) / 3 || 1140 / 3
+const maxWidth = (dimensions.maxWidth - 20) / 3 || 1140 / 3;
 
 const Wrapper = styled.iframe`
   -webkit-overflow-scrolling: touch;
@@ -19,26 +19,26 @@ const Wrapper = styled.iframe`
   transition: all 200ms linear;
   max-width: ${maxWidth}px;
   max-height: ${maxWidth}px;
-`
+`;
 
 class Iframe extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
-  }
-  frame?: HTMLIFrameElement
-  root: HTMLDivElement
+  };
+  frame?: HTMLIFrameElement;
+  root: HTMLDivElement;
 
-  state = { mounted: false }
+  state = { mounted: false };
 
   componentDidMount() {
-    this.root = document.createElement('div')
+    this.root = document.createElement('div');
     // We only need the first link tag
     this.frame.contentDocument.head.appendChild(
       document.querySelector('link[rel="stylesheet"]').cloneNode()
-    )
-    this.frame.contentDocument.body.appendChild(this.root)
-    this.setState({ mounted: true })
+    );
+    this.frame.contentDocument.body.appendChild(this.root);
+    this.setState({ mounted: true });
   }
 
   render() {
@@ -55,8 +55,8 @@ class Iframe extends Component {
             this.root
           )}
       </Wrapper>
-    )
+    );
   }
 }
 
-export default Iframe
+export default Iframe;
