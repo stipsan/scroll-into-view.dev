@@ -13,7 +13,6 @@ describe('Index Page', function() {
           cy.get('#scrolling-if-needed select[name="scroll-mode"]').select(
             scrollMode
           )
-
           ;[[1, 3, 'C'], [2, 4, 'D'], [3, 6, 'F']].forEach(
             ([button, item, text]) => {
               cy.get(
