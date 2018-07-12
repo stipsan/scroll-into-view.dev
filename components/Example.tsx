@@ -1,27 +1,27 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const breakpoint = 768
-const cornerRadius = 8
-export const SIZE = 200
+const breakpoint = 768;
+const cornerRadius = 8;
+export const SIZE = 200;
 
 export const Section = styled.div.attrs({
   className: 'columns is-gapless is-multiline',
 })`
   border-radius: ${cornerRadius}px;
   min-width: 0px;
-`
+`;
 
 export const Code = styled.div.attrs({ className: 'column' })`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-`
+`;
 
 const Header = styled.div`
   display: flex;
   min-height: 45px;
   padding: 0 5px;
-`
+`;
 
 export const CodeHeader = styled(Header).attrs({
   className: 'has-background-grey-dark has-text-light',
@@ -43,7 +43,7 @@ export const CodeHeader = styled(Header).attrs({
     align-items: center;
     white-space: nowrap;
   }
-`
+`;
 export const CodeBody = styled.div.attrs({
   className: 'has-background-grey-darker',
 })`
@@ -56,7 +56,7 @@ export const CodeBody = styled.div.attrs({
   @media screen and (min-width: ${breakpoint}px) {
     border-radius: 0 0 0 ${cornerRadius}px;
   }
-`
+`;
 
 export const Result = styled.div.attrs({
   className:
@@ -69,15 +69,19 @@ export const Result = styled.div.attrs({
   @media screen and (min-width: ${breakpoint}px) {
     border-radius: 0 ${cornerRadius}px ${cornerRadius}px 0;
   }
-`
+`;
 
-export const ResultHeader = styled(Header)`
+export const ResultHeader = styled(Header).attrs({
+  className: 'example-controls',
+})`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-`
+`;
 
-export const ScrollContainer = styled.div`
+export const ScrollContainer = styled.div.attrs({
+  className: 'example-container',
+})`
   box-sizing: content-box;
   box-shadow: 0 0 0 1px #e4e4e4;
   background: hsla(0, 0%, 0%, 0.05);
@@ -87,7 +91,7 @@ export const ScrollContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: ${SIZE}px;
-`
+`;
 
 export const Button = styled.a.attrs({
   className: 'button is-small',
@@ -98,4 +102,4 @@ export const Button = styled.a.attrs({
   :not(:last-child) {
     margin-right: 0.5rem;
   }
-`
+`;
