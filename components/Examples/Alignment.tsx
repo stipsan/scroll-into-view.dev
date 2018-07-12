@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+
 import { PureComponent } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import styled from 'styled-components';
@@ -60,14 +62,14 @@ class Alignment extends PureComponent {
     const { block, inline } = this.state;
 
     const SourceCode = `
-        import scrollIntoView from 'scroll-into-view-if-needed';
+    import scrollIntoView from 'scroll-into-view-if-needed';
 
-        scrollIntoView(node, ${JSON.stringify({
-          behavior: 'smooth',
-          block,
-          inline,
-        })})
-        `;
+    scrollIntoView(node, ${JSON.stringify({
+      behavior: 'smooth',
+      block,
+      inline,
+    })})
+    `;
     return (
       <Example.Section>
         <Example.Code>

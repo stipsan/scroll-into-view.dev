@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+
 import { Component } from 'react';
 import scrollIntoView from 'smooth-scroll-into-view-if-needed';
 import styled, { injectGlobal } from 'styled-components';

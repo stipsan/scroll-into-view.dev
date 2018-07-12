@@ -1,3 +1,5 @@
+/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+
 import { spring } from 'popmotion';
 import { PureComponent } from 'react';
 import scrollIntoView from 'scroll-into-view-if-needed';
