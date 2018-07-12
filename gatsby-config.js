@@ -8,5 +8,6 @@ module.exports = {
       resolve: 'gatsby-plugin-styled-components',
       options: { displayName: false },
     },
+    'gatsby-plugin-netlify',
   ],
 }
