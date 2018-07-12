@@ -8,8 +8,8 @@ export interface SectionProps {
 }
 
 export default styled.section`
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 20px 0 !important;
   max-width: ${dimensions.maxWidth}px;
 `

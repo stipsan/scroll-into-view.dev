@@ -12,14 +12,16 @@ import Footer from '../components/Footer'
 import { Chrome, Text as TextIcon } from '../components/Icons'
 import Section from '../components/Section'
 
+import 'bulma/css/bulma.min.css'
+
 injectGlobal`
   html,
   body {
-    margin: 0;
-    padding: 0;
+    margin: 0!important;
+    padding: 0!important;
   }
   body {
-    font-family: ${systemFontStack};
+    font-family: ${systemFontStack}!important;
   }
 `
 
@@ -79,9 +81,9 @@ const ScrollWrapper = styled.div`
 `
 
 const IntroductionSection = styled(Section)`
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 
-  padding-bottom: 3rem;
+  padding-bottom: 3rem !important;
   margin-bottom: 3rem !important;
   position: relative;
 
