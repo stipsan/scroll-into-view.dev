@@ -1,9 +1,9 @@
-const prettier = require('prettier/standalone');
-const plugins = [require('prettier/parser-babylon')];
+const prettier = require('prettier/standalone')
+const plugins = [require('prettier/parser-babylon')]
 
 export const dimensions = {
   maxWidth: 1220,
-};
+}
 
 export function format(code) {
   return prettier.format(code, {
@@ -12,5 +12,5 @@ export function format(code) {
     singleQuote: true,
     trailingComma: 'es5',
     plugins,
-  });
+  })
 }

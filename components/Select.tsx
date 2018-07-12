@@ -7,4 +7,4 @@ export default ({ label, children, ...props }) => (
       </select>
     </div>
   </div>
-);
+)

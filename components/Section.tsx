@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { dimensions } from '../utils';
+import styled from 'styled-components'
+import { dimensions } from '../utils'
 
 export interface SectionProps {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode
+  className?: string
 }
 
 export default styled.section`
@@ -11,4 +11,4 @@ export default styled.section`
   margin-right: auto;
   padding: 20px 0;
   max-width: ${dimensions.maxWidth}px;
-`;
+`

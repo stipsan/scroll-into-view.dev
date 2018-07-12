@@ -1,11 +1,11 @@
-import { PureComponent } from 'react';
-import styled from 'styled-components';
-import { format } from '../utils';
+import { PureComponent } from 'react'
+import styled from 'styled-components'
+import { format } from '../utils'
 
-import Refractor from 'react-refractor';
-import js from 'refractor/lang/javascript';
+import Refractor from 'react-refractor'
+import js from 'refractor/lang/javascript'
 
-Refractor.registerLanguage(js);
+Refractor.registerLanguage(js)
 
 const StyledSyntaxHighlighter = styled(Refractor).attrs({
   className: 'is-flex',
@@ -128,13 +128,13 @@ const StyledSyntaxHighlighter = styled(Refractor).attrs({
   .token.entity {
     cursor: help;
   }
-`;
+`
 
 class Code extends PureComponent<{ value: string }> {
   render() {
-    const value = format(this.props.value);
-    return <StyledSyntaxHighlighter language="javascript" value={value} />;
+    const value = format(this.props.value)
+    return <StyledSyntaxHighlighter language="javascript" value={value} />
   }
 }
 
-export default Code;
+export default Code

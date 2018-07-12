@@ -1,16 +1,16 @@
 /* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
 
-import { Component } from 'react';
-import scrollIntoView from 'smooth-scroll-into-view-if-needed';
-import styled, { injectGlobal } from 'styled-components';
-import systemFontStack from 'system-font-stack';
-import Alignment from '../components/Examples/Alignment';
-import Boundary from '../components/Examples/Boundary';
-import IfNeeded from '../components/Examples/IfNeeded';
-import OverrideBehavior from '../components/Examples/OverrideBehavior';
-import Footer from '../components/Footer';
-import { Chrome, Text as TextIcon } from '../components/Icons';
-import Section from '../components/Section';
+import { Component } from 'react'
+import scrollIntoView from 'smooth-scroll-into-view-if-needed'
+import styled, { injectGlobal } from 'styled-components'
+import systemFontStack from 'system-font-stack'
+import Alignment from '../components/Examples/Alignment'
+import Boundary from '../components/Examples/Boundary'
+import IfNeeded from '../components/Examples/IfNeeded'
+import OverrideBehavior from '../components/Examples/OverrideBehavior'
+import Footer from '../components/Footer'
+import { Chrome, Text as TextIcon } from '../components/Icons'
+import Section from '../components/Section'
 
 injectGlobal`
   html,
@@ -21,10 +21,10 @@ injectGlobal`
   body {
     font-family: ${systemFontStack};
   }
-`;
+`
 
 export interface IndexPageProps {
-  items: number[];
+  items: number[]
 }
 
 const Hero = styled.header`
@@ -41,7 +41,7 @@ const Hero = styled.header`
     rgb(182, 209, 245) 0%,
     rgb(114, 249, 231) 100%
   ); /* FF3.6-15 */
-`;
+`
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     z-index: 1;
     position: relative;
   }
-`;
+`
 const ScrollWrapper = styled.div`
   position: absolute;
   transition: opacity 100ms;
@@ -76,7 +76,7 @@ const ScrollWrapper = styled.div`
       color: #557271;
     }
   }
-`;
+`
 
 const IntroductionSection = styled(Section)`
   margin-top: 1.5rem;
@@ -94,32 +94,32 @@ const IntroductionSection = styled(Section)`
     height: 2px;
     background: #f5f5f5;
   }
-`;
+`
 
 const OtherSection = styled(Section).attrs({
   className: 'columns is-multiline is-desktop',
-})``;
+})``
 
 const SectionIntro = styled.div.attrs({
   className: 'column is-one-third-desktop',
 })`
   min-width: 250px;
-`;
+`
 const SectionCode = styled.div.attrs({
   className: 'column is-two-thirds-desktop',
-})``;
+})``
 
 export default class IndexPage extends Component<IndexPageProps> {
   static defaultProps = {
     items: Array.apply(null, { length: 100 }).map(Number.call, Number),
-  };
+  }
 
-  state = { maxHeight: 'auto' };
+  state = { maxHeight: 'auto' }
 
-  scrollToBoundary: HTMLElement;
-  scrollToRef: SVGElement;
-  maxHeightRef: SVGElement;
-  timeout: any;
+  scrollToBoundary: HTMLElement
+  scrollToRef: SVGElement
+  maxHeightRef: SVGElement
+  timeout: any
 
   componentDidMount() {
     window.addEventListener('load', () => {
@@ -134,15 +134,15 @@ export default class IndexPage extends Component<IndexPageProps> {
               ease: t =>
                 t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t,
               boundary: this.scrollToBoundary,
-            });
-          }, 1500);
+            })
+          }, 1500)
         }
-      );
-    });
+      )
+    })
   }
 
   componentWIllUnmount() {
-    clearTimeout(this.timeout);
+    clearTimeout(this.timeout)
   }
 
   render() {
@@ -296,6 +296,6 @@ export default class IndexPage extends Component<IndexPageProps> {
         </div>
         <Footer />
       </div>
-    );
+    )
   }
 }

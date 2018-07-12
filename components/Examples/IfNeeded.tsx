@@ -1,12 +1,12 @@
 /* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
 
-import { PureComponent } from 'react';
-import scrollIntoView from 'scroll-into-view-if-needed';
-import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed';
-import styled from 'styled-components';
-import Code from '../Code';
-import * as Example from '../Example';
-import Select from '../Select';
+import { PureComponent } from 'react'
+import scrollIntoView from 'scroll-into-view-if-needed'
+import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
+import styled from 'styled-components'
+import Code from '../Code'
+import * as Example from '../Example'
+import Select from '../Select'
 
 const Item = styled.div.attrs({
   className: 'has-background-primary is-size-4',
@@ -18,22 +18,22 @@ const Item = styled.div.attrs({
   height: ${Example.SIZE / 4 - 10}px;
   margin: 20px;
   color: hsla(0, 0%, 0%, 0.4);
-`;
+`
 
-const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
 class IfNeeded extends PureComponent {
   state = {
     selectedBehavior: 'smooth',
     scrollMode: 'if-needed' as 'if-needed',
-  };
+  }
 
-  items: { [key: string]: HTMLElement } = {};
+  items: { [key: string]: HTMLElement } = {}
 
   componentDidMount() {
     // Thanks to Safari
     'scrollBehavior' in document.documentElement.style ||
-      this.setState({ selectedBehavior: 'smooth-ponyfill' });
+      this.setState({ selectedBehavior: 'smooth-ponyfill' })
   }
 
   doScroll = target =>
@@ -45,14 +45,14 @@ class IfNeeded extends PureComponent {
           ? 'smooth'
           : (this.state.selectedBehavior as any),
       scrollMode: this.state.scrollMode,
-    });
+    })
 
   render() {
-    const { selectedBehavior, scrollMode } = this.state;
+    const { selectedBehavior, scrollMode } = this.state
     const behavior =
       (selectedBehavior as 'smooth-ponyfill') === 'smooth-ponyfill'
         ? 'smooth'
-        : selectedBehavior;
+        : selectedBehavior
 
     const SourceCode = `
         import scrollIntoView from '${
@@ -63,7 +63,7 @@ class IfNeeded extends PureComponent {
 
 
         scrollIntoView(node, ${JSON.stringify({ behavior, scrollMode })})
-        `;
+        `
     return (
       <Example.Section>
         <Example.Code>
@@ -120,8 +120,8 @@ class IfNeeded extends PureComponent {
           </Example.ScrollContainer>
         </Example.Result>
       </Example.Section>
-    );
+    )
   }
 }
 
-export default IfNeeded;
+export default IfNeeded

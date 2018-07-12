@@ -1,14 +1,14 @@
 /* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
 
-import { PureComponent } from 'react';
-import scrollIntoView from 'scroll-into-view-if-needed';
-import styled from 'styled-components';
-import Code from '../Code';
-import * as Example from '../Example';
-import Select from '../Select';
+import { PureComponent } from 'react'
+import scrollIntoView from 'scroll-into-view-if-needed'
+import styled from 'styled-components'
+import Code from '../Code'
+import * as Example from '../Example'
+import Select from '../Select'
 
-const layerSize = Example.SIZE * 1.5 + Example.SIZE / 6;
-const layerPadding = Example.SIZE / 12;
+const layerSize = Example.SIZE * 1.5 + Example.SIZE / 6
+const layerPadding = Example.SIZE / 12
 const ScrollLayer = styled.div.attrs({
   className: 'columns is-multiline is-mobile is-gapless',
 })`
@@ -16,7 +16,7 @@ const ScrollLayer = styled.div.attrs({
   padding: ${layerPadding}px;
   height: ${layerSize}px;
   width: ${layerSize}px;
-`;
+`
 
 const Item = styled.div.attrs({ className: 'column is-one-third' })`
   justify-content: center;
@@ -24,7 +24,7 @@ const Item = styled.div.attrs({ className: 'column is-one-third' })`
   align-items: center;
   /* The following is to support vertical writing mode */
   height: ${100 / 3}%;
-`;
+`
 const Tile = styled.div.attrs({
   className: 'has-background-primary is-size-1',
 })`
@@ -35,17 +35,17 @@ const Tile = styled.div.attrs({
   color: hsla(0, 0%, 0%, 0.3);
   justify-content: center;
   width: ${Example.SIZE / 3}px;
-`;
+`
 
-const range = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const range = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 class Alignment extends PureComponent {
   state = {
     block: 'center',
     inline: 'center',
-  };
+  }
 
-  items: HTMLElement[] = [];
+  items: HTMLElement[] = []
 
   doScroll = target =>
     scrollIntoView(target, {
@@ -53,13 +53,13 @@ class Alignment extends PureComponent {
       // @TODO resolve "as" tricks here
       block: this.state.block as 'start' | 'center' | 'end' | 'nearest',
       inline: this.state.inline as 'start' | 'center' | 'end' | 'nearest',
-    });
+    })
 
   handleChange = event =>
-    this.setState({ [event.target.name]: event.target.value });
+    this.setState({ [event.target.name]: event.target.value })
 
   render() {
-    const { block, inline } = this.state;
+    const { block, inline } = this.state
 
     const SourceCode = `
     import scrollIntoView from 'scroll-into-view-if-needed';
@@ -69,7 +69,7 @@ class Alignment extends PureComponent {
       block,
       inline,
     })})
-    `;
+    `
     return (
       <Example.Section>
         <Example.Code>
@@ -122,8 +122,8 @@ class Alignment extends PureComponent {
           </Example.ScrollContainer>
         </Example.Result>
       </Example.Section>
-    );
+    )
   }
 }
 
-export default Alignment;
+export default Alignment

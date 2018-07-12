@@ -1,11 +1,11 @@
 /* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
 
-import { PureComponent } from 'react';
-import scrollIntoView from 'scroll-into-view-if-needed';
-import styled from 'styled-components';
-import Code from '../Code';
-import * as Example from '../Example';
-import Select from '../Select';
+import { PureComponent } from 'react'
+import scrollIntoView from 'scroll-into-view-if-needed'
+import styled from 'styled-components'
+import Code from '../Code'
+import * as Example from '../Example'
+import Select from '../Select'
 
 const Item = styled.div.attrs({
   className: 'has-background-dark is-size-4',
@@ -20,32 +20,32 @@ const Item = styled.div.attrs({
 
   & + & {
   }
-`;
+`
 
-const range = ['😁', '🤯', '😅', '🤔', '🤩', '🤨', '😲'];
+const range = ['😁', '🤯', '😅', '🤔', '🤩', '🤨', '😲']
 
 interface BoundaryState {
-  block: 'start' | 'center' | 'end' | 'nearest';
-  boundary: boolean;
+  block: 'start' | 'center' | 'end' | 'nearest'
+  boundary: boolean
 }
 class Boundary extends PureComponent<{}, BoundaryState> {
   state = {
     block: 'end' as 'start' | 'center' | 'end' | 'nearest',
     boundary: true,
-  };
+  }
 
-  frameBoundary: Element;
-  items: { [key: string]: HTMLElement } = {};
+  frameBoundary: Element
+  items: { [key: string]: HTMLElement } = {}
 
   doScroll = target =>
     scrollIntoView(target, {
       behavior: 'smooth',
       block: this.state.block,
       boundary: this.state.boundary ? this.frameBoundary : undefined,
-    });
+    })
 
   render() {
-    const { boundary, block } = this.state;
+    const { boundary, block } = this.state
 
     const SourceCode = `
     import scrollIntoView from 'scroll-into-view-if-needed';
@@ -55,7 +55,7 @@ class Boundary extends PureComponent<{}, BoundaryState> {
       block: '${block}',
       ${boundary ? 'boundary: document.getElementById("example-boundary")' : ''}
     })
-    `;
+    `
 
     return (
       <Example.Section>
@@ -123,8 +123,8 @@ class Boundary extends PureComponent<{}, BoundaryState> {
           </Example.ScrollContainer>
         </Example.Result>
       </Example.Section>
-    );
+    )
   }
 }
 
-export default Boundary;
+export default Boundary
