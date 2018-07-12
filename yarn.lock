@@ -8872,9 +8872,9 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-smooth-scroll-into-view-if-needed@1.1.12:
-  version "1.1.12"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.12.tgz#3e623e1428e8329b8aea41667e850e48b1326f52"
+smooth-scroll-into-view-if-needed@1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.13.tgz#3ac460bf4c122ea0ff4ca0aec7488dd88a31ee36"
   dependencies:
     scroll-into-view-if-needed "2.2.11"
 
