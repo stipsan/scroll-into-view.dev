@@ -85,4 +85,26 @@ describe('Index Page', function() {
       })
     })
   })
+
+  describe('Custom transition: popmotion example', function() {
+    ;['center', 'nearest'].forEach(inline => {
+      it(`scrolls inline: ${inline} correctly`, function() {
+        cy.get('#custom-transition select[name="inline"]').select(inline)
+        ;[[1, 1, '🌎'], [2, 2, '🌍'], [3, 3, '🌏']].forEach(
+          ([button, item, text]) => {
+            cy.get(
+              `#custom-transition .example-controls button:nth-of-type(${button})`
+            )
+              .contains(text)
+              .click({ force: true })
+            cy.get(
+              `#custom-transition .example-container > div > div:nth-child(${item})`
+            )
+              .contains(text)
+              .should('be.visible')
+          }
+        )
+      })
+    })
+  })
 })
