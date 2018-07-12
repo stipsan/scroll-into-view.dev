@@ -58,4 +58,31 @@ describe('Index Page', function() {
       })
     })
   })
+
+  describe('Limit propagation', function() {
+    scrollLogicalPosition.forEach(block => {
+      ;[true, false].forEach(boundary => {
+        it(`scrolls block: ${block} and bondary: ${boundary} correctly`, function() {
+          cy.get('#limit-propagation select[name="block"]').select(block)
+          cy.get('#limit-propagation input[name="boundary"]')[
+            boundary ? 'check' : 'uncheck'
+          ]()
+          ;[[1, 2, '🤯'], [2, 4, '🤔'], [3, 6, '🤨']].forEach(
+            ([button, item, text]) => {
+              cy.get(
+                `#limit-propagation .example-controls button:nth-of-type(${button})`
+              )
+                .contains(text)
+                .click({ force: true })
+              cy.get(
+                `#limit-propagation .example-container > div:nth-child(${item})`
+              )
+                .contains(text)
+                .should('be.visible')
+            }
+          )
+        })
+      })
+    })
+  })
 })
