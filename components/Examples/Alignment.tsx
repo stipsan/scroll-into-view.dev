@@ -59,6 +59,15 @@ class Alignment extends PureComponent {
   render() {
     const { block, inline } = this.state;
 
+    const SourceCode = `
+        import scrollIntoView from 'scroll-into-view-if-needed';
+
+        scrollIntoView(node, ${JSON.stringify({
+          behavior: 'smooth',
+          block,
+          inline,
+        })})
+        `;
     return (
       <Example.Section>
         <Example.Code>
@@ -78,15 +87,7 @@ class Alignment extends PureComponent {
             </Select>
           </Example.CodeHeader>
           <Example.CodeBody>
-            <Code>{`
-        import scrollIntoView from 'scroll-into-view-if-needed';
-
-        scrollIntoView(node, ${JSON.stringify({
-          behavior: 'smooth',
-          block,
-          inline,
-        })})
-        `}</Code>
+            <Code value={SourceCode} />
           </Example.CodeBody>
         </Example.Code>
         <Example.Result>

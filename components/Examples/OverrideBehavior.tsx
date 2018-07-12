@@ -61,8 +61,23 @@ class Boundary extends PureComponent {
   componentDidUpdate() {
     this.doScroll(this.items[this.state.selected]);
   }
-  component;
+
   render() {
+    const SourceCode = `
+    import scrollIntoView from 'scroll-into-view-if-needed';
+    import styler from 'stylefire'
+    import { spring } from 'popmotion'
+
+    scrollIntoView(node, {behavior: instructions => {
+      const [{ el, left }] = instructions
+        const elStyler = styler(el)
+
+        spring({from: el.scrollLeft,to: left})
+        .start((left) => elStyler.set('scrollLeft', left))
+        
+      },inline: ${JSON.stringify(this.state.inline)}})
+    `;
+
     return (
       <Example.Section>
         <Example.Code>
@@ -77,20 +92,7 @@ class Boundary extends PureComponent {
             </Select>
           </Example.CodeHeader>
           <Example.CodeBody>
-            <Code>{`
-        import scrollIntoView from 'scroll-into-view-if-needed';
-        import styler from 'stylefire'
-        import { spring } from 'popmotion'
-
-        scrollIntoView(node, {behavior: instructions => {
-          const [{ el, left }] = instructions
-            const elStyler = styler(el)
-    
-            spring({from: el.scrollLeft,to: left})
-            .start((left) => elStyler.set('scrollLeft', left))
-            
-          },inline: ${JSON.stringify(this.state.inline)}})
-        `}</Code>
+            <Code value={SourceCode} />
           </Example.CodeBody>
         </Example.Code>
         <Example.Result>

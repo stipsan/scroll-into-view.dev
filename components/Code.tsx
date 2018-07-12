@@ -130,12 +130,10 @@ const StyledSyntaxHighlighter = styled(Refractor).attrs({
   }
 `;
 
-class Code extends PureComponent<{ children: string }> {
+class Code extends PureComponent<{ value: string }> {
   render() {
-    const formattedCode = format(this.props.children);
-    return (
-      <StyledSyntaxHighlighter language="javascript" value={formattedCode} />
-    );
+    const value = format(this.props.value);
+    return <StyledSyntaxHighlighter language="javascript" value={value} />;
   }
 }
 
