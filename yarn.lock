@@ -4690,9 +4690,9 @@ gatsby-plugin-page-creator@^2.0.0-beta.4:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-purgecss@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-purgecss/-/gatsby-plugin-purgecss-2.0.0.tgz#25a138b8cb79bb33d47113f640af45d23ecf558d"
+gatsby-plugin-purgecss@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-purgecss/-/gatsby-plugin-purgecss-2.0.1.tgz#f885127da5d7d55db078f9aab5acf0c7aec80cde"
   dependencies:
     loader-utils "^1.1.0"
     purgecss "^1.0.1"
