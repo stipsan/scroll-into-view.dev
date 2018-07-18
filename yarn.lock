@@ -8779,7 +8779,7 @@ scroll-behavior@^0.9.9:
     dom-helpers "^3.2.1"
     invariant "^2.2.2"
 
-scroll-into-view-if-needed@2.2.13:
+scroll-into-view-if-needed@2.2.13, scroll-into-view-if-needed@2.2.14:
   version "2.2.13"
   resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.13.tgz#1ddad92c1dc37695c9992e05f56a2fc0873330ff"
   dependencies:
@@ -8993,11 +8993,11 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-smooth-scroll-into-view-if-needed@1.1.17:
-  version "1.1.17"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.17.tgz#4c7af3a6d7230d62393df880fe43c209909c0eca"
+smooth-scroll-into-view-if-needed@1.1.18:
+  version "1.1.18"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.18.tgz#7a2c85d2103397d67451b689d3df0d1bc139e77f"
   dependencies:
-    scroll-into-view-if-needed "2.2.13"
+    scroll-into-view-if-needed "2.2.14"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
