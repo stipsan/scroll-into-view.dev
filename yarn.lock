@@ -2892,10 +2892,6 @@ compression@^1.5.2, compression@^1.6.2:
     safe-buffer "5.1.1"
     vary "~1.1.2"
 
-compute-scroll-into-view@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.3.tgz#73646ffc8d62cd524829ba9c34b52579ac7781b8"
-
 compute-scroll-into-view@1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.4.tgz#0d0917907b0d613f7d93a8c7575152ac0a512d43"
@@ -8812,11 +8808,11 @@ scroll-behavior@^0.9.9:
     dom-helpers "^3.2.1"
     invariant "^2.2.2"
 
-scroll-into-view-if-needed@2.2.12:
-  version "2.2.12"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.12.tgz#71ca681c0f2433edcc03d214da8d0b6600a959bf"
+scroll-into-view-if-needed@2.2.12, scroll-into-view-if-needed@2.2.13:
+  version "2.2.13"
+  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.13.tgz#1ddad92c1dc37695c9992e05f56a2fc0873330ff"
   dependencies:
-    compute-scroll-into-view "1.0.3"
+    compute-scroll-into-view "1.0.4"
 
 select-hose@^2.0.0:
   version "2.0.0"
