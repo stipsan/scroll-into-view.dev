@@ -8358,9 +8358,9 @@ redux@^3.6.0:
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
 
-refractor@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.5.0.tgz#cd38fee596c0c494addf726543ea6f4b89d3147b"
+refractor@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.6.0.tgz#6b0d88f654c8534eefed3329a35bc7bb74ae0979"
   dependencies:
     hastscript "^4.0.0"
     parse-entities "^1.1.2"
