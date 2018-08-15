@@ -921,6 +921,12 @@
   dependencies:
     "@types/react" "*"
 
+"@types/reach__router@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/reach__router/-/reach__router-1.0.0.tgz#c32d6a322f2dc8eb847df5ebe3fc931a340202c5"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@16.0.7":
   version "16.0.7"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.7.tgz#54d0f867a76b90597e8432030d297982f25c20ba"
@@ -4702,12 +4708,13 @@ gatsby-cli@^2.0.0-beta.13:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-link@^2.0.0-beta.20:
-  version "2.0.0-beta.20"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.0-beta.20.tgz#0966b7c2f920df7b879506512e114344b353984b"
+gatsby-link@^2.0.0-beta.22:
+  version "2.0.0-beta.22"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.0-beta.22.tgz#1aff1a1918bdc1adf5d9e6e5eea59637a56009bf"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
     "@reach/router" "^1.1.1"
+    "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
     ric "^1.3.0"
 
@@ -4762,9 +4769,9 @@ gatsby-react-router-scroll@^2.0.0-beta.8:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@2.0.0-beta.102:
-  version "2.0.0-beta.102"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.102.tgz#1060185432bb0ec5a900f2937c8b81319c2207b0"
+gatsby@2.0.0-beta.105:
+  version "2.0.0-beta.105"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.105.tgz#fefd3a6be7741e97a315debd8600a9272e9faf99"
   dependencies:
     "@babel/code-frame" "7.0.0-beta.52"
     "@babel/core" "7.0.0-beta.52"
@@ -4822,7 +4829,7 @@ gatsby@2.0.0-beta.102:
     front-matter "^2.1.0"
     fs-extra "^5.0.0"
     gatsby-cli "^2.0.0-beta.13"
-    gatsby-link "^2.0.0-beta.20"
+    gatsby-link "^2.0.0-beta.22"
     gatsby-plugin-page-creator "^2.0.0-beta.5"
     gatsby-react-router-scroll "^2.0.0-beta.8"
     glob "^7.1.1"
