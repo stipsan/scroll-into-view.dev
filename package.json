@@ -20,7 +20,7 @@
     "babel-plugin-styled-components": "1.5.1",
     "bulma": "0.7.1",
     "compute-scroll-into-view": "1.0.8",
-    "gatsby": "2.0.0-beta.100",
+    "gatsby": "2.0.0-beta.102",
     "gatsby-plugin-netlify": "2.0.0-beta.6",
     "gatsby-plugin-react-helmet": "2.0.11",
     "gatsby-plugin-styled-components": "3.0.0-beta.3",
