@@ -761,6 +761,10 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
+"@popmotion/easing@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@popmotion/easing/-/easing-1.0.1.tgz#48336aea29542113df10aeb81b4fd10f0b95f937"
+
 "@reach/router@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.1.1.tgz#24a5b20f1cc9e55e2cbcdc454fb82c94db479a81"
@@ -7528,13 +7532,14 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-popmotion@8.3.3:
-  version "8.3.3"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.3.tgz#af87d4f260f323f0a47c36aea32a18b568640bb0"
+popmotion@8.3.4:
+  version "8.3.4"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.4.tgz#7dd1162c6a7efdfbaca2bcaaa628432dd6905559"
   dependencies:
+    "@popmotion/easing" "^1.0.1"
     framesync "^3.1.9"
     hey-listen "^1.0.5"
-    style-value-types "^3.0.3"
+    style-value-types "^3.0.4"
     stylefire "^2.0.6"
     tslib "^1.9.1"
 
@@ -9314,6 +9319,10 @@ style-rules@^1.1.2:
 style-value-types@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.3.tgz#1643486f1b9cfb5402bb5e7876a984d6619e9f82"
+
+style-value-types@^3.0.4:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.6.tgz#144f634ba0c8f053ee615c7308adc97fe83917dd"
 
 styled-components@3.3.3:
   version "3.3.3"
