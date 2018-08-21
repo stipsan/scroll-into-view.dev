@@ -7532,9 +7532,9 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-popmotion@8.3.4:
-  version "8.3.4"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.4.tgz#7dd1162c6a7efdfbaca2bcaaa628432dd6905559"
+popmotion@8.3.6:
+  version "8.3.6"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.6.tgz#33b214ca8e2b27029183d69fb6538368bba40e77"
   dependencies:
     "@popmotion/easing" "^1.0.1"
     framesync "^3.1.9"
