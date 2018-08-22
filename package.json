@@ -44,7 +44,7 @@
     "cypress": "3.1.0",
     "husky": "0.14.3",
     "lint-staged": "7.2.2",
-    "lynt": "0.5.2",
+    "lynt": "0.5.3",
     "prettier-package-json": "2.0.0"
   },
   "lint-staged": {
