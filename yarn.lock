@@ -9243,10 +9243,6 @@ style-rules@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/style-rules/-/style-rules-1.1.2.tgz#72813578c0ce1f9ec40bab3bc1c1bf8ab3d0ea65"
 
-style-value-types@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.3.tgz#1643486f1b9cfb5402bb5e7876a984d6619e9f82"
-
 style-value-types@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.6.tgz#144f634ba0c8f053ee615c7308adc97fe83917dd"
@@ -9266,16 +9262,7 @@ styled-components@3.3.3:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
-stylefire@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.6.tgz#aa35093b782e1d2ea746d9aac483f38366954e19"
-  dependencies:
-    framesync "^3.1.8"
-    hey-listen "^1.0.4"
-    style-value-types "^3.0.3"
-    tslib "^1.9.1"
-
-stylefire@^2.0.7:
+stylefire@2.0.7, stylefire@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.7.tgz#ccb121dbd7e96fb92c311413639830cc2d4c7eab"
   dependencies:
