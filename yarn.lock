@@ -7465,9 +7465,9 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-popmotion@8.3.7:
-  version "8.3.7"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.7.tgz#c58a7f2156875a2ffd95f2e4a9f63e08d5f12b48"
+popmotion@8.3.8:
+  version "8.3.8"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.8.tgz#af2b9ba00d4be089461043b60ea82c1709352a27"
   dependencies:
     "@popmotion/easing" "^1.0.1"
     framesync "^3.1.9"
