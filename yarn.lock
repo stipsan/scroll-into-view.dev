@@ -1143,6 +1143,10 @@ after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
 
+ajv-errors@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.0.tgz#ecf021fa108fd17dfb5e6b383f2dd233e31ffc59"
+
 ajv-keywords@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-2.1.1.tgz#617997fc5f60576894c435f940d819e135b80762"
@@ -1659,9 +1663,9 @@ babel-plugin-macros@^2.4.0:
   dependencies:
     cosmiconfig "^5.0.5"
 
-babel-plugin-remove-graphql-queries@^2.0.2-rc.2:
-  version "2.0.2-rc.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.0.2-rc.2.tgz#85ae3b8d46ebaa27e128d15321d67acd409d95e2"
+babel-plugin-remove-graphql-queries@^2.0.2-rc.3:
+  version "2.0.2-rc.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.0.2-rc.3.tgz#82f8984e06585db4e8fe02caa68d03cec918fd57"
 
 babel-plugin-styled-components@1.6.2:
   version "1.6.2"
@@ -4689,15 +4693,15 @@ gatsby-link@^2.0.0-rc.2:
     prop-types "^15.6.1"
     ric "^1.3.0"
 
-gatsby-plugin-netlify@2.0.0-rc.1:
-  version "2.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.0-rc.1.tgz#6c2b1c2ef7360377e26c1dbacd84045483f9afed"
+gatsby-plugin-netlify@2.0.0-rc.2:
+  version "2.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.0-rc.2.tgz#03695002a4a24c44cf055974342f126d99416122"
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^4.0.2"
     kebab-hash "^0.1.2"
     lodash "^4.17.4"
-    webpack-assets-manifest "^1.0.0"
+    webpack-assets-manifest "^3.0.2"
 
 gatsby-plugin-page-creator@^2.0.0-rc.1:
   version "2.0.0-rc.1"
@@ -4724,13 +4728,13 @@ gatsby-plugin-styled-components@3.0.0-rc.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-typescript@2.0.0-rc.3:
-  version "2.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.0-rc.3.tgz#1258a3b8d3a3f995d0e263e17370e83dc903eb8d"
+gatsby-plugin-typescript@2.0.0-rc.4:
+  version "2.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.0-rc.4.tgz#4307a126c24191e5e5eedfe9e73ca89e048fdab9"
   dependencies:
     "@babel/preset-typescript" "^7.0.0"
     "@babel/runtime" "^7.0.0"
-    babel-plugin-remove-graphql-queries "^2.0.2-rc.2"
+    babel-plugin-remove-graphql-queries "^2.0.2-rc.3"
 
 gatsby-react-router-scroll@^2.0.0-rc.2:
   version "2.0.0-rc.2"
@@ -4740,9 +4744,9 @@ gatsby-react-router-scroll@^2.0.0-rc.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@2.0.0-rc.10:
-  version "2.0.0-rc.10"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.10.tgz#3fd4b2c78ff694c9ef30c628ba2c9dbbe0d827d9"
+gatsby@2.0.0-rc.13:
+  version "2.0.0-rc.13"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.13.tgz#cede18dd72de943e50be76bc07d1b20ff4e167f8"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -4763,7 +4767,7 @@ gatsby@2.0.0-rc.10:
     babel-plugin-add-module-exports "^0.2.1"
     babel-plugin-dynamic-import-node "^1.2.0"
     babel-plugin-macros "^2.4.0"
-    babel-plugin-remove-graphql-queries "^2.0.2-rc.2"
+    babel-plugin-remove-graphql-queries "^2.0.2-rc.3"
     better-queue "^3.8.6"
     bluebird "^3.5.0"
     chalk "^2.3.2"
@@ -6332,25 +6336,13 @@ lodash.kebabcase@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.kebabcase/-/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
 
-lodash.keys@^4.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.keys/-/lodash.keys-4.2.0.tgz#a08602ac12e4fb83f91fc1fb7a360a4d9ba35205"
-
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
-lodash.merge@^4.0:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
-
 lodash.once@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
-
-lodash.pick@^4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
 
 lodash.toarray@^4.4.0:
   version "4.4.0"
@@ -8670,6 +8662,14 @@ schema-utils@^0.4.0, schema-utils@^0.4.3, schema-utils@^0.4.4, schema-utils@^0.4
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
+schema-utils@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-1.0.0.tgz#0b79a93204d7b600d4b2850d1f66c2a34951c770"
+  dependencies:
+    ajv "^6.1.0"
+    ajv-errors "^1.0.0"
+    ajv-keywords "^3.1.0"
+
 scroll-behavior@^0.9.9:
   version "0.9.9"
   resolved "https://registry.yarnpkg.com/scroll-behavior/-/scroll-behavior-0.9.9.tgz#ebfe0658455b82ad885b66195215416674dacce2"
@@ -9900,17 +9900,17 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webpack-assets-manifest@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-1.0.0.tgz#54a1bc4036e2eed2b3ce1fd6a7e31c09be99538a"
+webpack-assets-manifest@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-3.0.2.tgz#d9c7f57d4e0a6a261e2558258073f7c5e95e3f32"
   dependencies:
     chalk "^2.0"
     lodash.get "^4.0"
     lodash.has "^4.0"
-    lodash.keys "^4.0"
-    lodash.merge "^4.0"
-    lodash.pick "^4.0"
     mkdirp "^0.5"
+    schema-utils "^1.0.0"
+    tapable "^1.0.0"
+    webpack-sources "^1.0.0"
 
 webpack-dev-middleware@3.1.3, webpack-dev-middleware@^3.0.1:
   version "3.1.3"
@@ -9980,6 +9980,13 @@ webpack-merge@^4.1.0:
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.3.tgz#8aaff2108a19c29849bc9ad2a7fd7fce68e87c4a"
   dependencies:
     lodash "^4.17.5"
+
+webpack-sources@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.2.0.tgz#18181e0d013fce096faf6f8e6d41eeffffdceac2"
+  dependencies:
+    source-list-map "^2.0.0"
+    source-map "~0.6.1"
 
 webpack-sources@^1.0.1, webpack-sources@^1.1.0:
   version "1.1.0"
