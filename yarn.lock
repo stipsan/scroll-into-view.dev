@@ -4727,9 +4727,9 @@ gatsby-plugin-styled-components@3.0.0-rc.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-typescript@2.0.0-rc.4:
-  version "2.0.0-rc.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.0-rc.4.tgz#4307a126c24191e5e5eedfe9e73ca89e048fdab9"
+gatsby-plugin-typescript@2.0.0-rc.5:
+  version "2.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.0-rc.5.tgz#d27b4d476fe24279c0e4f48b8ea5f67ffecbb0ae"
   dependencies:
     "@babel/preset-typescript" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -4743,9 +4743,9 @@ gatsby-react-router-scroll@^2.0.0-rc.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@2.0.0-rc.14:
-  version "2.0.0-rc.14"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.14.tgz#8a654b81465f736b5b12694e9f055dff238812e5"
+gatsby@2.0.0-rc.15:
+  version "2.0.0-rc.15"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.15.tgz#994ceabf049e0020fa799928d77658ab95cb0290"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
