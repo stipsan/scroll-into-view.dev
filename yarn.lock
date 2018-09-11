@@ -4657,9 +4657,9 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
-gatsby-cli@^2.0.0-rc.1:
-  version "2.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.0.0-rc.1.tgz#61e2693f44c8c88b2e8eb48367a1d8b166121423"
+gatsby-cli@^2.0.0-rc.5:
+  version "2.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.0.0-rc.5.tgz#30d03b71d2fa710c772aa808b2e7b99c37a005d7"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -4672,7 +4672,7 @@ gatsby-cli@^2.0.0-rc.1:
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.1"
     hosted-git-info "^2.6.0"
-    lodash "^4.17.4"
+    lodash "^4.17.10"
     opentracing "^0.14.3"
     pretty-error "^2.1.1"
     resolve-cwd "^2.0.0"
@@ -4692,26 +4692,26 @@ gatsby-link@^2.0.0-rc.2:
     prop-types "^15.6.1"
     ric "^1.3.0"
 
-gatsby-plugin-netlify@2.0.0-rc.2:
-  version "2.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.0-rc.2.tgz#03695002a4a24c44cf055974342f126d99416122"
+gatsby-plugin-netlify@2.0.0-rc.6:
+  version "2.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.0-rc.6.tgz#33ff1535442a0d6b50d8fb54ef049cccb47bb1bd"
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^4.0.2"
     kebab-hash "^0.1.2"
-    lodash "^4.17.4"
+    lodash "^4.17.10"
     webpack-assets-manifest "^3.0.2"
 
-gatsby-plugin-page-creator@^2.0.0-rc.1:
-  version "2.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.0-rc.1.tgz#98e02ea80e3511cc03287f69e352f053cc1f80f9"
+gatsby-plugin-page-creator@^2.0.0-rc.5:
+  version "2.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.0-rc.5.tgz#c6587ce83605c6856a4414453c499c5a23e2a62d"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
     chokidar "^1.7.0"
     fs-exists-cached "^1.0.0"
     glob "^7.1.1"
-    lodash "^4.17.4"
+    lodash "^4.17.10"
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
@@ -4721,9 +4721,9 @@ gatsby-plugin-react-helmet@2.0.11:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-styled-components@3.0.0-rc.1:
-  version "3.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.0-rc.1.tgz#c6f706e31ebaab88c711907e9a14d959086e815e"
+gatsby-plugin-styled-components@3.0.0-rc.5:
+  version "3.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.0-rc.5.tgz#19e2ab9c73f7c873a3171e73d487266f388eedc4"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -4743,9 +4743,9 @@ gatsby-react-router-scroll@^2.0.0-rc.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@2.0.0-rc.15:
-  version "2.0.0-rc.15"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.15.tgz#994ceabf049e0020fa799928d77658ab95cb0290"
+gatsby@2.0.0-rc.19:
+  version "2.0.0-rc.19"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.19.tgz#bb336365c48fcb6b6d639ff62b39bc14d3f79365"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -4799,9 +4799,9 @@ gatsby@2.0.0-rc.15:
     flat "^4.0.0"
     friendly-errors-webpack-plugin "^1.6.1"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.0.0-rc.1"
+    gatsby-cli "^2.0.0-rc.5"
     gatsby-link "^2.0.0-rc.2"
-    gatsby-plugin-page-creator "^2.0.0-rc.1"
+    gatsby-plugin-page-creator "^2.0.0-rc.5"
     gatsby-react-router-scroll "^2.0.0-rc.2"
     glob "^7.1.1"
     graphql "^0.13.2"
@@ -4818,7 +4818,7 @@ gatsby@2.0.0-rc.15:
     json-loader "^0.5.7"
     json-stringify-safe "^5.0.1"
     kebab-hash "^0.1.2"
-    lodash "^4.17.4"
+    lodash "^4.17.10"
     md5 "^2.2.1"
     md5-file "^3.1.1"
     mime "^2.2.0"
