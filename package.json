@@ -45,7 +45,7 @@
     "husky": "0.14.3",
     "lint-staged": "7.3.0",
     "lynt": "0.5.3",
-    "prettier-package-json": "2.0.0"
+    "prettier-package-json": "2.0.1"
   },
   "lint-staged": {
     "*.js": [
