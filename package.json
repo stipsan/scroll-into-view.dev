@@ -16,7 +16,7 @@
     "@types/node": "10.11.5",
     "@types/prettier": "1.13.2",
     "@types/react": "16.4.16",
-    "@types/react-dom": "16.0.8",
+    "@types/react-dom": "16.0.9",
     "babel-plugin-styled-components": "1.8.0",
     "bulma": "0.7.1",
     "compute-scroll-into-view": "1.0.11",
