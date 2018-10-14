@@ -11,9 +11,7 @@
   "packageRules": [
     {
       "groupName": "scroll-into-view",
-      "packagePatterns": [
-        "scroll-into-view"
-      ]
+      "packagePatterns": ["scroll-into-view"]
     }
   ]
 }
