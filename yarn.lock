@@ -10058,10 +10058,10 @@ scroll-behavior@^0.9.9:
     dom-helpers "^3.2.1"
     invariant "^2.2.2"
 
-scroll-into-view-if-needed@2.2.19:
-  version "2.2.19"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.19.tgz#23e97ace6a6886f171f30b545a689b3afb8fc71b"
-  integrity sha512-fn+/Is/AsUlY8L36aO78RUQ7cuosAMVuBCT1DSzU1fGF8Mni75r4NTDtb6RNZ4hXcLzDyG7FCBGXZjbSipiixA==
+scroll-into-view-if-needed@2.2.20:
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.20.tgz#3a46847a72233a3af9770e55df450f2a7f2e2a0e"
+  integrity sha512-P9kYMrhi9f6dvWwTGpO5I3HgjSU/8Mts7xL3lkoH5xlewK7O9Obdc5WmMCzppln7bCVGNmf3qfoZXrpCeyNJXw==
   dependencies:
     compute-scroll-into-view "1.0.11"
 
@@ -10275,12 +10275,12 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-smooth-scroll-into-view-if-needed@1.1.22:
-  version "1.1.22"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.22.tgz#c3dc616d7729fad04ebda514415472defc7da0e4"
-  integrity sha512-yfuDiRxNAe8Nr1ghlkg3anq+XYDVTb7PqdLyL1I7uLe6uTwXhzGsDeL4xEGF0bz4s1fx4VPq3v1AlWx76ptMWQ==
+smooth-scroll-into-view-if-needed@1.1.23:
+  version "1.1.23"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.23.tgz#e2a3073e5f90deab0aca23f9316beb41230371a4"
+  integrity sha512-52177sj5yR2novVCB+vJRCYEUkHFz2mq5UKmm5wwIWs0ZtC1sotVaTjKBsuNzBPF4nOV1NxMctyD4V/VMmivCQ==
   dependencies:
-    scroll-into-view-if-needed "2.2.19"
+    scroll-into-view-if-needed "2.2.20"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
