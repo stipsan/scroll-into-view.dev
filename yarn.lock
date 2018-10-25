@@ -7411,10 +7411,10 @@ ltcdr@^2.2.1:
   resolved "https://registry.yarnpkg.com/ltcdr/-/ltcdr-2.2.1.tgz#5ab87ad1d4c1dab8e8c08bbf037ee0c1902287cf"
   integrity sha1-Wrh60dTB2rjowIu/A37gwZAih88=
 
-lynt@0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/lynt/-/lynt-0.5.3.tgz#80aba00a8c14ac4e35e586536227a4df0aaa70d9"
-  integrity sha512-/YSUgFEDftLOwhxH2WNlIM4nrK8DXp/rFlai/O2QaSiM2c3gsHIMlT6EV9HrWCjfbCamdfMlo9MhUseh6z648g==
+lynt@0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/lynt/-/lynt-0.5.4.tgz#ae9cf34503fbf2251ab963aae2cb1dac164ced63"
+  integrity sha512-WGbvNkx8+A4I5a4CR9ohQGseXPB4yA2ujEXgEpzWejNhnBANtAxVF1qFfDv7oSwDH8s1coUF3w/oGAzB9xFZFQ==
   dependencies:
     "@types/cosmiconfig" "^5.0.3"
     "@types/eslint" "^4.16.3"
