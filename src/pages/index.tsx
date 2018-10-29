@@ -269,7 +269,8 @@ export default class IndexPage extends Component<IndexPageProps> {
                 <code>inline</code> aligns horizontally. It depends on the{' '}
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode">
                   writing-mode
-                </a>.
+                </a>
+                .
               </p>
             </SectionIntro>
             <SectionCode>
