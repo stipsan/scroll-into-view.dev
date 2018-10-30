@@ -63,7 +63,8 @@ class Boundary extends PureComponent<{}, BoundaryState> {
           <Example.CodeHeader>
             <div className="control">
               <label>
-                Boundary:&nbsp;<input
+                Boundary:&nbsp;
+                <input
                   name="boundary"
                   type="checkbox"
                   checked={boundary}
