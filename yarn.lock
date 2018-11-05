@@ -5278,6 +5278,13 @@ framesync@^3.1.8, framesync@^3.1.9:
   resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
   integrity sha512-avNik/k8Wy0r+A2LkoS+4mBb9PoamhBni2u64gRgs5kc1YrApshw6vDL0tqWxdqcUOXSSg6gI9oN0l0GN/FFjA==
 
+framesync@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/framesync/-/framesync-4.0.1.tgz#ed7791baf0d266f58ab02000456f82cb384815bf"
+  integrity sha512-7dF3SXz/xMdwSHFHgj8PV2dAUCFclXWhasAb06rFvAM2pX24m9eDs6X+ikK0kx92w/uIljUi0sBINwcbl0rT2Q==
+  dependencies:
+    hey-listen "^1.0.5"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -10727,7 +10734,17 @@ styled-components@3.3.3:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
-stylefire@2.0.7, stylefire@^2.0.7:
+stylefire@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.1.0.tgz#356dc7951da17f4f55f5f5e6473f2327c17e7077"
+  integrity sha512-DeO5v4w4xwvSoatWkfD++tpPqoolSxZtmrL7mFwxHp70AXJuzvwDVlTkpaXwPXvfevXwiGXA224gOnIk2pLiRA==
+  dependencies:
+    framesync "^4.0.0"
+    hey-listen "^1.0.4"
+    style-value-types "^3.0.6"
+    tslib "^1.9.1"
+
+stylefire@^2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.7.tgz#ccb121dbd7e96fb92c311413639830cc2d4c7eab"
   integrity sha512-jKzMP73SVpiDy7L5+nm20SUAd2LJ3CKiGfpvn3cAQKLlztRoe0F7PnDApA4TxWsAwQvjvYrkv0i+BvJ1eUCf/w==
