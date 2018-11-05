@@ -6,19 +6,20 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          key: v1-deps-{{ .Branch }}
-          key: v1-deps
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - v1-deps-{{ .Branch }}
+            - v1-deps
       - run: yarn install --frozen-lockfile
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.cache  ## cache both yarn and Cypress!
+            - ~/.cache ## cache both yarn and Cypress!
       - run: yarn typecheck
       - run: yarn lint
       - run:
-           command: yarn start
-           background: true
+          command: yarn start
+          background: true
       - run: npx wait-on http://localhost:8000
       - run: $(yarn bin)/cypress run --record --key $RECORD_KEY --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'
       - store_test_results:
