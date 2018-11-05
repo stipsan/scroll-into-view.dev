@@ -12,6 +12,10 @@
     {
       "groupName": "scroll-into-view",
       "packagePatterns": ["scroll-into-view"]
+    },
+    {
+      "groupName": "popmotion",
+      "packageNames": ["popmotion", "stylefire"]
     }
   ]
 }
