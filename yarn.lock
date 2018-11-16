@@ -835,10 +835,10 @@
   resolved "https://registry.yarnpkg.com/@popmotion/easing/-/easing-1.0.1.tgz#48336aea29542113df10aeb81b4fd10f0b95f937"
   integrity sha512-NbIEz9mZAem0F0sjg2v57LbU9Y2Xc50QEX434jYrwEQzXJuJipyUV48Qz4hjHqbB/8xiUj0JMQfRvP8K9nUbxg==
 
-"@popmotion/popcorn@^0.1.0":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@popmotion/popcorn/-/popcorn-0.1.2.tgz#2db84c24796a4f02e5f4897174de30f17ebce6a0"
-  integrity sha512-WJ9I7ce7oAQ6NPqH+9cXXvvM7tWS737EahMWxoioutNP8vm13qKgE9g6QxsRKzNDIU9ru5km5cERVmkGD0WHww==
+"@popmotion/popcorn@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@popmotion/popcorn/-/popcorn-0.2.0.tgz#02750f55c27febd7b3009cc8ce29392735d235d0"
+  integrity sha512-IdVpvrvZ6mv7eYwxymQKjmVgOEu5byEwI566JpCIX9GD4/MwT8w0yq5LmC649iXvtYg2JAOW4o1Y+RKYl6dTPA==
   dependencies:
     "@popmotion/easing" "^1.0.1"
     framesync "^4.0.1"
@@ -8830,13 +8830,13 @@ pluralize@^7.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
-popmotion@8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.5.0.tgz#9d5df110319990eb6ef1e16c0a5acd8d10249e76"
-  integrity sha512-H/r0vbQO+Zgr4x4zmwiP2GFOCkp7UMd6A4jV66KDXenaH7+qDs+1raC+4QIEAOke/QigJaJ/W39om8vgr0pTOw==
+popmotion@8.5.2:
+  version "8.5.2"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.5.2.tgz#5c271fc4370f2739970c3a04bc890b7dbc8e519e"
+  integrity sha512-RZxR8TlEJ4mLePKMyJnz+OczEq81Yb6eHohLzA05bczpytC9nC9Ak5i+CHAoHaXEpW4dGqs0oeLeURnU/DUVMQ==
   dependencies:
     "@popmotion/easing" "^1.0.1"
-    "@popmotion/popcorn" "^0.1.0"
+    "@popmotion/popcorn" "^0.2.0"
     framesync "^4.0.0"
     hey-listen "^1.0.5"
     style-value-types "^3.0.6"
@@ -10965,10 +10965,10 @@ styled-components@3.3.3:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
-stylefire@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.2.0.tgz#1b74025f8e01dc6b4f55c3fee0587570412ddcf3"
-  integrity sha512-1NnVMswVJU0dMfUJqZ0RH8OEVq5qFcbICTAugltJwvCoWGlIn0nM88JsPQOALVP0WyN+i/WSZ/ih7HuUMBdgsg==
+stylefire@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.2.1.tgz#3ae1f74477fa5117d410757cefe5878179708e38"
+  integrity sha512-0Yc5ILS2kVIow8UnbGLGRQhkECxIZTH23Y/KwjVJfuvocWyF/VfuRYwW8MngOkOhJ9oea6E38QgDWWJkj0EqJQ==
   dependencies:
     framesync "^4.0.0"
     hey-listen "^1.0.4"
