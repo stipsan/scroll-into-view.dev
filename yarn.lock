@@ -10981,10 +10981,10 @@ styled-components@3.3.3:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
-stylefire@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.3.0.tgz#9798533db611f0048589a6a882e2aa7e345c90f3"
-  integrity sha512-LQyqDz9fFzmqFVOfkA1BrTsVN4sodic6abzM/e9327kOej1yZPrut2rjZ7bRhMYblt2gS/FdLlvde/sZvLl/fQ==
+stylefire@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.3.1.tgz#05b65601d65d717b9ac34ece81160f48d9442009"
+  integrity sha512-RNSf3ofR7n6+DG0zamrx81Ub7b83FqECbK+f4ks8piOogaNhZAKwYeMe5eBOz2cKF7eeD31OgTkfeVTyeGgAdw==
   dependencies:
     framesync "^4.0.0"
     hey-listen "^1.0.4"
