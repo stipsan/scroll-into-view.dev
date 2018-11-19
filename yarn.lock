@@ -6129,14 +6129,14 @@ hastscript@^3.1.0:
     property-information "^3.0.0"
     space-separated-tokens "^1.0.0"
 
-hastscript@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/hastscript/-/hastscript-4.0.0.tgz#653f7f4f7aedb9e6c629af8c13707553f5671c77"
-  integrity sha512-zrN3fborQZT6+DJZOCKpeafzYIjs3y4ymzHGExBmUFSqwjqrRbH8DYDDbPsNLkVW0YDvoKdQ1c6wMLcZuoZDmg==
+hastscript@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/hastscript/-/hastscript-5.0.0.tgz#fee10382c1bc4ba3f1be311521d368c047d2c43a"
+  integrity sha512-xJtuJ8D42Xtq5yJrnDg/KAIxl2cXBXKoiIJwmWX9XMf8113qHTGl/Bf7jEsxmENJ4w6q4Tfl8s/Y6mEZo8x8qw==
   dependencies:
     comma-separated-tokens "^1.0.0"
     hast-util-parse-selector "^2.2.0"
-    property-information "^4.0.0"
+    property-information "^5.0.1"
     space-separated-tokens "^1.0.0"
 
 hex-color-regex@^1.1.0:
@@ -9324,10 +9324,10 @@ property-information@^3.0.0:
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-3.2.0.tgz#fd1483c8fbac61808f5fe359e7693a1f48a58331"
   integrity sha1-/RSDyPusYYCPX+NZ52k6H0ilgzE=
 
-property-information@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/property-information/-/property-information-4.1.0.tgz#16f817d8c087f3018b91877c193d730570487bb2"
-  integrity sha512-bv9oWK9kX47b1rpZoLdv21FGCUAWTOClpb/wsbz2unJtyrZg05h7JBhn4mDb20KCG1jF/cbIdUa2IoYU/Wj4Hw==
+property-information@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/property-information/-/property-information-5.0.1.tgz#c3b09f4f5750b1634c0b24205adbf78f18bdf94f"
+  integrity sha512-nAtBDVeSwFM3Ot/YxT7s4NqZmqXI7lLzf46BThvotEtYf2uk2yH0ACYuWQkJ7gxKs49PPtKVY0UlDGkyN9aJlw==
   dependencies:
     xtend "^4.0.1"
 
@@ -9758,12 +9758,12 @@ redux@^3.6.0:
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
 
-refractor@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.6.1.tgz#a88fddbd13e647da3f1912f980d6807286e41c86"
-  integrity sha512-tdRAsgmoNw8BKsCD9lQkLnCXVBnhtYU254VNXJQ1n6cDd9Dw+vaofGjt507Hymwpy7BhhySyc/sEtiL6Q2G7KA==
+refractor@2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/refractor/-/refractor-2.6.2.tgz#8e0877ab8864165275aafeea5d9c8eebe871552f"
+  integrity sha512-AMNEGkhaXfhoa0/0mW0bHdfizDJnuHDK29/D5oQaKICf6DALQ+kDEHW/36oDHCdfva4XrZ+cdMhRvPsTI4OIjA==
   dependencies:
-    hastscript "^4.0.0"
+    hastscript "^5.0.0"
     parse-entities "^1.1.2"
     prismjs "~1.15.0"
 
