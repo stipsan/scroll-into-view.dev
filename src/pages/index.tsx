@@ -162,9 +162,7 @@ export default class IndexPage extends Component<IndexPageProps> {
           <meta name="description" content={description} />
         </Helmet>
         <Hero>
-          <Wrapper
-            ref={node => (this.scrollToBoundary = node as HTMLElement)}
-          >
+          <Wrapper ref={node => (this.scrollToBoundary = node as HTMLElement)}>
             <Chrome ref={node => (this.maxHeightRef = node)} />
             <ScrollWrapper
               style={{
