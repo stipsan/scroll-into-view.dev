@@ -5,7 +5,7 @@ const Svg = styled.svg`
   height: auto;
 `
 
-export const Text = React.forwardRef((props, ref) => (
+export const Text = React.forwardRef<SVGElement>((props, ref) => (
   <Svg
     width="744px"
     height="454px"
@@ -54,7 +54,7 @@ const ChromeWrapper = styled.div`
   z-index: 1;
 }
 `
-export const Chrome = React.forwardRef((props, ref) => (
+export const Chrome = React.forwardRef<SVGElement>((props, ref) => (
   <ChromeWrapper>
     <Svg
       viewBox="0 0 744 389"
