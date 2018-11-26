@@ -110,7 +110,7 @@ class Alignment extends PureComponent {
               {range.map(number => (
                 <Item key={number}>
                   <Tile
-                    innerRef={node =>
+                    ref={node =>
                       (this.items[number] = node as HTMLElement)
                     }
                   >
