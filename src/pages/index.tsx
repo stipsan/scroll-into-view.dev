@@ -154,7 +154,7 @@ export default class IndexPage extends Component<IndexPageProps> {
   render() {
     return (
       <div>
-      <GlobalStyles />
+        <GlobalStyles />
         <Helmet>
           <title>{description}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
