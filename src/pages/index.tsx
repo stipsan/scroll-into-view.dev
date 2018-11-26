@@ -163,16 +163,16 @@ export default class IndexPage extends Component<IndexPageProps> {
         </Helmet>
         <Hero>
           <Wrapper
-            innerRef={node => (this.scrollToBoundary = node as HTMLElement)}
+            ref={node => (this.scrollToBoundary = node as HTMLElement)}
           >
-            <Chrome innerRef={node => (this.maxHeightRef = node)} />
+            <Chrome ref={node => (this.maxHeightRef = node)} />
             <ScrollWrapper
               style={{
                 maxHeight: this.state.maxHeight,
                 opacity: this.state.maxHeight === 'auto' ? 0 : undefined,
               }}
             >
-              <TextIcon innerRef={node => (this.scrollToRef = node)} />
+              <TextIcon ref={node => (this.scrollToRef = node)} />
             </ScrollWrapper>
           </Wrapper>
         </Hero>
