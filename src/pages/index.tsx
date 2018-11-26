@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
-import styled, { injectGlobal } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import systemFontStack from 'system-font-stack'
 import Helmet from 'react-helmet'
 
@@ -18,7 +18,7 @@ import 'bulma/css/bulma.min.css'
 
 const { description } = require('scroll-into-view-if-needed/package.json')
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   html,
   body {
     margin: 0!important;
@@ -154,6 +154,7 @@ export default class IndexPage extends Component<IndexPageProps> {
   render() {
     return (
       <div>
+        <GlobalStyles />
         <Helmet>
           <title>{description}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -161,17 +162,15 @@ export default class IndexPage extends Component<IndexPageProps> {
           <meta name="description" content={description} />
         </Helmet>
         <Hero>
-          <Wrapper
-            innerRef={node => (this.scrollToBoundary = node as HTMLElement)}
-          >
-            <Chrome innerRef={node => (this.maxHeightRef = node)} />
+          <Wrapper ref={node => (this.scrollToBoundary = node as HTMLElement)}>
+            <Chrome ref={node => (this.maxHeightRef = node)} />
             <ScrollWrapper
               style={{
                 maxHeight: this.state.maxHeight,
                 opacity: this.state.maxHeight === 'auto' ? 0 : undefined,
               }}
             >
-              <TextIcon innerRef={node => (this.scrollToRef = node)} />
+              <TextIcon ref={node => (this.scrollToRef = node)} />
             </ScrollWrapper>
           </Wrapper>
         </Hero>

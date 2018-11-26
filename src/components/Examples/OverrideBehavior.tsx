@@ -111,13 +111,13 @@ class Boundary extends PureComponent {
             ))}
           </Example.ResultHeader>
           <Example.ScrollContainer
-            innerRef={container => (this.container = container as HTMLElement)}
+            ref={container => (this.container = container as HTMLElement)}
           >
             <ScrollLayer>
               {emojis.map((emoji, key) => (
                 <Item
                   key={emoji}
-                  innerRef={node => (this.items[key] = node as HTMLElement)}
+                  ref={node => (this.items[key] = node as HTMLElement)}
                 >
                   {emoji}
                 </Item>

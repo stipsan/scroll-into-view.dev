@@ -47,7 +47,7 @@ class Iframe extends Component {
     return (
       <Wrapper
         frameBorder="0"
-        innerRef={frame => (this.frame = frame as HTMLIFrameElement)}
+        ref={frame => (this.frame = frame as HTMLIFrameElement)}
       >
         {this.state.mounted &&
           createPortal(

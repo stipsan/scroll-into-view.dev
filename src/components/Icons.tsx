@@ -5,13 +5,14 @@ const Svg = styled.svg`
   height: auto;
 `
 
-export const Text = props => (
+export const Text = React.forwardRef<SVGElement>((props, ref) => (
   <Svg
     width="744px"
     height="454px"
     viewBox="0 0 744 454"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
+    ref={ref}
     {...props}
   >
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -46,20 +47,21 @@ export const Text = props => (
       />
     </g>
   </Svg>
-)
+))
 
 const ChromeWrapper = styled.div`
   position: relative;
   z-index: 1;
 }
 `
-export const Chrome = props => (
+export const Chrome = React.forwardRef<SVGElement>((props, ref) => (
   <ChromeWrapper>
     <Svg
       viewBox="0 0 744 389"
       width="744"
       height="389"
       xmlns="http://www.w3.org/2000/svg"
+      ref={ref}
       {...props}
     >
       <path
@@ -74,4 +76,4 @@ export const Chrome = props => (
       />
     </Svg>
   </ChromeWrapper>
-)
+))

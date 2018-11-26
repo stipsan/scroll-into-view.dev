@@ -112,12 +112,12 @@ class Boundary extends PureComponent<{}, BoundaryState> {
           </Example.ResultHeader>
           <Example.ScrollContainer
             id="example-boundary"
-            innerRef={node => (this.frameBoundary = node as Element)}
+            ref={node => (this.frameBoundary = node as Element)}
           >
             {range.map(name => (
               <Item
                 key={name}
-                innerRef={node => (this.items[name] = node as HTMLElement)}
+                ref={node => (this.items[name] = node as HTMLElement)}
               >
                 {name}
               </Item>
