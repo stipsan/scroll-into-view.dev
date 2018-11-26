@@ -112,7 +112,7 @@ class IfNeeded extends PureComponent {
             {range.map(name => (
               <Item
                 key={name}
-                innerRef={node => (this.items[name] = node as HTMLElement)}
+                ref={node => (this.items[name] = node as HTMLElement)}
               >
                 {name}
               </Item>
