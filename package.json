@@ -38,7 +38,7 @@
     "styled-components": "4.1.2",
     "stylefire": "2.3.2",
     "system-font-stack": "1.0.5",
-    "typescript": "3.1.6"
+    "typescript": "3.2.1"
   },
   "devDependencies": {
     "cypress": "3.1.2",
