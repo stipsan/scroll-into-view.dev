@@ -13,7 +13,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@types/node": "10.12.16",
+    "@types/node": "10.12.17",
     "@types/prettier": "1.15.2",
     "@types/react": "16.7.17",
     "@types/react-dom": "16.0.11",
