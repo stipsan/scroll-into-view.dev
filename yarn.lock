@@ -5431,11 +5431,6 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framesync@^3.1.8:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
-  integrity sha512-avNik/k8Wy0r+A2LkoS+4mBb9PoamhBni2u64gRgs5kc1YrApshw6vDL0tqWxdqcUOXSSg6gI9oN0l0GN/FFjA==
-
 framesync@^4.0.0, framesync@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/framesync/-/framesync-4.0.1.tgz#ed7791baf0d266f58ab02000456f82cb384815bf"
@@ -8999,17 +8994,17 @@ pluralize@^7.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
-popmotion@8.5.4:
-  version "8.5.4"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.5.4.tgz#db6393f745df585290f0858207561a9bbba545b5"
-  integrity sha512-cjQY4tTHhuq7dHl6w/eTKwbBOccI3RcZeF+OCuyuSbJoRe5It9Lcft5cV0MX/7ZoEpFAlu9ZbJ+fzNOBkXckxA==
+popmotion@8.5.5:
+  version "8.5.5"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.5.5.tgz#0b6bfa6c82d457e4cccd2375923539b6d975b9e8"
+  integrity sha512-YiCinpxop8dkXQJEaCvckY6ac1DeVz/MyQkL+FGV9TYJz4J04dzXE1lnFv6gZ2t2Xl2JCkOFa9vZQ9t8krWqXQ==
   dependencies:
     "@popmotion/easing" "^1.0.1"
     "@popmotion/popcorn" "^0.3.0"
     framesync "^4.0.0"
     hey-listen "^1.0.5"
     style-value-types "^3.0.6"
-    stylefire "^2.0.7"
+    stylefire "^2.3.4"
     tslib "^1.9.1"
 
 portfinder@^1.0.9:
@@ -11148,7 +11143,7 @@ styled-components@4.1.3:
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
 
-stylefire@2.3.4:
+stylefire@2.3.4, stylefire@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.3.4.tgz#261957f18683d8e44c89310ff902bec08a83d26a"
   integrity sha512-mQFSzQTmB2CeYiBDAK8e9AzBLdpuZQGy/W7Oso5BC921+8IM53r+ZFLP2cBOeXCEd6WB3diz7mDxGU5cQh8SbQ==
@@ -11156,16 +11151,6 @@ stylefire@2.3.4:
     framesync "^4.0.0"
     hey-listen "^1.0.4"
     style-value-types "^3.0.6"
-
-stylefire@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.7.tgz#ccb121dbd7e96fb92c311413639830cc2d4c7eab"
-  integrity sha512-jKzMP73SVpiDy7L5+nm20SUAd2LJ3CKiGfpvn3cAQKLlztRoe0F7PnDApA4TxWsAwQvjvYrkv0i+BvJ1eUCf/w==
-  dependencies:
-    framesync "^3.1.8"
-    hey-listen "^1.0.4"
-    style-value-types "^3.0.6"
-    tslib "^1.9.1"
 
 stylehacks@^4.0.0:
   version "4.0.0"
