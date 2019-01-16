@@ -15,7 +15,7 @@
   "dependencies": {
     "@types/node": "10.12.18",
     "@types/prettier": "1.15.2",
-    "@types/react": "16.7.18",
+    "@types/react": "16.7.19",
     "@types/react-dom": "16.0.11",
     "babel-plugin-styled-components": "1.10.0",
     "bulma": "0.7.2",
@@ -91,7 +91,7 @@
     ]
   },
   "resolutions": {
-    "@types/react": "16.7.18",
+    "@types/react": "16.7.19",
     "prop-types": "15.6.2"
   }
 }
