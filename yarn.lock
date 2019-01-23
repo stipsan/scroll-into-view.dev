@@ -9066,10 +9066,10 @@ pluralize@^7.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
-popmotion@8.6.0:
-  version "8.6.0"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.6.0.tgz#14edf50376fc2d656b59e0d46390896577818abb"
-  integrity sha512-rU0idZO8fQi8xhHJsFRQKrDIvbLc3aCF6wLcPBVLIYRI/KvQVzprxF6bu2P+PVaYG5G6rf1qSpcn4XgZsNxoyg==
+popmotion@8.6.1:
+  version "8.6.1"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.6.1.tgz#b2ea854f53d20eb5825d04edad8a267bb161c93b"
+  integrity sha512-VbMIP9yTyq7JuuvrstcW47KhXkpN2xuunDIk2vtHPbt8apyin+KFhNrcHRl2d+MN4BnxJURXHcRDFvlfYc3Y4g==
   dependencies:
     "@popmotion/easing" "^1.0.1"
     "@popmotion/popcorn" "^0.3.0"
