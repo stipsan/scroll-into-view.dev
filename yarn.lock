@@ -5696,10 +5696,10 @@ gatsby-plugin-react-helmet@3.0.6:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-styled-components@3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.5.tgz#1788493d301e06f514e91f944a33d3a7d7321498"
-  integrity sha512-m0Dvb4THs7QH3tcFJdmiqsnLYQTamvjzyTGMScDi1PtxyD7Z3ixQgwNjAK9Z+tFeE/TCm4JN/Vwm4jlnqB2AvQ==
+gatsby-plugin-styled-components@3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.6.tgz#873857d1a03123683833688c8f008bd9f782504b"
+  integrity sha512-wCr0ab4LlYF7X2+idSB1fRIL4aoxoUjfRGYpcyDE0k9qsGHlMpD3Gd4qSdyCUdxSDd+7oK35Wqy0KPHl56RDCg==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -5721,10 +5721,10 @@ gatsby-react-router-scroll@^2.0.4:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@2.1.8:
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.8.tgz#1f953964c28522a92b519afe409243420648bb9d"
-  integrity sha512-Itro+x0esH6/xvpkZng0ID2kaOo5cs8gxgfjZPrp3WFx8DHZvTktYj7CqtdDKairW2p4Nut72b3AewNaahBn2Q==
+gatsby@2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.9.tgz#940530ad392313ac931ae20bd0d7e291f1a2e5ad"
+  integrity sha512-pVjkldHxcJTD691nEg0N6z1+SBmsPNiHKBgMbIz6PvhqN9RWK8uxgzqVgpvzaYdCuOaTHvj9Z4oQpSIRH/Fvbg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5829,6 +5829,7 @@ gatsby@2.1.8:
     signal-exit "^3.0.2"
     slash "^1.0.0"
     socket.io "^2.0.3"
+    stack-trace "^0.0.10"
     string-similarity "^1.2.0"
     style-loader "^0.21.0"
     terser-webpack-plugin "^1.2.2"
