@@ -11111,10 +11111,10 @@ styled-components@4.1.3:
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
 
-stylefire@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.4.1.tgz#30945b5499acb59284a0f79645da6ff6759d561a"
-  integrity sha512-4xjQf6AL+rYwc85wOj2Rzbr9W1mk5x+dVW+p6l4pMME8bCl3fiBWC4/2wYAN6oWadupqNsfU4GwhglMO7NaFSg==
+stylefire@2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.4.2.tgz#d4a7f574ea7d75fd6962c6a57b757713467ea49a"
+  integrity sha512-uvZwrpMMXWmUJUJ/AhNm8g/4qMxh4K4RIyQQS43IqFaWuvr3EieycblHfs0NikZdPWnvLVb4JzeXwHkpIOPJQA==
   dependencies:
     framesync "^4.0.0"
     hey-listen "^1.0.4"
