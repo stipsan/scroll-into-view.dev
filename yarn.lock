@@ -11527,10 +11527,10 @@ stylefire@2.4.3:
     hey-listen "^1.0.4"
     style-value-types "^3.0.6"
 
-stylefire@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-3.0.2.tgz#1c6766ca79d0e48e4d06e2f6c1fd876290efd5a4"
-  integrity sha512-THG8duPugZE8BjB1gmhC7FhVc1xksttT7d/kkVHSPRKxIxttwtpzWzPZZx9SBgQyy4No7WkKV7w/KpgI579xfA==
+stylefire@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-4.0.1.tgz#f199a3320863af81bb17a46e153c6865566c269c"
+  integrity sha512-effFd7kyOJVVD0MUBIXp6ed9nUwljO031EiF6uL3Ev9XCccrr8xHqDTBJ3NKrMK0jfPkhykdWBxExK+PqXiUWA==
   dependencies:
     "@popmotion/popcorn" "^0.3.6"
     framesync "^4.0.0"
