@@ -18,7 +18,7 @@
     "@types/react": "16.8.15",
     "@types/react-dom": "16.8.4",
     "babel-plugin-styled-components": "1.10.0",
-    "bulma": "0.7.4",
+    "bulma": "0.7.5",
     "compute-scroll-into-view": "1.0.11",
     "gatsby": "2.11.7",
     "gatsby-plugin-netlify": "2.1.0",
