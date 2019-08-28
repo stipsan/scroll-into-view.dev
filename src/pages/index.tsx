@@ -1,13 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js jsx-no-lambda no-parameter-reassignment no-var-requires */
 
-import React, {
-  Component,
-  useState,
-  useEffect,
-  useLayoutEffect,
-  useReducer,
-  useRef,
-} from 'react'
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
 import styled, { createGlobalStyle } from 'styled-components'
 import systemFontStack from 'system-font-stack'
@@ -127,8 +120,8 @@ const IndexPage: React.FC = () => {
   useLayoutEffect(() => {
     setMaxHeight(`${maxHeightRef.current.getBoundingClientRect().height}px`)
   }, [])
-  useEffect(
-    () => {
+  useEffect(() => {
+    if (maxHeight !== 'auto') {
       const timeout = setTimeout(() => {
         scrollIntoView(scrollToRef.current, {
           block: 'end',
@@ -141,9 +134,8 @@ const IndexPage: React.FC = () => {
       }, 1500)
 
       return () => clearTimeout(timeout)
-    },
-    [maxHeight]
-  )
+    }
+  }, [maxHeight])
 
   return (
     <div>
