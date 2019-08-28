@@ -120,22 +120,25 @@ const IndexPage: React.FC = () => {
   useLayoutEffect(() => {
     setMaxHeight(`${maxHeightRef.current.getBoundingClientRect().height}px`)
   }, [])
-  useEffect(() => {
-    if (maxHeight !== 'auto') {
-      const timeout = setTimeout(() => {
-        scrollIntoView(scrollToRef.current, {
-          block: 'end',
-          duration: 600,
-          // easeInOutQuint
-          ease: t =>
-            t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t,
-          boundary: scrollToBoundary.current,
-        })
-      }, 1500)
+  useEffect(
+    () => {
+      if (maxHeight !== 'auto') {
+        const timeout = setTimeout(() => {
+          scrollIntoView(scrollToRef.current, {
+            block: 'end',
+            duration: 600,
+            // easeInOutQuint
+            ease: t =>
+              t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t,
+            boundary: scrollToBoundary.current,
+          })
+        }, 1500)
 
-      return () => clearTimeout(timeout)
-    }
-  }, [maxHeight])
+        return () => clearTimeout(timeout)
+      }
+    },
+    [maxHeight]
+  )
 
   return (
     <div>
