@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "cypress": "3.6.1",
-    "husky": "3.0.9",
+    "husky": "3.1.0",
     "lint-staged": "9.4.3",
     "lynt": "0.5.5",
     "prettier-package-json": "2.1.0"
