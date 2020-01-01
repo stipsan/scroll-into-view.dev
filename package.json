@@ -41,7 +41,7 @@
     "typescript": "3.7.2"
   },
   "devDependencies": {
-    "cypress": "3.7.0",
+    "cypress": "3.8.1",
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
     "lynt": "0.5.5",
