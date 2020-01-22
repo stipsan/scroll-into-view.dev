@@ -21,7 +21,8 @@ jobs:
           command: yarn start
           background: true
       - run: npx wait-on http://localhost:8000
-      - run: $(yarn bin)/cypress run --record --key $RECORD_KEY --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'
+      #- run: $(yarn bin)/cypress run --record --key $RECORD_KEY --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'
+      - run: $(yarn bin)/cypress run --reporter junit --reporter-options 'mochaFile=junit/test-results.xml'
       - store_test_results:
           path: junit
       - store_artifacts:
