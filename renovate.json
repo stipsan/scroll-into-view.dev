@@ -22,5 +22,5 @@
       "schedule": ["before 4am on sunday"],
       "commitMessageTopic": "Dev dependency {{depName}}"
     }
-  ],
+  ]
 }
