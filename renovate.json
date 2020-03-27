@@ -1,7 +1,6 @@
 {
   "extends": [
     "config:js-app",
-    //"github>finn-no/renovate-presets:js",
     ":automergeDigest",
     ":automergeMajor",
     ":automergeRequireAllStatusChecks",
@@ -21,9 +20,7 @@
     {
       "depTypeList": ["devDependencies"],
       "schedule": ["before 4am on sunday"],
-      "commitMessage": "Dev dependency {{depName}} updated to version {{newValue}}",
-      "prTitle": "Dev dependency update: {{depName}}",
-      
+      "commitMessageTopic": "Dev dependency {{depName}}"
     }
   ],
 }
