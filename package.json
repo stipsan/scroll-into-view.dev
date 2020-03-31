@@ -36,7 +36,7 @@
     "scroll-into-view-if-needed": "2.2.24",
     "smooth-scroll-into-view-if-needed": "1.1.27",
     "styled-components": "4.4.1",
-    "stylefire": "7.0.2",
+    "stylefire": "7.0.3",
     "system-font-stack": "1.0.5",
     "typescript": "3.8.3"
   },
