@@ -3568,11 +3568,6 @@ compute-scroll-into-view@1.0.16, compute-scroll-into-view@^1.0.16:
   resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.16.tgz#5b7bf4f7127ea2c19b750353d7ce6776a90ee088"
   integrity sha512-a85LHKY81oQnikatZYA90pufpZ6sQx++BoCxOEMsjpZx+ZnaKGQnCyCehTRr/1p9GBIAHTjcU9k71kSYWloLiQ==
 
-compute-scroll-into-view@^1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.14.tgz#80e3ebb25d6aa89f42e533956cb4b16a04cfe759"
-  integrity sha512-mKDjINe3tc6hGelUMNDzuhorIUZ7kS7BwyY0r2wQd2HOH2tRuJykiC06iSEX8y1TuhNzvz4GcJnK16mM2J1NMQ==
-
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -10959,19 +10954,12 @@ scroll-behavior@^0.9.12:
     dom-helpers "^3.4.0"
     invariant "^2.2.4"
 
-scroll-into-view-if-needed@2.2.26:
+scroll-into-view-if-needed@2.2.26, scroll-into-view-if-needed@^2.2.26:
   version "2.2.26"
   resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.26.tgz#e4917da0c820135ff65ad6f7e4b7d7af568c4f13"
   integrity sha512-SQ6AOKfABaSchokAmmaxVnL9IArxEnLEX9j4wAZw+x4iUTb40q7irtHG3z4GtAWz5veVZcCnubXDBRyLVQaohw==
   dependencies:
     compute-scroll-into-view "^1.0.16"
-
-scroll-into-view-if-needed@^2.2.25:
-  version "2.2.25"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.25.tgz#117b7bc7c61bc7a2b7872a0984bc73a19bc6e961"
-  integrity sha512-C8RKJPq9lK7eubwGpLbUkw3lklcG3Ndjmea2PyauzrA0i4DPlzAmVMGxaZrBFqCrVLfvJmP80IyHnv4jxvg1OQ==
-  dependencies:
-    compute-scroll-into-view "^1.0.14"
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -11224,12 +11212,12 @@ slugify@^1.4.0:
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.4.0.tgz#c9557c653c54b0c7f7a8e786ef3431add676d2cb"
   integrity sha512-FtLNsMGBSRB/0JOE2A0fxlqjI6fJsgHGS13iTuVT28kViI4JjUiNqp/vyis0ZXYcMnpR3fzGNkv+6vRlI2GwdQ==
 
-smooth-scroll-into-view-if-needed@1.1.28:
-  version "1.1.28"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.28.tgz#70591d6723aa747114e0c0348379f8739701e4ba"
-  integrity sha512-VBxjAYySCfPix8JaiYKB+Rr4+1tFJ+aJ80caiVmsEA1cgQ3G/aFEfIRSpabJfX5o3FGm3IEttBLebe0uNtgURw==
+smooth-scroll-into-view-if-needed@1.1.29:
+  version "1.1.29"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.29.tgz#4f532d9f0353dbca122e546fb062e7b5e0643734"
+  integrity sha512-UxvIEbmMEqwbw0aZI4SOAtwwkMaLYVION20bDQmazVp3sNb1+WIA5koukqoJizRuAAUANRmcBcrTnodcB7maqw==
   dependencies:
-    scroll-into-view-if-needed "^2.2.25"
+    scroll-into-view-if-needed "^2.2.26"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
