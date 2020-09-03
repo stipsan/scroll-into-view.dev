@@ -9541,10 +9541,10 @@ pnp-webpack-plugin@^1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popmotion@8.7.3:
-  version "8.7.3"
-  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.7.3.tgz#330a77fd8b288f0e8f930e3d3f351d6eb4897860"
-  integrity sha512-OcpS/V9sCJjrKiVfp3JB5kp5SBqefZ4RvM9GBLYgv0YbULxv9S5METP9ueVJxSClR3yrfFEY2pLWTWKLn/EUfg==
+popmotion@8.7.5:
+  version "8.7.5"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.7.5.tgz#95e01b169697a060f6e73748c0f3e0e1e3ae06ed"
+  integrity sha512-p85l/qrOuLTQZ+aGfyB8cqOzDRWgiSFN941jSrj9CsWeJzUn+jiGSWJ50sr59gWAZ8TKIvqdDowqFlScc0NEyw==
   dependencies:
     "@popmotion/easing" "^1.0.1"
     "@popmotion/popcorn" "^0.4.4"
