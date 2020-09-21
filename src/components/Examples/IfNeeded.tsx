@@ -24,17 +24,11 @@ const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
 class IfNeeded extends PureComponent {
   state = {
-    selectedBehavior: 'smooth',
+    selectedBehavior: 'smooth-ponyfill',
     scrollMode: 'if-needed' as 'if-needed',
   }
 
   items: { [key: string]: HTMLElement } = {}
-
-  componentDidMount() {
-    // Thanks to Safari
-    'scrollBehavior' in document.documentElement.style ||
-      this.setState({ selectedBehavior: 'smooth-ponyfill' })
-  }
 
   doScroll = target =>
     (this.state.selectedBehavior === 'smooth'
