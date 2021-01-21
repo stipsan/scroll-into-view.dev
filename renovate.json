@@ -1,14 +1,5 @@
 {
-  "extends": [
-    "config:js-app",
-    "github>finn-no/renovate-presets:js",
-    ":automergeDigest",
-    ":automergeMajor",
-    ":automergeRequireAllStatusChecks",
-    ":prHourlyLimit4",
-    ":semanticCommits",
-    ":pinDigestsDisabled"
-  ],
+  "extends": ["github>stipsan/renovate-presets:auto"],
   "packageRules": [
     {
       "groupName": "scroll-into-view",
