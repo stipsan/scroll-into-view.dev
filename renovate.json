@@ -1,13 +1,3 @@
 {
-  "extends": ["github>stipsan/renovate-presets:auto"],
-  "packageRules": [
-    {
-      "groupName": "scroll-into-view",
-      "packagePatterns": ["scroll-into-view"]
-    },
-    {
-      "groupName": "popmotion",
-      "packageNames": ["popmotion", "stylefire"]
-    }
-  ]
+  "extends": ["github>stipsan/renovate-presets:auto"]
 }
