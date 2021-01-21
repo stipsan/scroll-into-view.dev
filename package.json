@@ -31,7 +31,7 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-helmet": "6.1.0",
-    "react-refractor": "1.0.1",
+    "react-refractor": "2.1.2",
     "refractor": "2.10.1",
     "scroll-into-view-if-needed": "2.2.26",
     "smooth-scroll-into-view-if-needed": "1.1.29",
