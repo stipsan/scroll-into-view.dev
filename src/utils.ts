@@ -1,5 +1,5 @@
 import prettier from 'prettier/standalone'
-import babylonParser from 'prettier/parser-babylon'
+import parserBabel from 'prettier/parser-babel'
 
 export const dimensions = {
   maxWidth: 1220,
@@ -7,10 +7,10 @@ export const dimensions = {
 
 export function format(code) {
   return prettier.format(code, {
-    parser: 'babylon',
+    parser: 'babel',
     printWidth: 60,
     singleQuote: true,
     trailingComma: 'es5',
-    plugins: [babylonParser],
+    plugins: [parserBabel],
   })
 }

@@ -26,7 +26,7 @@
     "gatsby-plugin-styled-components": "3.9.0",
     "gatsby-plugin-typescript": "2.11.0",
     "popmotion": "9.1.0",
-    "prettier": "1.19.1",
+    "prettier": "2.2.1",
     "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -42,8 +42,8 @@
   },
   "devDependencies": {
     "cypress": "6.3.0",
-    "husky": "3.1.0",
-    "lint-staged": "9.5.0",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.3",
     "lynt": "0.5.5",
     "prettier-package-json": "2.1.3"
   },
