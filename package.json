@@ -25,7 +25,7 @@
     "gatsby-plugin-react-helmet": "3.9.0",
     "gatsby-plugin-styled-components": "3.9.0",
     "gatsby-plugin-typescript": "2.11.0",
-    "popmotion": "8.7.6",
+    "popmotion": "9.1.0",
     "prettier": "2.2.1",
     "prop-types": "15.7.2",
     "react": "17.0.1",
