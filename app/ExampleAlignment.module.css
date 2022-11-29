@@ -1,0 +1,25 @@
+.scrollLayer {
+  box-sizing: border-box;
+  padding: calc(var(--size) / 12);
+  height: calc(calc(var(--size) * 1.5) + calc(var(--size) / 6));
+  width: calc(calc(var(--size) * 1.5) + calc(var(--size) / 6));
+  width: calc(calc(var(--size) * 1.5) + calc(var(--size) / 6));
+}
+
+.item {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  /* The following is to support vertical writing mode */
+  height: calc(calc(var(--size) / 2) / 3)%;
+}
+
+.tile {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  height: calc(var(--size) / 3);
+  color: hsla(0, 0%, 0%, 0.3);
+  justify-content: center;
+  width: calc(var(--size) / 3);
+}

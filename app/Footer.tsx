@@ -1,25 +1,15 @@
 /* tslint:disable:no-var-requires */
 
-import React from 'react'
-import styled from 'styled-components'
+import cx from 'classnames'
+import computePkg from 'compute-scroll-into-view/package.json' assert { type: 'json' }
+import scrollPkg from 'scroll-into-view-if-needed/package.json' assert { type: 'json' }
+import smoothPkg from 'smooth-scroll-into-view-if-needed/package.json' assert { type: 'json' }
 
-const {
-  version: baseVersion,
-} = require('scroll-into-view-if-needed/package.json')
-const {
-  version: smoothVersion,
-} = require('smooth-scroll-into-view-if-needed/package.json')
-const {
-  version: computeVersion,
-} = require('compute-scroll-into-view/package.json')
 
-const Wrapper = styled.footer`
-  margin-top: 20px;
-  text-align: center;
-`
+import styles from './Footer.module.css'
 
 export default () => (
-  <Wrapper className="footer">
+  <footer className={cx(styles.footer, "footer")}>
     <div className="container">
       <div className="content has-text-centered">
         <p>
@@ -34,7 +24,7 @@ export default () => (
           >
             <div className="tags has-addons">
               <span className="tag is-dark">scroll-into-view-if-needed</span>
-              <span className="tag is-info">{baseVersion}</span>
+              <span className="tag is-info">{scrollPkg.version}</span>
             </div>
           </a>
           <a
@@ -45,7 +35,7 @@ export default () => (
               <span className="tag is-dark">
                 smooth-scroll-into-view-if-needed
               </span>
-              <span className="tag is-info">{smoothVersion}</span>
+              <span className="tag is-info">{smoothPkg.version}</span>
             </div>
           </a>
           <a
@@ -54,11 +44,11 @@ export default () => (
           >
             <div className="tags has-addons">
               <span className="tag is-dark">compute-scroll-into-view</span>
-              <span className="tag is-info">{computeVersion}</span>
+              <span className="tag is-info">{computePkg.version}</span>
             </div>
           </a>
         </div>
       </div>
     </div>
-  </Wrapper>
+  </footer>
 )

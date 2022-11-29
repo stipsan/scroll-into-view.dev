@@ -1,24 +1,14 @@
-/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+'use client'
 
-import React, { PureComponent } from 'react'
+import cx from 'classnames'
+import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed'
-import styled from 'styled-components'
-import Code from '../Code'
-import * as Example from '../Example'
-import Select from '../Select'
+import Code from './Code'
+import * as Example from './Example'
+import Select from './Select'
 
-const Item = styled.div.attrs({
-  className: 'has-background-primary is-size-4',
-})`
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  display: flex;
-  height: ${Example.SIZE / 4 - 10}px;
-  margin: 20px;
-  color: hsla(0, 0%, 0%, 0.4);
-`
+import styles from './ExampleIfNeeded.module.css'
 
 const range = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
@@ -30,7 +20,7 @@ class IfNeeded extends PureComponent {
 
   items: { [key: string]: HTMLElement } = {}
 
-  doScroll = target =>
+  doScroll = (target) =>
     (this.state.selectedBehavior === 'smooth'
       ? scrollIntoView
       : smoothScrollIntoView)(target, {
@@ -64,7 +54,7 @@ class IfNeeded extends PureComponent {
           <Example.CodeHeader>
             <Select
               label="Behavior"
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ selectedBehavior: event.target.value })
               }
               value={selectedBehavior}
@@ -76,7 +66,7 @@ class IfNeeded extends PureComponent {
 
             <Select
               label="Scroll mode"
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({ scrollMode: event.target.value })
               }
               value={scrollMode}
@@ -103,13 +93,14 @@ class IfNeeded extends PureComponent {
             </Example.Button>
           </Example.ResultHeader>
           <Example.ScrollContainer>
-            {range.map(name => (
-              <Item
+            {range.map((name) => (
+              <div
                 key={name}
-                ref={node => (this.items[name] = node as HTMLElement)}
+                className={cx(styles.item, 'has-background-primary is-size-4')}
+                ref={(node) => (this.items[name] = node as HTMLElement)}
               >
                 {name}
-              </Item>
+              </div>
             ))}
           </Example.ScrollContainer>
         </Example.Result>

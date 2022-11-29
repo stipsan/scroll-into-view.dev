@@ -1,0 +1,9 @@
+.item {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  height: calc(calc(var(--size) / 4) - 10px);
+  margin: 20px;
+  color: white;
+  justify-content: center;
+}

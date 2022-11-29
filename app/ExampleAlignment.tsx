@@ -1,41 +1,14 @@
-/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+'use client'
 
-import React, { PureComponent } from 'react'
+import cx from 'classnames'
+import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
-import styled from 'styled-components'
-import Code from '../Code'
-import * as Example from '../Example'
-import Select from '../Select'
+import Code from './Code'
+import * as Example from './Example'
+import Select from './Select'
 
-const layerSize = Example.SIZE * 1.5 + Example.SIZE / 6
-const layerPadding = Example.SIZE / 12
-const ScrollLayer = styled.div.attrs({
-  className: 'columns is-multiline is-mobile is-gapless',
-})`
-  box-sizing: border-box;
-  padding: ${layerPadding}px;
-  height: ${layerSize}px;
-  width: ${layerSize}px;
-`
+import styles from './ExampleAlignment.module.css'
 
-const Item = styled.div.attrs({ className: 'column is-one-third' })`
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  /* The following is to support vertical writing mode */
-  height: ${100 / 3}%;
-`
-const Tile = styled.div.attrs({
-  className: 'has-background-primary is-size-1',
-})`
-  align-items: center;
-  border-radius: 4px;
-  display: flex;
-  height: ${Example.SIZE / 3}px;
-  color: hsla(0, 0%, 0%, 0.3);
-  justify-content: center;
-  width: ${Example.SIZE / 3}px;
-`
 
 const range = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -47,7 +20,7 @@ class Alignment extends PureComponent {
 
   items: HTMLElement[] = []
 
-  doScroll = target =>
+  doScroll = (target) =>
     scrollIntoView(target, {
       behavior: 'smooth',
       // @TODO resolve "as" tricks here
@@ -55,7 +28,7 @@ class Alignment extends PureComponent {
       inline: this.state.inline as 'start' | 'center' | 'end' | 'nearest',
     })
 
-  handleChange = event =>
+  handleChange = (event) =>
     this.setState({ [event.target.name]: event.target.value })
 
   render() {
@@ -106,17 +79,18 @@ class Alignment extends PureComponent {
             </Example.Button>
           </Example.ResultHeader>
           <Example.ScrollContainer>
-            <ScrollLayer>
-              {range.map(number => (
-                <Item key={number}>
-                  <Tile
-                    ref={node => (this.items[number] = node as HTMLElement)}
+            <div className={cx(styles.scrollLayer, 'columns is-multiline is-mobile is-gapless')}>
+              {range.map((number) => (
+                <div key={number} className={cx(styles.item,'column is-one-third' )}>
+                  <div
+                  className={cx(styles.tile, 'has-background-primary is-size-1')}
+                    ref={(node) => (this.items[number] = node as HTMLElement)}
                   >
                     {number}
-                  </Tile>
-                </Item>
+                  </div>
+                </div>
               ))}
-            </ScrollLayer>
+            </div>
           </Example.ScrollContainer>
         </Example.Result>
       </Example.Section>

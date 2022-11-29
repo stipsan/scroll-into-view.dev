@@ -1,26 +1,13 @@
-/* tslint:disable:jsx-no-multiline-js jsx-no-lambda */
+'use client'
 
-import React, { PureComponent } from 'react'
+import cx from 'classnames'
+import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
-import styled from 'styled-components'
-import Code from '../Code'
-import * as Example from '../Example'
-import Select from '../Select'
+import Code from './Code'
+import * as Example from './Example'
+import Select from './Select'
 
-const Item = styled.div.attrs({
-  className: 'has-background-dark is-size-4',
-})`
-  align-items: center;
-  border-radius: 4px;
-  display: flex;
-  height: ${Example.SIZE / 4 - 10}px;
-  margin: 20px;
-  color: white;
-  justify-content: center;
-
-  & + & {
-  }
-`
+import styles from './ExampleBoundary.module.css'
 
 const range = ['😁', '🤯', '😅', '🤔', '🤩', '🤨', '😲']
 
@@ -37,7 +24,7 @@ class Boundary extends PureComponent<{}, BoundaryState> {
   frameBoundary: Element
   items: { [key: string]: HTMLElement } = {}
 
-  doScroll = target =>
+  doScroll = (target) =>
     scrollIntoView(target, {
       behavior: 'smooth',
       block: this.state.block,
@@ -68,7 +55,7 @@ class Boundary extends PureComponent<{}, BoundaryState> {
                   name="boundary"
                   type="checkbox"
                   checked={boundary}
-                  onChange={event =>
+                  onChange={(event) =>
                     this.setState({ boundary: event.target.checked })
                   }
                 />
@@ -76,7 +63,7 @@ class Boundary extends PureComponent<{}, BoundaryState> {
             </div>
             <Select
               label="Block"
-              onChange={event =>
+              onChange={(event) =>
                 this.setState({
                   block: event.target.value as
                     | 'start'
@@ -112,15 +99,16 @@ class Boundary extends PureComponent<{}, BoundaryState> {
           </Example.ResultHeader>
           <Example.ScrollContainer
             id="example-boundary"
-            ref={node => (this.frameBoundary = node as Element)}
+            ref={(node) => (this.frameBoundary = node as Element)}
           >
-            {range.map(name => (
-              <Item
+            {range.map((name) => (
+              <div
                 key={name}
-                ref={node => (this.items[name] = node as HTMLElement)}
+                className={cx(styles.item, 'has-background-dark is-size-4')}
+                ref={(node) => (this.items[name] = node as HTMLElement)}
               >
                 {name}
-              </Item>
+              </div>
             ))}
           </Example.ScrollContainer>
         </Example.Result>

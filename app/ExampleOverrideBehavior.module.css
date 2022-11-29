@@ -1,0 +1,16 @@
+.scrollLayer {
+  display: flex;
+  padding-left: var(--size);
+  padding-right: var(--size);
+  width: calc(var(--size) * 3);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--size) / 2);
+  width: calc(var(--size) / 2);
+  margin: calc(var(--size) / 4);
+  color: black;
+}

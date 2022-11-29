@@ -25,7 +25,7 @@
 }
 .wrapper > svg {
   z-index: 1;
-    position: relative;
+  position: relative;
 }
 
 .scrollWrapper {
@@ -44,11 +44,9 @@
   .scrollWrapper {
     opacity: 1;
     mix-blend-mode: difference;
-
   }
 
   .scrollWrapper svg {
     color: #557271;
   }
 }
-
