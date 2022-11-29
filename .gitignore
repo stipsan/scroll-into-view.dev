@@ -68,3 +68,5 @@ public
 # Cypress
 cypress/screenshots
 cypress/videos
+
+.vscode

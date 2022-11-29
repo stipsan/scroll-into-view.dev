@@ -2,83 +2,17 @@
 
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import scrollIntoView from 'smooth-scroll-into-view-if-needed'
-import styled, { createGlobalStyle } from 'styled-components'
-import systemFontStack from 'system-font-stack'
-import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
 import Alignment from '../components/Examples/Alignment'
 import Boundary from '../components/Examples/Boundary'
 import IfNeeded from '../components/Examples/IfNeeded'
 import OverrideBehavior from '../components/Examples/OverrideBehavior'
 import Footer from '../components/Footer'
-import { Chrome, Text as TextIcon } from '../components/Icons'
 import Section from '../components/Section'
 
 import 'bulma/css/bulma.min.css'
 
-const { description } = require('scroll-into-view-if-needed/package.json')
-
-const GlobalStyles = createGlobalStyle`
-  html,
-  body {
-    margin: 0!important;
-    padding: 0!important;
-  }
-  body {
-    font-family: ${systemFontStack}!important;
-  }
-`
-
-const Hero = styled.header`
-  display: flex;
-  box-sizing: border-box;
-  padding: 90px 10px;
-  padding-top: 10vmin;
-  padding-bottom: 10vmin;
-  align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(168deg, #b1d2fa 0%, #05ffe6 100%);
-  background: -moz-linear-gradient(
-    -78deg,
-    rgb(182, 209, 245) 0%,
-    rgb(114, 249, 231) 100%
-  ); /* FF3.6-15 */
-`
-const Wrapper = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 744px;
-
-  svg {
-    width: 100%;
-    height: auto;
-  }
-
-  > svg {
-    z-index: 1;
-    position: relative;
-  }
-`
-const ScrollWrapper = styled.div`
-  position: absolute;
-  transition: opacity 100ms;
-  /* overflow: scroll; is so ugly on machines that don't hide scrollbars */
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 3px;
-  opacity: 0.6;
-
-  @supports (mix-blend-mode: difference) {
-    opacity: 1;
-    mix-blend-mode: difference;
-
-    svg {
-      color: #557271;
-    }
-  }
-`
 
 const IntroductionSection = styled(Section)`
   margin-top: 1.5rem !important;
@@ -141,27 +75,7 @@ const IndexPage: React.FC = () => {
   )
 
   return (
-    <div>
-      <GlobalStyles />
-      <Helmet>
-        <title>{description}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:description" content={description} />
-        <meta name="description" content={description} />
-      </Helmet>
-      <Hero>
-        <Wrapper ref={scrollToBoundary}>
-          <Chrome ref={maxHeightRef} />
-          <ScrollWrapper
-            style={{
-              maxHeight: maxHeight,
-              opacity: maxHeight === 'auto' ? 0 : undefined,
-            }}
-          >
-            <TextIcon ref={scrollToRef} />
-          </ScrollWrapper>
-        </Wrapper>
-      </Hero>
+    <>
       <div className="container is-fluid">
         <IntroductionSection className="columns">
           <div className="column">
@@ -292,7 +206,7 @@ const IndexPage: React.FC = () => {
         </OtherSection>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -1,36 +1,32 @@
 {
   "private": true,
   "scripts": {
-    "precommit": "lint-staged",
-    "dev": "gatsby develop",
-    "lint": "yarn lynt:js && yarn lynt:ts",
-    "lynt": "lynt --ignore out --ignore public",
-    "lynt:js": "yarn lynt --env mocha --global cy",
-    "lynt:ts": "yarn lynt --typescript --react",
-    "prestart": "gatsby build",
-    "start": "gatsby serve -p 8000",
-    "test": "cypress run",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@types/node": "^10.17.51",
-    "@types/prettier": "^2.1.6",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/node": "^18.11.9",
+    "@types/prettier": "^2.7.1",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
     "babel-plugin-styled-components": "^1.12.0",
-    "bulma": "^0.9.1",
-    "compute-scroll-into-view": "^1.0.16",
+    "bulma": "^0.9.4",
+    "classnames": "^2.3.2",
+    "compute-scroll-into-view": "^1.0.17",
     "gatsby": "^2.31.1",
     "gatsby-plugin-netlify": "^2.10.0",
     "gatsby-plugin-react-helmet": "^3.9.0",
     "gatsby-plugin-styled-components": "^3.9.0",
     "gatsby-plugin-typescript": "^2.11.0",
+    "next": "^13.0.5",
     "popmotion": "^9.1.0",
-    "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-is": "^18.2.0",
     "react-refractor": "^2.1.4",
     "refractor": "^3.3.0",
     "scroll-into-view-if-needed": "^2.2.26",
@@ -38,60 +34,21 @@
     "styled-components": "^5.2.1",
     "stylefire": "^7.0.3",
     "system-font-stack": "^1.0.5",
-    "typescript": "^4.1.3"
+    "typescript": "^4.9.3"
   },
+  "browserslist": [
+    "> 0.2% and supports es6-module and supports es6-module-dynamic-import and not dead and not IE 11",
+    "maintained node versions"
+  ],
   "devDependencies": {
-    "cypress": "^6.3.0",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.3",
-    "lynt": "^0.5.5",
-    "prettier-package-json": "^2.1.3"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.css": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.md": [
-      "prettier --write",
-      "git add"
-    ],
-    "**/package.json": [
-      "prettier-package-json --write",
-      "git add"
-    ],
-    "**/.babelrc": [
-      "prettier --write",
-      "git add"
-    ]
+    "prettier": "^2.8.0",
+    "prettier-plugin-packagejson": "^2.3.0"
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "overrides": [
-      {
-        "files": ".babelrc",
-        "options": {
-          "parser": "json"
-        }
-      }
-    ]
+    "singleQuote": true
   },
-  "resolutions": {
-    "@types/react": "^17.0.0",
-    "prop-types": "^15.7.2"
+  "engines": {
+    "node": "18"
   }
 }

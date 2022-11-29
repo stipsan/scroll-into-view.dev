@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  box-sizing: border-box;
+  padding: 90px 10px;
+  padding-top: 10vmin;
+  padding-bottom: 10vmin;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(168deg, #b1d2fa 0%, #05ffe6 100%);
+  background: -moz-linear-gradient(
+    -78deg,
+    rgb(182, 209, 245) 0%,
+    rgb(114, 249, 231) 100%
+  ); /* FF3.6-15 */
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 744px;
+}
+.wrapper svg {
+  width: 100%;
+  height: auto;
+}
+.wrapper > svg {
+  z-index: 1;
+    position: relative;
+}
+
+.scrollWrapper {
+  position: absolute;
+  transition: opacity 100ms;
+  /* overflow: scroll; is so ugly on machines that don't hide scrollbars */
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  opacity: 0.6;
+}
+
+@supports (mix-blend-mode: difference) {
+  .scrollWrapper {
+    opacity: 1;
+    mix-blend-mode: difference;
+
+  }
+
+  .scrollWrapper svg {
+    color: #557271;
+  }
+}
+
