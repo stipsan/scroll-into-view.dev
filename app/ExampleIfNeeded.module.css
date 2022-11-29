@@ -5,5 +5,5 @@
   display: flex;
   height: calc(calc(var(--size) / 4px) - 10px);
   margin: 20px;
-  color: hsla(0, 0%, 0%, 0.4); 
+  color: hsla(0, 0%, 0%, 0.4);
 }

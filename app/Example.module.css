@@ -36,7 +36,6 @@
   white-space: nowrap;
 }
 
-
 .codeBody {
   border-radius: 0;
   overflow: hidden;
@@ -46,7 +45,6 @@
 }
 @media screen and (min-width: 768px) {
   .codeBody {
-
     border-radius: 0 0 0 8px;
   }
 }
@@ -60,7 +58,6 @@
   .result {
     border-radius: 0 8px 8px 0;
   }
-  
 }
 
 .resultHeader {
@@ -84,8 +81,7 @@
 .button {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-
 }
 .button:not(:last-child) {
   margin-right: 0.5rem;
-} 
+}

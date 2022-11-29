@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <Hero />
       <div className="container is-fluid">
-        <section className={cx(styles.intro, "columns")}>
+        <section className={cx(styles.intro, 'columns')}>
           <div className="column">
             <h2 className="is-size-4">Ponyfill</h2>
             <p>
@@ -56,8 +56,11 @@ export default function Page() {
             </p>
           </div>
         </section>
-        <section className="columns is-multiline is-desktop" id="scrolling-if-needed">
-          <div className="column is-one-third-desktop" >
+        <section
+          className="columns is-multiline is-desktop"
+          id="scrolling-if-needed"
+        >
+          <div className="column is-one-third-desktop">
             <h3 className="title">Scrolling if needed</h3>
             <p className="subtitle">
               When deciding if scrolling is needed the visibility of the target
@@ -87,12 +90,15 @@ export default function Page() {
               <a href="https://codepen.io/stipsan/pen/NMxLew">CodePen</a>.
             </p>
           </div>
-          <div className='column is-two-thirds-desktop'>
+          <div className="column is-two-thirds-desktop">
             <IfNeeded />
           </div>
         </section>
-        <section className="columns is-multiline is-desktop" id="scroll-alignment">
-          <div className="column is-one-third-desktop" >
+        <section
+          className="columns is-multiline is-desktop"
+          id="scroll-alignment"
+        >
+          <div className="column is-one-third-desktop">
             <h3 className="title">Scroll alignment</h3>
             <p className="subtitle">
               The position options for both <code>block</code> and{' '}
@@ -108,12 +114,15 @@ export default function Page() {
               .
             </p>
           </div>
-          <div className='column is-two-thirds-desktop'>
+          <div className="column is-two-thirds-desktop">
             <Alignment />
           </div>
         </section>
-        <section className="columns is-multiline is-desktop"  id="limit-propagation">
-          <div className="column is-one-third-desktop" >
+        <section
+          className="columns is-multiline is-desktop"
+          id="limit-propagation"
+        >
+          <div className="column is-one-third-desktop">
             <h3 className="title">Limit propagation</h3>
             <p className="subtitle">
               Boundaries are good, that's what people keep saying. If you want
@@ -122,12 +131,15 @@ export default function Page() {
             </p>
             <p>Keep in mind this is a non-standard feature not in any spec.</p>
           </div>
-          <div className='column is-two-thirds-desktop'>
+          <div className="column is-two-thirds-desktop">
             <Boundary />
           </div>
         </section>
-        <section className="columns is-multiline is-desktop"  id="custom-transition">
-          <div className="column is-one-third-desktop" >
+        <section
+          className="columns is-multiline is-desktop"
+          id="custom-transition"
+        >
+          <div className="column is-one-third-desktop">
             <h3 className="title">Custom transition: popmotion example</h3>
             <p className="subtitle">
               If you want a different easing, duration or another creative
@@ -137,7 +149,7 @@ export default function Page() {
               Just like <code>boundary</code> this is not in the spec.
             </p>
           </div>
-          <div className='column is-two-thirds-desktop'>
+          <div className="column is-two-thirds-desktop">
             <OverrideBehavior />
           </div>
         </section>

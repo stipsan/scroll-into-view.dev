@@ -9,12 +9,15 @@ import styles from './Code.module.css'
 
 Refractor.registerLanguage(js)
 
-
-function Code(props:{value: string}) {
-  const value = useMemo(()=>format(props.value),[props.value]) 
-    return <Refractor className={cx(
-      styles.code,'is-flex'
-    )} language="javascript" value={value} />
+function Code(props: { value: string }) {
+  const value = useMemo(() => format(props.value), [props.value])
+  return (
+    <Refractor
+      className={cx(styles.code, 'is-flex')}
+      language="javascript"
+      value={value}
+    />
+  )
 }
 
 export default memo(Code)

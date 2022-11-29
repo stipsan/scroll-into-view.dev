@@ -3,7 +3,6 @@ import { forwardRef } from 'react'
 
 import styles from './Icons.module.css'
 
-
 export const Text = forwardRef<SVGElement>(function Text(props: any, ref) {
   return (
     <svg

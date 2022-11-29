@@ -5,11 +5,10 @@ import computePkg from 'compute-scroll-into-view/package.json' assert { type: 'j
 import scrollPkg from 'scroll-into-view-if-needed/package.json' assert { type: 'json' }
 import smoothPkg from 'smooth-scroll-into-view-if-needed/package.json' assert { type: 'json' }
 
-
 import styles from './Footer.module.css'
 
 export default () => (
-  <footer className={cx(styles.footer, "footer")}>
+  <footer className={cx(styles.footer, 'footer')}>
     <div className="container">
       <div className="content has-text-centered">
         <p>

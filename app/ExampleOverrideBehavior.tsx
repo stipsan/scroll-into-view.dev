@@ -11,10 +11,7 @@ import Select from './Select'
 
 import styles from './ExampleOverrideBehavior.module.css'
 
-
-
 const emojis = ['🌎', '🌍', '🌏']
-
 
 function Boundary() {
   const containerRef = useRef<HTMLElement>(null)
@@ -24,7 +21,8 @@ function Boundary() {
     containerRef.current.scrollLeft = 200
   }, [])
 
-  const SourceCode = useMemo(() => `
+  const SourceCode = useMemo(
+    () => `
   import scrollIntoView from 'scroll-into-view-if-needed';
   import Styler from 'stylefire'
   import { animate } from 'popmotion'
@@ -37,8 +35,9 @@ function Boundary() {
       
       
     },inline: ${JSON.stringify(inline)}})
-  `,[inline])
-
+  `,
+    [inline]
+  )
 
   return (
     <Example.Section>
@@ -46,8 +45,7 @@ function Boundary() {
         <Example.CodeHeader>
           <Select
             label="Inline"
-            onChange={(event) =>setInline( event.target.value )
-            }
+            onChange={(event) => setInline(event.target.value)}
             value={inline}
           >
             <option value="center">Center</option>
@@ -65,33 +63,31 @@ function Boundary() {
             <Example.Button
               key={emoji}
               onClick={(vent) => {
-                scrollIntoView(containerRef.current.querySelector(`[data-key="${key}"]`), {
-                  behavior: (instructions) => {
-                    const [{ el, left }] = instructions
-                    const styler = Styler(el as HTMLElement, {})
-            
-                    animate({
-                      from: el.scrollLeft,
-                      to: left,
-                      type: 'spring',
-                      onUpdate: (left) => styler.set('scrollLeft', left),
-                    })
-                  },
-                  boundary: containerRef.current,
-                  inline,
-                })
-                
-                }
-              
-              }
+                scrollIntoView(
+                  containerRef.current.querySelector(`[data-key="${key}"]`),
+                  {
+                    behavior: (instructions) => {
+                      const [{ el, left }] = instructions
+                      const styler = Styler(el as HTMLElement, {})
+
+                      animate({
+                        from: el.scrollLeft,
+                        to: left,
+                        type: 'spring',
+                        onUpdate: (left) => styler.set('scrollLeft', left),
+                      })
+                    },
+                    boundary: containerRef.current,
+                    inline,
+                  }
+                )
+              }}
             >
               {emoji}
             </Example.Button>
           ))}
         </Example.ResultHeader>
-        <Example.ScrollContainer
-          ref={containerRef}
-        >
+        <Example.ScrollContainer ref={containerRef}>
           <div className={styles.scrollLayer}>
             {emojis.map((emoji, key) => (
               <div

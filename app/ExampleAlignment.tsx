@@ -9,7 +9,6 @@ import Select from './Select'
 
 import styles from './ExampleAlignment.module.css'
 
-
 const range = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 class Alignment extends PureComponent {
@@ -79,11 +78,22 @@ class Alignment extends PureComponent {
             </Example.Button>
           </Example.ResultHeader>
           <Example.ScrollContainer>
-            <div className={cx(styles.scrollLayer, 'columns is-multiline is-mobile is-gapless')}>
+            <div
+              className={cx(
+                styles.scrollLayer,
+                'columns is-multiline is-mobile is-gapless'
+              )}
+            >
               {range.map((number) => (
-                <div key={number} className={cx(styles.item,'column is-one-third' )}>
+                <div
+                  key={number}
+                  className={cx(styles.item, 'column is-one-third')}
+                >
                   <div
-                  className={cx(styles.tile, 'has-background-primary is-size-1')}
+                    className={cx(
+                      styles.tile,
+                      'has-background-primary is-size-1'
+                    )}
                     ref={(node) => (this.items[number] = node as HTMLElement)}
                   >
                     {number}
