@@ -27,7 +27,7 @@
     "eslint-config-next": "^13.0.5",
     "motion": "^10.14.3",
     "next": "^13.0.5",
-    "popmotion": "^9.1.0",
+    "popmotion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-refractor": "^2.1.7",
