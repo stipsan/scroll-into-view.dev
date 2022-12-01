@@ -61,7 +61,7 @@ class IfNeeded extends PureComponent {
             >
               <option value="smooth-ponyfill">Ponyfill smooth</option>
               <option value="smooth">Native smooth</option>
-              <option value="instant">Instant</option>
+              <option value="auto">Auto</option>
             </Select>
 
             <Select

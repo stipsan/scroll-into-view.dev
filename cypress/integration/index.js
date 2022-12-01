@@ -4,7 +4,7 @@ describe('Index Page', function () {
   })
 
   describe('Scrolling if needed', function () {
-    ;['smooth-ponyfill', 'smooth', 'instant'].forEach((behavior) => {
+    ;['smooth-ponyfill', 'smooth', 'auto'].forEach((behavior) => {
       ;['if-needed', 'always'].forEach((scrollMode) => {
         it(`scrolls behavior: ${behavior} and scrollMode: ${scrollMode} correctly`, function () {
           cy.get('#scrolling-if-needed select[name="behavior"]').select(
