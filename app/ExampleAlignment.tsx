@@ -3,6 +3,7 @@
 import cx from 'classnames'
 import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
+import type {Options} from 'compute-scroll-into-view'
 import Code from './Code'
 import * as Example from './Example'
 import Select from './Select'
@@ -11,10 +12,10 @@ import styles from './ExampleAlignment.module.css'
 
 const range = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-class Alignment extends PureComponent {
+class Alignment extends PureComponent<{}, Pick<Options, 'block' | 'inline'>> {
   state = {
-    block: 'center',
-    inline: 'center',
+    block: 'center' as const,
+    inline: 'center' as const,
   }
 
   items: HTMLElement[] = []
@@ -22,9 +23,8 @@ class Alignment extends PureComponent {
   doScroll = (target) =>
     scrollIntoView(target, {
       behavior: 'smooth',
-      // @TODO resolve "as" tricks here
-      block: this.state.block as 'start' | 'center' | 'end' | 'nearest',
-      inline: this.state.inline as 'start' | 'center' | 'end' | 'nearest',
+      block: this.state.block,
+      inline: this.state.inline,
     })
 
   handleChange = (event) =>
