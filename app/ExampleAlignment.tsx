@@ -3,7 +3,7 @@
 import cx from 'classnames'
 import { PureComponent } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
-import type {Options} from 'compute-scroll-into-view'
+import type { Options } from 'compute-scroll-into-view'
 import Code from './Code'
 import * as Example from './Example'
 import Select from './Select'
