@@ -32,7 +32,7 @@ export default function Page() {
                 proposing
               </a>{' '}
               to add to <code>scrollIntoVIew</code> as another option:{' '}
-              <code>scrollMode: "if-needed"</code>.
+              <code>scrollMode: &quot;if-needed&quot;</code>.
             </p>
           </div>
           <div className="column">
@@ -40,9 +40,10 @@ export default function Page() {
             <p>
               The core package <code>scroll-into-view-if-needed</code> is
               unapologetically small and dependency-free. That is why{' '}
-              <code>behavior: "smooth"</code> is only ponyfilled if you use the
-              add-on package <code>smooth-scroll-into-view-if-needed</code>. You
-              don't need the add-on if native smooth scrolling is enough.
+              <code>behavior: &quot;smooth&quot;</code> is only ponyfilled if
+              you use the add-on package{' '}
+              <code>smooth-scroll-into-view-if-needed</code>. You don&#39;t need
+              the add-on if native smooth scrolling is enough.
             </p>
           </div>
           <div className="column">
@@ -52,7 +53,7 @@ export default function Page() {
               customize scrolling to your needs. Avoid scrolling unwanted parent
               elements by using the <code>boundary: Element</code> option. Pass
               a function to <code>behavior</code> to customize exactly how
-              elements are scrolled when <code>smooth</code> isn't enough.
+              elements are scrolled when <code>smooth</code> isn&#39;t enough.
             </p>
           </div>
         </section>
@@ -64,12 +65,13 @@ export default function Page() {
             <h3 className="title">Scrolling if needed</h3>
             <p className="subtitle">
               When deciding if scrolling is needed the visibility of the target
-              element is checked. If it's less than 100% it will be scrolled.
+              element is checked. If it&#39;s less than 100% it will be
+              scrolled.
             </p>
             <p>
               By default the browser controls the scrolling when{' '}
-              <code>behavior: 'smooth'</code> (unless you opt in to the
-              ponyfill). Note there's browser differences with native smooth
+              <code>behavior: &#39;smooth&#39;</code> (unless you opt in to the
+              ponyfill). Note there&#39;s browser differences with native smooth
               scrolling, like{' '}
               <a
                 href="https://user-images.githubusercontent.com/81981/38905887-9c00eff2-42b3-11e8-86aa-41ef679a54af.gif"
@@ -102,8 +104,8 @@ export default function Page() {
             <h3 className="title">Scroll alignment</h3>
             <p className="subtitle">
               The position options for both <code>block</code> and{' '}
-              <code>inline</code> are supported. Mix and match to your heart's
-              content.
+              <code>inline</code> are supported. Mix and match to your
+              heart&#39;s content.
             </p>
             <p>
               Usually <code>block</code> aligns vertically, while{' '}
@@ -125,9 +127,9 @@ export default function Page() {
           <div className="column is-one-third-desktop">
             <h3 className="title">Limit propagation</h3>
             <p className="subtitle">
-              Boundaries are good, that's what people keep saying. If you want
-              some elements to scroll into view, but not all of the parents then{' '}
-              <code>boundary</code> is the answer.
+              Boundaries are good, that&#39;s what people keep saying. If you
+              want some elements to scroll into view, but not all of the parents
+              then <code>boundary</code> is the answer.
             </p>
             <p>Keep in mind this is a non-standard feature not in any spec.</p>
           </div>
