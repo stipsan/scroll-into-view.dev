@@ -35,7 +35,7 @@
     "react-refractor": "^2.1.7",
     "refractor": "^4.8.0",
     "scroll-into-view-if-needed": "^3.0.6",
-    "smooth-scroll-into-view-if-needed": "^1.1.33",
+    "smooth-scroll-into-view-if-needed": "^2.0.0",
     "stylefire": "^7.0.3",
     "typescript": "^5.0.0"
   },
