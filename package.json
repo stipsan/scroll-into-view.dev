@@ -44,6 +44,6 @@
     "prettier-plugin-packagejson": "^2.4.3"
   },
   "engines": {
-    "node": "18"
+    "node": "18 || 20"
   }
 }
